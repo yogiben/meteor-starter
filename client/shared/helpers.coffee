@@ -12,3 +12,10 @@ UI.registerHelper 'Users', ->
 
 UI.registerHelper 'User', ->
 	Meteor.user()
+
+UI.registerHelper 'Languages', ->
+	Languages
+
+UI.registerHelper '_Languages', ->
+	_.map Languages, (language)->
+		language

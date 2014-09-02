@@ -1,0 +1,22 @@
+<template name="languages">
+	<div class="template-languages">
+		<div class="row">
+			{{#each _Languages}}
+			  <div class="col-md-2 col-sm-4 col-xs-6">
+			  	<div class="checkbox">
+			  	  <label>
+			  	    <input type="checkbox" name="{{name}}"> {{name}}
+			  	  </label>
+			  	</div>
+			  </div>
+			{{/each}}
+			<div class="col-md-12">
+				<hr/>
+				<p>
+					<a href="{{pathFor 'home'}}" class="btn btn-default">Cancel</a>
+					<a id="confirm" class="btn btn-primary">Confirm</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</template>
