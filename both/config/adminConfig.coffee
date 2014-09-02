@@ -1,4 +1,5 @@
 AdminConfig =
+    name: Config.name
     # adminEmails: ['benjaminpeterjonesesquire@gmail.com','dave.southperth@gmail.com']
     fromEmail: 'noreply@app.com'
     collections : 

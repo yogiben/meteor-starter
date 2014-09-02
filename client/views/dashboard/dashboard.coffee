@@ -1,0 +1,3 @@
+Template.dashboard.events
+	'click': () ->
+		# ...

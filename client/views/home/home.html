@@ -28,7 +28,11 @@
 				<div class="col-lg-12 col-sm-12">
 					<h1>{{Config.title}}</h1>
 					<h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
-					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>		
+					{{#if currentUser}}
+					<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>
+					{{else}}
+					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>
+					{{/if}}
 				</div>
 <!-- 				<div class="col-lg-6 col-sm-6">
 					<img class="img-responsive" src="/img/image-header1.png" alt="">
@@ -209,7 +213,11 @@
 					A complete solution for your bills. With Bitcoin.
 				</h3>
 				<div class="text-center">
+				{{#if currentUser}}
+				<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>
+				{{else}}
 				<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>
+				{{/if}}
 			</div>			
 		</div>
 			<div class="col-md-8  wow fadeInUp animated">
