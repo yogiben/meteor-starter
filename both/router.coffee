@@ -22,13 +22,13 @@ Router.map ->
     path: "/dashboard/:language/add"
     layoutTemplate: "dashboardLayout"
     action: ->
-      Session.set 'language', @params.language
+      Session.set 'language_name', @params.language
       @render()
   @route "words",
     path: "/dashboard/:language/"
     layoutTemplate: "dashboardLayout"
     action: ->
-      Session.set 'language', @params.language
+      Session.set 'language_name', @params.language
       Session.set 'title', Languages[@params.language].name
       Session.set 'subtitle', ''
       @render()
