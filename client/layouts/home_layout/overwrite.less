@@ -1,0 +1,525 @@
+.home-layout
+{
+
+/* ==============================================================
+
+Template name : Gotte multi purpose landing page with flat design
+Categorie : Landing page
+Author : Nce18cex
+Version : v1.0.0
+Created : 1 January 2014
+Last update : 12 January 2014
+
+-----------------------------------------------------------------
+CSS structure
+-----------------------------------------------------------------
+
+01. Typography
+02. Navbar
+03. Carousel
+04. Accordion
+05. Tabs
+06. Form
+07. Button
+
+============================================================== */
+
+/*
+Typography
+======================= */
+body {
+	background:#fff;
+	font-family: 'Open Sans', sans-serif;
+	color:#fff;
+	font-weight:400;
+	font-size:13px;
+	line-height:22px;
+	padding:0;
+}
+
+p{
+	margin:0 0 20px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: 'Open Sans', sans-serif;
+	margin:0 0 20px 0;
+}
+
+h1{
+	font-size:72px;
+	line-height:86px;
+}
+
+h2{
+	font-size:56px;
+	line-height:72px;
+}
+
+h3{
+	font-size:46px;
+	line-height:56px;
+}
+
+h4{
+	font-size:32px;
+	line-height:42px;
+}
+
+h5{
+	font-size:24px;
+	line-height:32px;
+}
+
+h6{
+	font-size:18px;
+	line-height:22px;
+}
+
+.alignleft{
+	float:left;
+	margin:0 20px 20px 0;
+}
+
+.alignright{
+	float:right;
+	margin:0 20px 0 20px;
+}
+
+
+/*
+Navbar
+==================================== */
+.navbar {
+  position: relative;
+  min-height: 40px;
+  padding:15px 0 20px 0;
+  margin-bottom: 0;
+  background:#383f45;
+  border-radius: 0;
+}
+
+.navbar-inverse {
+  border:none;
+}
+
+.navbar-inverse .collapse{
+  float:right;
+}
+
+.navbar-brand{
+	margin:3px 0 0 0;
+	padding:0;	
+}
+
+.navbar-inverse .navbar-nav li a{
+	color:#fff;
+	padding:5px 10px 5px 10px;
+	margin:10px 0 0 10px;
+}
+
+.navbar-inverse .navbar-nav li a:hover,
+.navbar-inverse .navbar-nav li a:focus,
+.navbar-inverse .navbar-nav li a:active{
+	background:none;
+	color:#1d1f21;	
+	outline:none;
+}
+
+.navbar-inverse .navbar-nav .active a{
+	background:none;
+}
+
+.navbar-inverse .navbar-nav .active a:hover{
+	background:none;
+}
+
+.navbar-inverse .navbar-nav li a.selected,
+.navbar-inverse .navbar-nav li a.selected:hover,
+.navbar-inverse .navbar-nav li a.selected:focus,
+.navbar-inverse .navbar-nav li a.selected:active{
+	color:#1d1f21;
+	border-radius:1px;
+	outline:none;
+}
+
+
+.navbar .navbar-collapse .nav select{
+  color: #939393;
+  border:1px solid #33353a;
+  margin:4px 0 0 0;
+  background:#33353a;		
+  padding:9px 15px 9px 15px;
+  outline:none;
+  display:none;
+  border-radius:1px;
+  cursor:pointer;
+}
+
+/*
+Carousel
+======================= */
+.carousel{
+	float:left;
+	width:100%;
+	margin-top:40px;
+}
+
+.carousel-indicators{
+	top:-70px;
+}
+
+.carousel-indicators li,
+.carousel-indicators .active{
+	border:none;
+	width: 40px;
+	height:10px;
+	margin: 1px;	
+	border:none;
+	background-color:#fff;
+	border-radius:2px;
+	opacity:0.2;
+}
+.carousel-indicators .active{
+	opacity:1;
+}
+
+/*
+Accordion
+======================= */
+.accordion-heading a{
+	position:relative;
+	background:#0d0f12;
+	color:#fff;
+	display:block;
+	padding:15px 20px 15px 90px;
+	border-radius:2px;
+	margin-bottom:10px;
+	font-size:20px;
+	border:none;
+}
+
+.accordion-heading span{
+	position:absolute;
+	padding:15px 25px 15px 25px;
+	font-size:20px;
+	height:100%;
+	color:#fff;
+	top:0;
+	left:0;
+	border-left:5px solid;
+	border-radius:2px 0 0 2px;
+}
+
+.accordion-heading a:hover,
+.accordion-heading a:focus,
+.accordion-heading a:active{
+	outline:none;
+	text-decoration:none;
+}
+
+.accordion-heading span.primary-bg{
+	background-image:none;
+}
+
+.accordion-inner{
+	background:#f6f7f9;
+	padding:20px;
+	margin-bottom:10px;
+	border-radius:2px;
+}
+
+/*
+Tabs
+==================================== */
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-tabs > li {
+  float: left;
+  width:33.33333333333333%;  
+  margin:0;
+}
+
+.nav-tabs > li > a {
+  color:#fff;
+  margin-right:0;
+  font-size:14px;
+  line-height: 1.428571429;
+  text-transform:uppercase;
+  border: none;
+  border-radius:0;
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:20px 0 25px 0;
+}
+
+.nav-tabs > li > a i,
+.nav-tabs > li > a i.icon-rounded{
+	float:none;
+	color:#fff;
+	border-color:#fff;
+	margin:0 0 10px 0;
+}
+
+.nav-tabs li a.tab-bg1{
+	background-color:#4ea9f4;
+}
+
+.nav-tabs li a.tab-bg2{
+	background-color:#6f405c;
+}
+
+.nav-tabs li a.tab-bg3{
+	background-color:#b05f6d;
+}
+
+.nav-tabs li a.tab-bg4{
+	background-color:#df867a;
+}
+
+.nav-tabs li a.tab-bg5{
+	background-color:#ffab89;
+}
+
+.nav-tabs li a.tab-bg6{
+	background-color:#ff6f57;
+}
+
+.nav-tabs li a.tab-bg7{
+	background-color:#ffc153;
+}
+
+.nav-tabs li a.tab-bg8{
+	background-color:#ad2549;
+}
+
+.nav-tabs li a.tab-bg9{
+	background-color:#c75531;
+}
+
+.nav-tabs li a.tab-bg1:hover{
+	background-color:#6aa2d7;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg2:hover{
+	background-color:#673b55;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg3:hover{
+	background-color:#a35664;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg4:hover{
+	background-color:#d68075;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg5:hover{
+	background-color:#f5a484;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg6:hover{
+	background-color:#f66b54;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg7:hover{
+	background-color:#f6ba50;
+	color:#fff;		
+}
+
+.nav-tabs li a.tab-bg8:hover{
+	background-color:#94314b;
+	color:#fff;	
+}
+
+.nav-tabs li a.tab-bg9:hover{
+	background-color:#c34d2f;
+	color:#fff;	
+}
+
+.nav-tabs  li  a:hover {
+  border: none;
+  color:#fff;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:active {
+  outline:none;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:active {
+  background:#4ea9f4;
+  color: #fff;
+  cursor: default;
+  border: none;
+  outline:none;
+}
+
+.tab-content{
+  padding:0 20px 20px 20px;
+}
+
+/*
+Form
+======================= */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #161616;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.form-control:-moz-placeholder {
+  color: #323232;
+}
+
+.form-control::-moz-placeholder {
+  color: #323232;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #323232;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #323232;
+}
+
+.form-control:focus {
+  border-color:#fff;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*
+Button
+======================= */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  border-radius:1px;
+  color: #161616;
+  border:none;
+  padding: 10px 25px;
+  font-size: 18px;
+  line-height: 1.33;
+  -webkit-box-shadow:none;
+  box-shadow:none; 
+  background-image:none;	
+}
+
+.btn-default{
+	color:#fff;
+	background:#333d46;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active{
+	color:#fff;
+	background:#242a2f;
+	outline:none;
+}
+
+.btn-primary{
+	color: #1d1f21;
+	border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active{
+	color: #1d1f21;
+	border: none;
+	outline:none;
+}
+
+.btn-secondary{
+	color: #1d1f21;
+	border: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active{
+	color: #1d1f21;
+	border: none;
+	outline:none;
+}
+
+.btn-tertiary{
+	color: #1d1f21;
+	border: none;
+}
+
+.btn-tertiary:hover,
+.btn-tertiary:focus,
+.btn-tertiary:active{
+	color: #1d1f21;
+	border: none;
+	outline:none;
+}
+
+
+.lg-text{
+	float:left;
+	margin:11px 0 0 10px;
+	font-weight:700;
+	font-size:20px;
+}
+
+.btn-lg {
+  padding: 15px 50px;
+  font-size: 28px;
+  line-height: 1.83;
+  border-radius: 3px;
+}
+
+.btn-sm,
+.btn-xs {
+  padding: 8px 15px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+}
+}

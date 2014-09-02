@@ -1,7 +1,224 @@
 <template name="home">
+<section id="intro">
+	<header>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="container">
+
+					<a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
+
+					<div id="main-nav" class="navbar-collapse">          
+						<ul class="social-links">
+							{{#if Config.twitter}}
+							<a href="http://twitter.com/{{Config.twitter}}" target="_blank"><li class="fa fa-twitter"></li></a>
+							{{/if}}
+							{{#if Config.facebook}}
+							<a href="http://facebook.com/{{Config.facebook}}" target="_blank"><li class="fa fa-facebook"></li></a>
+							{{/if}}
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+	</header>
 	<div class="container">
-		<div class="row" id="champion-messages">
-			<h1>Home</h1>
+		<div class="intro-well wow animated bounceIn">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12">
+					<h1>{{Config.title}}</h1>
+					<h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
+					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>		
+				</div>
+<!-- 				<div class="col-lg-6 col-sm-6">
+					<img class="img-responsive" src="/img/image-header1.png" alt="">
+				</div> -->
+			</div>
 		</div>
 	</div>
+</section>
+<section id="features">
+	<div class="container wow fadeIn animated">
+		<h1>How It Works</h1>
+		<h2>{{Config.name}} - {{Config.subtitle}}</h2>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.1s">
+				<div class="iconbox">
+					<i class="fa fa-plane"></i>
+				</div>
+				<p class="icntitle">1. Step 1</p>
+				<p class="icnp">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+			<div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.2s">
+				<div class="iconbox">
+					<i class="fa fa-bolt"></i>
+				</div>
+				<p class="icntitle">2. Step 2</p>
+				<p class="icnp"> Oratio me istius philosophi non offendit; Qua tu etiam inprudens utebare non numquam.</p>
+			</div>
+			<div class="col-md-4 wow fadeInRight animated" data-wow-delay="0.3s">
+				<div class="iconbox">
+					<i class="fa fa-check"></i>
+				</div>
+				<p class="icntitle">3. Step 3</p>
+				<p class="icnp">Et ille ridens: Video, inquit, quid agas; Duo Reges: constructio interrete.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="examples">
+	<div class="container wow fadeInUp animated">
+		<h1>Great features!</h1>
+		<h2>You can use {{BillsConfig.siteName}} to do anything</h2>
+	</div>
+</section>
+<section id="advantages">
+	<div class="row text-center">
+		<div class="col-lg-12 col-sm-12">
+			<h1>Goodbye online banking</h1>
+			<h2>Smart money transfer made possible by digital currency.</h2>
+		</div>
+	</div>
+	<div class="more-features">
+		<div class="container">
+			<div class="col-sm-6">
+				<div class="features-left wow animated fadeInLeft" data-wow-delay="0.1s">
+					<div class="features-item">
+						<i class="fa fa-lock icons_right hidden-sm"></i>
+						<div class="text-align-right">
+							<h4>Feature</h4>
+							<p>Your data never leaves our Berlin office and we treat your details with the utmost respect.</p>
+						</div>
+					</div>
+					<div class="features-item">
+						<i class="fa fa-reorder icons_right hidden-sm"></i>
+						<div class="text-align-right">
+							<h4>Fast</h4>
+							<p>We process your bill in one working day as soon as receive you Bitcoin payment.</p>
+
+						</div>
+					</div>
+					<div class="features-item">
+						<i class="fa fa-user icons_right hidden-sm"></i>
+						<div class="text-align-right">
+							<h4>Reliable</h4>
+							<p>We have a dedicated customer service team reachable by phone or email.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div id="iphone" class="col-sm-4 hidden-xs wow animated fadeInUp" data-wow-delay="0.3s">
+				<img src="img/iphone.png" class="img-responsive" alt="iPhone">
+			</div> -->
+			<div class="col-sm-6">
+				<div class="features-right wow animated fadeInRight" data-wow-delay="0.2s">
+					<div class="features-item">
+						<i class="fa fa-btc icons_left hidden-sm"></i>
+						<div class="text-align-left">
+							<h4>Cheap</h4>
+							<p>We currently charge only a {{fee}}% fee (minimum €{{minFee}}) and use the BitPay exchange rates.</p>
+						</div>
+					</div>
+					<div class="features-item">
+						<i class="fa fa-send-o icons_left hidden-sm"></i>
+						<div class="text-align-left">
+							<h4>Convenient</h4>
+							<p>Convert your Bitcoin in cash to send without having to wait for an exchange.</p>
+						</div>
+					</div>
+					<div class="features-item">
+						<i class="fa fa-repeat icons_left hidden-sm"></i>
+						<div class="text-align-left">
+							<h4>Monthly Bills</h4>
+							<p>Pay your electricity, rent and phone bill in a single bitcoin transaction.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="faqs">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<h3 style="margin-bottom:3px;">FAQs</h3>
+				<div class="panel-group" id="accordion">
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+				          Question 4
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseOne" class="panel-collapse collapse">
+				      <div class="panel-body">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedulo, inquam, faciam. Haeret in salebra. Verum hoc idem saepe faciamus. An potest cupiditas finiri?
+				      </div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+				          Question 3
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseTwo" class="panel-collapse collapse">
+				      <div class="panel-body">
+				        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedulo, inquam, faciam. Haeret in salebra. Verum hoc idem saepe faciamus. An potest cupiditas finiri? Quorum sine causa fieri nihil putandum est. Duo Reges: constructio interrete. Nos commodius agimus. Experiamur igitur, inquit, etsi habet haec Stoicorum ratio difficilius quiddam et obscurius.
+				      </div>
+				    </div>
+				  </div>
+				  <div class="panel panel-default">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+				        	Question 4
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapseThree" class="panel-collapse collapse">
+				      <div class="panel-body">
+				       Quorum sine causa fieri nihil putandum est. Duo Reges: constructio interrete. Nos commodius agimus. Experiamur igitur, inquit, etsi habet haec Stoicorum ratio difficilius quiddam et obscurius.
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				<p class="text-center">
+					<a href="{{Config.about}}" target="_blank" class="btn btn-success">
+						Learn more
+					</a>
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<img id="ipad" src="/img/ipad.png" alt="" class="wow animated fadeInRight" data-wow-delay="0.1s">
+			</div>
+		</div>
+	</div>
+</section>
+<section id="final">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 text-center wow fadeInDown animated">
+				<h3>
+					A complete solution for your bills. With Bitcoin.
+				</h3>
+				<div class="text-center">
+				<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>
+			</div>			
+		</div>
+			<div class="col-md-8  wow fadeInUp animated">
+				<img src="img/screenshot.png" class="img-responsive" alt="picture">
+			</div>
+		</div>
+	</div>
+</section>
+<footer>
+	{{{Config.footer}}}
+</footer>
 </template>

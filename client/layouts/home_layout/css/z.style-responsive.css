@@ -1,0 +1,324 @@
+
+@media (min-width: 1200px) {
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	/*
+	=========================================================================
+	UPDATE FOR VERSION 1.1
+	=========================================================================
+	*/
+	/** PRICING TABLES **/
+	.pricing-tables table.table-inner > thead > tr > th,
+	.pricing-tables table.table-inner > tbody > tr > th,
+	.pricing-tables table.table-inner > tfoot > tr > th,
+	.pricing-tables table.table-inner > thead > tr > td,
+	.pricing-tables table.table-inner > tbody > tr > td,
+	.pricing-tables table.table-inner > tfoot > tr > td {
+	  padding: 15px;
+	  font-size: 14px;
+	  vertical-align: middle;
+	  border-top: 1px dotted #dddddd;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body{overflow-x: hidden;}
+	.table-responsive {
+		width: 100%;
+		margin-bottom: 15px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		border: 1px solid #dddddd;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		-webkit-overflow-scrolling: touch;
+	}
+	.table-responsive > .table {
+		margin-bottom: 0;
+	}
+	.table-responsive > .table > thead > tr > th,
+	.table-responsive > .table > tbody > tr > th,
+	.table-responsive > .table > tfoot > tr > th,
+	.table-responsive > .table > thead > tr > td,
+	.table-responsive > .table > tbody > tr > td,
+	.table-responsive > .table > tfoot > tr > td {
+		white-space: nowrap;
+	}
+	.table-responsive > .table-bordered {
+		border: 0;
+	}
+	.table-responsive > .table-bordered > thead > tr > th:first-child,
+	.table-responsive > .table-bordered > tbody > tr > th:first-child,
+	.table-responsive > .table-bordered > tfoot > tr > th:first-child,
+	.table-responsive > .table-bordered > thead > tr > td:first-child,
+	.table-responsive > .table-bordered > tbody > tr > td:first-child,
+	.table-responsive > .table-bordered > tfoot > tr > td:first-child {
+		border-left: 0;
+	}
+	.table-responsive > .table-bordered > thead > tr > th:last-child,
+	.table-responsive > .table-bordered > tbody > tr > th:last-child,
+	.table-responsive > .table-bordered > tfoot > tr > th:last-child,
+	.table-responsive > .table-bordered > thead > tr > td:last-child,
+	.table-responsive > .table-bordered > tbody > tr > td:last-child,
+	.table-responsive > .table-bordered > tfoot > tr > td:last-child {
+		border-right: 0;
+	}
+	.table-responsive > .table-bordered > tbody > tr:last-child > th,
+	.table-responsive > .table-bordered > tfoot > tr:last-child > th,
+	.table-responsive > .table-bordered > tbody > tr:last-child > td,
+	.table-responsive > .table-bordered > tfoot > tr:last-child > td {
+		border-bottom: 0;
+	}
+	.button-menu-mobile{display: block;}
+	.navbar{margin: 0 0 0 40px;}
+	.left {
+		width: 225px;
+		margin-left: 0px;
+		left: -225px;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.right {
+		left: 0;
+		right: 0;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		overflow-x: hidden;
+	}
+	.mobile-sidebar{left: 0px;}
+	.mobile-content{left: 225px;right: -225px;}
+	.box-info .icon-box{
+		width: 45px;
+		font-size: 20px;
+		margin-top: 5px
+	}
+	.box-info .text-box p{font-size: 11px;}
+	.toolbar-btn-action{text-align: center;}
+	.gallery-wrap .column .inner .img-wrap{
+		height: 60px;
+		overflow: hidden;
+		background: #ddd;
+	}
+	.gallery-wrap .column-3 .inner .img-wrap{
+		height: 140px;
+		overflow: hidden;
+		background: #ddd;
+	}
+	.gallery-wrap .column-4 .inner .img-wrap{
+		height: 100px;
+		overflow: hidden;
+		background: #ddd;
+	}
+	.user-profile-sidebar{text-align: center;}
+	
+	/*
+	=========================================================================
+	UPDATE FOR VERSION 1.1
+	=========================================================================
+	*/
+	/** Weather widget **/
+	.weather-widget .overlay-weather-info{
+		top: 10px;
+		left: 10px;
+		right: 10px;
+	}
+	.weather-widget .overlay-weather-info .weather-info-city{margin: 10px 0;}
+	.weather-widget .overlay-weather-info .weather-info-city h4{font-size: 15px;}
+	.weather-widget .overlay-weather-info .weather-info-city h1{font-size: 24px;}
+	.weather-widget .overlay-weather-info i.weather-icon{font-size: 60px;}
+	
+}
+
+
+@media (max-width: 767px) {
+	body{overflow-x: hidden;}
+	.header.sidebar{
+		position: absolute;
+		right: 39px;
+		left: 40px;
+		top: 0px;
+		text-align: center;
+		z-index: 999992;
+	}
+	.header.sidebar.logo-brand{
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.left {
+		top: -50px;
+	}
+	.navbar{
+		margin: 0 0 0 0px;
+		z-index: 999991;
+	}
+	.navbar-default {
+	  border: none;
+	}
+	.button-menu-mobile{
+		display: block;
+		z-index: 999993;
+	}
+	
+	button.navbar-toggle{
+		padding: 15px 15px;
+		border-radius: 0;
+		background: #1B1E24;
+		color: #A5B2BC;
+		margin-right: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		border: none;
+		font-size: 14px;
+	}
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background: #1B1E24;
+		color: #A5B2BC;
+	}
+	
+	.navbar-collapse{
+		padding-right: 15px;
+		padding-left: 15px;
+		margin: 0;
+	}
+	.left {
+		width: 225px;
+		margin-left: 0px;
+		left: -225px;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+	.right {
+		left: 0;
+		right: 0;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+		overflow-x: hidden;
+	}
+	.mobile-sidebar{left: 0px;}
+	.mobile-content{left: 225px;right: -225px;}
+	.header.sidebar.logo-brand.logo-brand-toggle{left: 225px;right: -225px;}
+	.box-info table{margin: 0 0 0 0;}
+	.box-info .table-responsive{border: none;}
+	.nav.navbar-nav.top-navbar li span.absolute {left: 25px;}
+	.box-info .additional .list-group{margin-bottom: -10px;}
+	.data-table-toolbar .btn{margin: 15px 0;}
+	.toolbar-btn-action{text-align: center;}
+	.gallery-wrap .column{width: 25%;}
+	.gallery-wrap .column-4{width: 33.33333333333333%;}
+	.gallery-wrap .column-3{width: 50%;}
+	.gallery-wrap .column .inner .img-wrap{
+		height: 70px;
+		overflow: hidden;
+		background: #ddd;
+	}
+	.gallery-wrap .column-3 .inner .img-wrap{
+		height: 140px;
+		overflow: hidden;
+		background: #ddd;
+	}
+	.gallery-wrap .column-4 .inner .img-wrap{
+		height: 105px;
+		overflow: hidden;
+		background: #ddd;
+	}
+	
+	footer{text-align: center;}
+	
+	.lock-screen{text-align: center;}
+	.ava-lock-screen{text-align: center; margin-bottom: 20px;}
+	.ava-lock-screen img{
+		width: 100px;
+		margin: 0;
+	}
+	
+	.la-pricing-table .la-col-4{width: 50%;}
+	.user-profile-sidebar{text-align: center;}
+	
+	/*
+	=========================================================================
+	UPDATE FOR VERSION 1.1
+	=========================================================================
+	*/
+	/** PRICING TABLES **/
+	.pricing-tables .header{padding: 15px 0 50px;}
+	.pricing-tables .header h3{font-size: 20px;}
+	.pricing-tables .circle-price-wrap{
+		width: 120px;
+		height: 120px;
+		top: 50px;
+		margin-left: -60px;
+	}
+	.pricing-tables .circle-price-wrap h2{
+		font-size: 35px;
+		padding: 5px 0 ;
+	}
+	.pricing-tables .circle-price-wrap h2 small{
+		font-size: 13px;
+		color: #909090;
+		display: block;
+	}
+	.pricing-tables table.table-inner > thead > tr > th,
+	.pricing-tables table.table-inner > tbody > tr > th,
+	.pricing-tables table.table-inner > tfoot > tr > th,
+	.pricing-tables table.table-inner > thead > tr > td,
+	.pricing-tables table.table-inner > tbody > tr > td,
+	.pricing-tables table.table-inner > tfoot > tr > td {
+		padding: 10px;
+		font-size: 13px;
+		vertical-align: middle;
+		border-top: 1px dotted #dddddd;
+	}
+	/** Weather widget **/
+	.weather-widget .overlay-weather-info i.weather-icon{font-size: 90px;}
+}
+
+@media (max-width: 480px){
+	.box-info .icon-box{
+		width: 100%;
+		display: block;
+	}
+	.box-info .icon-box,.box-info .text-box{text-align: center;}
+	.gallery-wrap .column,.gallery-wrap .column-3,.gallery-wrap .column-4{width: 33.33333333333333%;}
+	.gallery-wrap .column .inner .img-wrap,.gallery-wrap .column-3 .inner .img-wrap,.gallery-wrap .column-4 .inner .img-wrap{height: 70px;}
+	.login-wrap{margin: 20px 0 0 0;}
+	
+	/*
+	=========================================================================
+	UPDATE FOR VERSION 1.1
+	=========================================================================
+	*/
+	/** PRICING TABLES **/
+	.pricing-tables .header{padding: 5px 0 50px;}
+	.pricing-tables .header h3{font-size: 20px;}
+	.pricing-tables .circle-price-wrap{
+		width: 120px;
+		height: 120px;
+		top: 70px;
+		margin-left: -60px;
+	}
+	/** Weather widget **/
+	.weather-widget .overlay-weather-info .weather-info-city{margin: 5px 0;}
+	.weather-widget .overlay-weather-info .weather-info-city h4{font-size: 14px;}
+	.weather-widget .overlay-weather-info .weather-info-city h1{font-size: 20px;}
+	.weather-widget .overlay-weather-info i.weather-icon{font-size: 45px;}
+}
+
+@media (max-width: 360px){
+	.gallery-wrap .column,.gallery-wrap .column-3,.gallery-wrap .column-4{width: 50%;}
+	.gallery-wrap .column .inner .img-wrap,.gallery-wrap .column-3 .inner .img-wrap,.gallery-wrap .column-4 .inner .img-wrap{height: 80px;}
+	.la-pricing-table .la-col-4{width: 100%;}
+}
+
+@media (max-width: 320px){
+	.gallery-wrap .column,.gallery-wrap .column-3,.gallery-wrap .column-4{width: 50%;}
+	.gallery-wrap .column .inner .img-wrap,.gallery-wrap .column-3 .inner .img-wrap,.gallery-wrap .column-4 .inner .img-wrap{height: 70px;}
+}

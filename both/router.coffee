@@ -1,5 +1,5 @@
 Router.configure
-  layoutTemplate: "MasterLayout"
+  layoutTemplate: "masterLayout"
   loadingTemplate: "Loading"
   notFoundTemplate: "NotFound"
   routeControllerNameConverter: "camelCase"
@@ -9,5 +9,6 @@ Router.map ->
   
   @route "home",
     path: "/"
+    layoutTemplate: "homeLayout"
   @route "profile",
     path: "/profile"
