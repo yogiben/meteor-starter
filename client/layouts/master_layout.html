@@ -1,0 +1,73 @@
+<template name="masterLayout">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<div class="wrap master-layout {{$.Session.get 'sidebar'}}">
+	{{>header}}
+	<div class="container close-navbar">
+	{{> yield }}
+	</div>
+	{{>footer}}
+	</div>
+</template>
+
+<template name="header">
+	<div class="navbar navbar-default">
+		<div class="container close-navbar">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">{{{Config.logo}}}</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				{{#if currentUser}}
+				<ul class="nav navbar-nav navbar-right">
+					{{#if isInRole 'admin'}}
+					<li><a href="{{pathFor 'adminDashboard'}}">Admin</a></li> 
+					{{/if}}
+					<li class="dropdown hidden-xs">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{niceName}} <i class="fa fa-chevron-down i-xs"></i></a>
+						<ul class="dropdown-menu">
+							<li><a href="{{pathFor 'profile'}}">Profile</a></li>
+							<li class="divider"></li>
+							<li><a href="/sign-out">Logout</a></li>
+						</ul>
+					</li>
+
+					<li class="visible-xs">
+						<a href="{{pathFor 'profile'}}" class="close-navbar">Edit profile</a>
+					</li>
+					<li class="visible-xs">
+						<a class="close-navbar" href="/sign-out">Sign out</a>
+					</li>
+
+				</ul>
+				{{else}}
+				<ul class="nav navbar-nav navbar-right">
+					
+					<li>
+						<a class="close-navbar" href="/sign-up">Sign up</a>
+					</li>
+					<li>
+						<a class="close-navbar" href="/sign-in">Log in</a>
+					</li>
+					
+				</ul>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="footer">
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					{{{Config.footer}}}
+				</div>
+			</div>
+		</div>
+	</footer>
+</template>
