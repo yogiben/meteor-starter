@@ -1,5 +1,11 @@
 Schemas = {}
 
+Schemas.UserLanguage = new SimpleSchema(
+  code:
+    type: String
+    optional: true
+)
+
 Schemas.UserProfile = new SimpleSchema(
   firstName:
     type: String
