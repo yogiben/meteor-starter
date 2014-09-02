@@ -1,10 +1,12 @@
 Languages =
-	es:
+	spanish:
 		name: 'Spanish'
+		code: 'es'
 		targetName: 'Español'
 		transliteration: false
-	zh:
+	chinese:
 		name: 'Chinese'
+		code: 'es'
 		targetName: '中文'
 		transliteration: true
 

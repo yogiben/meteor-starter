@@ -1,14 +1,13 @@
 <template name="dashboardHeader">
     <header class="header">
-        <a href="/admin" class="logo">
-            {{#if dashboardConfig.name}}
-            {{dashboardConfig.name}}
+        <a href="{{pathFor 'dashboard'}}" class="logo">
+            {{#if Config.name}}
+            {{Config.name}}
             {{else}}
-            dashboard
+            Dashboard
             {{/if}}
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
-            <!-- Sidebar toggle button-->
             <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -17,22 +16,14 @@
             </a>
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
-                    <li>
-                        {{#if dashboardConfig.dashboard.homeUrl}}
-                        <a href="{{dashboardConfig.dashboard.homeUrl}}">Home</a>
-                        {{else}}
-                        <a href="/">Home</a>
-                        {{/if}}
-
-                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <span>dashboard<i class="caret"></i></span>
+                            <span>{{niceName}}<i class="caret"></i></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="">
-                            <a href="{{pathFor 'adminDashboardUsersEdit' _id=currentUser._id}}">
-                                Your profile
+                            <a href="{{pathFor 'profile'}}">
+                                Profile
                                 </a>
                             </li>
                             <li class="">
