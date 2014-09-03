@@ -10,5 +10,7 @@ Router.map ->
   @route "home",
     path: "/"
     layoutTemplate: "homeLayout"
+  @route "dashboard",
+  	path: "/dashboard"
   @route "profile",
     path: "/profile"
