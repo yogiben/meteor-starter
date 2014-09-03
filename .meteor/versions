@@ -47,6 +47,7 @@ mrt:underscore-string-latest@2.3.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.1
 ordered-dict@1.0.0
+raix:handlebar-helpers@0.1.2
 random@1.0.0
 reactive-dict@1.0.0
 reload@1.0.0
