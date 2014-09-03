@@ -34,7 +34,7 @@ Schemas.User = new SimpleSchema(
     type: Schemas.UserProfile
     optional: true
 
-  languages:
+  learning:
     type: [String]
     optional: true
 

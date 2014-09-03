@@ -1,4 +1,4 @@
 Accounts.onCreateUser (options, user) ->
-  user.languages = []
+  user.learning = []
   user.profile = {}
   user

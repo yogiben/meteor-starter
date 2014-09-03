@@ -19,3 +19,6 @@ UI.registerHelper 'Languages', ->
 UI.registerHelper '_Languages', ->
 	_.map Languages, (language)->
 		language
+
+UI.registerHelper 'learning', ->
+	Meteor.user().learning

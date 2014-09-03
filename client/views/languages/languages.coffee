@@ -1,9 +1,9 @@
 Template.languages.events
 	'click #confirm': () ->
-		languages = []
+		learning = []
 		_.each $( "input:checked" ), (input)->
-			languages.push $(input).attr('name').toLowerCase()
-			Meteor.users.update {_id:Meteor.userId()}, {$set: {languages:languages}}, (e,r)->
+			learning.push $(input).attr('name').toLowerCase()
+			Meteor.users.update {_id:Meteor.userId()}, {$set: {learning:learning}}, (e,r)->
 				if e
 					alert e
 				else
