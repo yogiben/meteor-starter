@@ -4,7 +4,9 @@
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
 				<div class="container">
+
 					<a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
+
 					<div id="main-nav" class="navbar-collapse">          
 						<ul class="social-links">
 							{{#if Config.twitter}}
@@ -26,11 +28,7 @@
 				<div class="col-lg-12 col-sm-12">
 					<h1>{{Config.title}}</h1>
 					<h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
-					{{#if currentUser}}
-					<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>
-					{{else}}
-					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>
-					{{/if}}
+					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>		
 				</div>
 <!-- 				<div class="col-lg-6 col-sm-6">
 					<img class="img-responsive" src="/img/image-header1.png" alt="">
@@ -73,14 +71,14 @@
 <section id="examples">
 	<div class="container wow fadeInUp animated">
 		<h1>Great features!</h1>
-		<h2>You can use {{BillsConfig.siteName}} to do anything</h2>
+		<h2>You can use {{Config.siteName}} to do anything</h2>
 	</div>
 </section>
 <section id="advantages">
 	<div class="row text-center">
 		<div class="col-lg-12 col-sm-12">
-			<h1>Goodbye online banking</h1>
-			<h2>Smart money transfer made possible by digital currency.</h2>
+			<h1>Your life will be better!</h1>
+			<h2>Meteor is great great great.</h2>
 		</div>
 	</div>
 	<div class="more-features">
@@ -91,14 +89,14 @@
 						<i class="fa fa-lock icons_right hidden-sm"></i>
 						<div class="text-align-right">
 							<h4>Feature</h4>
-							<p>Your data never leaves our Berlin office and we treat your details with the utmost respect.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</div>
 					</div>
 					<div class="features-item">
 						<i class="fa fa-reorder icons_right hidden-sm"></i>
 						<div class="text-align-right">
 							<h4>Fast</h4>
-							<p>We process your bill in one working day as soon as receive you Bitcoin payment.</p>
+							<p> Quo tandem modo? Nonne videmus quanta perturbatio rerum omnium consequatur</p>
 
 						</div>
 					</div>
@@ -106,7 +104,7 @@
 						<i class="fa fa-user icons_right hidden-sm"></i>
 						<div class="text-align-right">
 							<h4>Reliable</h4>
-							<p>We have a dedicated customer service team reachable by phone or email.</p>
+							<p> quanta confusio? Duo Reges: constructio interrete.</p>
 						</div>
 					</div>
 				</div>
@@ -120,21 +118,21 @@
 						<i class="fa fa-btc icons_left hidden-sm"></i>
 						<div class="text-align-left">
 							<h4>Cheap</h4>
-							<p>We currently charge only a {{fee}}% fee (minimum €{{minFee}}) and use the BitPay exchange rates.</p>
+							<p>Expectoque quid ad id, quod quaerebam, respondeas. Nos commodius agimus.</p>
 						</div>
 					</div>
 					<div class="features-item">
 						<i class="fa fa-send-o icons_left hidden-sm"></i>
 						<div class="text-align-left">
 							<h4>Convenient</h4>
-							<p>Convert your Bitcoin in cash to send without having to wait for an exchange.</p>
+							<p>Si qua in iis corrigere voluit, deteriora fecit.</p>
 						</div>
 					</div>
 					<div class="features-item">
 						<i class="fa fa-repeat icons_left hidden-sm"></i>
 						<div class="text-align-left">
 							<h4>Monthly Bills</h4>
-							<p>Pay your electricity, rent and phone bill in a single bitcoin transaction.</p>
+							<p>Si qua in iis corrigere voluit, deteriora fecit.</p>
 						</div>
 					</div>
 				</div>
@@ -208,14 +206,10 @@
 		<div class="row">
 			<div class="col-md-4 text-center wow fadeInDown animated">
 				<h3>
-					A complete solution for your bills. With Bitcoin.
+					Your life will be instantly better.
 				</h3>
 				<div class="text-center">
-				{{#if currentUser}}
-				<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>
-				{{else}}
 				<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>
-				{{/if}}
 			</div>			
 		</div>
 			<div class="col-md-8  wow fadeInUp animated">
