@@ -13,18 +13,19 @@ UI.registerHelper 'Users', ->
 UI.registerHelper 'Language', ->
 	Session.get 'Language'
 
-UI.registerHelper 'Languages',->
-	Session.get 'language'
-
-UI.registerHelper 'User', ->
-	Meteor.user()
-
 UI.registerHelper 'Languages', ->
 	Languages
 
-UI.registerHelper '_Languages', ->
-	_.map Languages, (language)->
-		language
-
 UI.registerHelper 'learning', ->
-	Meteor.user().learning
+	Session.get 'learning'
+
+UI.registerHelper 'Learning', ->
+	Session.get 'Learning'
+
+
+
+UI.registerHelper '_', ->
+	_
+
+UI.registerHelper 'User', ->
+	Meteor.user()
