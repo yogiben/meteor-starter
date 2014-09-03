@@ -1,12 +1,12 @@
 <template name="languages">
 	<div class="template-languages">
 		<div class="row">
-			{{#each _Languages}}
+			{{#each toArray Languages}}
 			  <div class="col-md-2 col-sm-4 col-xs-6">
 			  	<div class="checkbox">
 			  	  <label>
-			  	    <!-- <input type="checkbox" name="{{name}}" checked="{{#if _ 'isString' 'hi'}}true{{/if}}"> {{name}} -->
-			  	    <input type="checkbox" name="{{name}}" checked=""> {{name}}
+			  	    <input type="checkbox" name="{{name}}" checked="{{#if _.contains learning string}}true{{/if}}"> {{name}}
+			  	    <!-- <input type="checkbox" name="{{name}}" checked=""> {{name}} -->
 			  	  </label>
 			  	</div>
 			  </div>

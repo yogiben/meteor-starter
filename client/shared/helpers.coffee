@@ -22,6 +22,9 @@ UI.registerHelper 'learning', ->
 UI.registerHelper 'Learning', ->
 	Session.get 'Learning'
 
+UI.registerHelper 'toArray', ->
+	_.map Languages, (Language)->
+		Language
 
 
 UI.registerHelper '_', ->
