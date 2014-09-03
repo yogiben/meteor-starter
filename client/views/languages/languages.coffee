@@ -8,3 +8,8 @@ Template.languages.events
 					alert e
 				else
 					Router.go 'dashboard'
+	'change input': ->
+		Session.set 'learning_selected', $('input:checked').length
+
+Template.languages.rendered = ->
+	Session.set 'learning_selected', 1

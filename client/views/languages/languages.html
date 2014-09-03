@@ -15,7 +15,7 @@
 				<hr/>
 				<p>
 					<a href="{{pathFor 'home'}}" class="btn btn-default">Cancel</a>
-					<a id="confirm" class="btn btn-primary">Confirm</a>
+					<a id="confirm" class="btn btn-primary {{#if $.Session.equals 'learning_selected' 0}}disabled{{/if}}">Confirm</a>
 				</p>
 			</div>
 		</div>
