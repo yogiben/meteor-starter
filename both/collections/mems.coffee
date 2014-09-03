@@ -1,49 +1,19 @@
 Schemas = {}
 
-Words = new Meteor.Collection('words')
+Mems = new Meteor.Collection('mems');
 
-Schemas.WordsAttempts = new SimpleSchema
-	date:
-		type: Date
-	start:
-		type: Number
-	end:
-		type: Number
-
-Schemas.Words = new SimpleSchema
-	source:
-		type:String
-		max: 200
-
-	target:
+Schemas.Mems = new SimpleSchema
+	word:
 		type: String
-		max: 200
-
-	transliteration:
-		type: String
-		max: 200
-		optional: true
-
-	level:
-		type: Number
-		autoValue: ->
-			if @isInsert
-				true
-
-	mem:
-		type: [String]
 
 	content:
 		type: String
-		autoform:
-			rows: 5
 
 	createdAt: 
 		type: Date
 		autoValue: ->
 			if this.isInsert
 				new Date()
-
 	updatedAt:
 		type:Date
 		optional:true
@@ -63,9 +33,9 @@ Schemas.Words = new SimpleSchema
 					label: user.emails[0].address
 					value: user._id
 
-Words.attachSchema(Schemas.Words)
+Mems.attachSchema(Schemas.Mems)
 
 if Meteor.isClient
-	window.Words = Words
+	window.Mems = Mems
 else if Meteor.isServer
-	global.Words = Words
+	global.Mems = Mems

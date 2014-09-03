@@ -42,6 +42,16 @@ Schemas.Sets = new SimpleSchema
 					label: user.emails[0].address
 					value: user._id
 
+	public:
+		type: Boolean
+		autoValue: ->
+			false
+	
+	starter:
+		type: Boolean
+		autoValue: ->
+			false
+
 Sets.attachSchema(Schemas.Sets)
 
 if Meteor.isClient
