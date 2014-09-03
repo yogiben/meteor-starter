@@ -5,7 +5,7 @@ if Meteor.isClient
   Meteor.startup ->
     AccountsEntry.config
       homeRoute: '/'
-      dashboardRoute: '/'
+      dashboardRoute: '/dashboard'
       profileRoute: 'profile'
       passwordSignupFields: 'EMAIL_ONLY'
 

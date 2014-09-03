@@ -9,6 +9,9 @@
 
 					<div id="main-nav" class="navbar-collapse">          
 						<ul class="social-links">
+							{{#if $not currentUser}}
+							<a href="{{pathFor 'entrySignIn'}}"><li style="font-size:13px;">Login</li></a>
+							{{/if}}
 							{{#if Config.twitter}}
 							<a href="http://twitter.com/{{Config.twitter}}" target="_blank"><li class="fa fa-twitter"></li></a>
 							{{/if}}
@@ -28,7 +31,11 @@
 				<div class="col-lg-12 col-sm-12">
 					<h1>{{Config.title}}</h1>
 					<h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
+					{{#if currentUser}}
+					<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>	
+					{{else}}
 					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>		
+					{{/if}}
 				</div>
 <!-- 				<div class="col-lg-6 col-sm-6">
 					<img class="img-responsive" src="/img/image-header1.png" alt="">
@@ -209,7 +216,11 @@
 					A complete solution for your bills. With Bitcoin.
 				</h3>
 				<div class="text-center">
-				<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>
+				{{#if currentUser}}
+				<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>	
+				{{else}}
+				<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>		
+				{{/if}}
 			</div>			
 		</div>
 			<div class="col-md-8  wow fadeInUp animated">
