@@ -16,7 +16,10 @@ Schemas.UserProfile = new SimpleSchema(
 )
 
 Schemas.User = new SimpleSchema(
-  
+  username:
+    type: String
+    max: 50
+
   emails:
     type: [Object]
 

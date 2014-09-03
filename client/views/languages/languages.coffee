@@ -7,7 +7,7 @@ Template.languages.events
 				if e
 					alert e
 				else
-					Router.go 'dashboard'
+					Router.go 'dashboard', {username: Meteor.user().username}
 	'change input': ->
 		Session.set 'learning_selected', $('input:checked').length
 

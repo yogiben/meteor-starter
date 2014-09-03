@@ -32,7 +32,7 @@
 					<h1>{{Config.title}}</h1>
 					<h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
 					{{#if currentUser}}
-					<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>	
+					<a class="btn btn-primary" href="{{pathFor 'dashboard' username=User.username}}"><i class="fa fa-dashboard"></i> Dashboard</a>	
 					{{else}}
 					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>		
 					{{/if}}
@@ -217,7 +217,7 @@
 				</h3>
 				<div class="text-center">
 				{{#if currentUser}}
-				<a class="btn btn-primary" href="{{pathFor 'dashboard'}}"><i class="fa fa-dashboard"></i> Dashboard</a>	
+				<a class="btn btn-primary" href="{{pathFor 'dashboard' username=User.username}}"><i class="fa fa-dashboard"></i> Dashboard</a>	
 				{{else}}
 				<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>		
 				{{/if}}

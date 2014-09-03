@@ -2,10 +2,11 @@ UI.registerHelper 'Config', ->
 	Config
 
 UI.registerHelper 'niceName',->
-	if Meteor.user().profile.firstName
-		Meteor.user().profile.firstName
-	else
-		Meteor.user().emails[0].address
+	if Session.get('User')
+		if Session.get('User').profile.firstName
+			Session.get('User').profile.firstName
+		else
+			Session.get('User').emails[0].address
 
 UI.registerHelper 'Users', ->
 	Meteor.users
