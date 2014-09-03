@@ -1,23 +1,28 @@
 Schemas = {}
 
-Posts = new Meteor.Collection('posts');
+Sets = new Meteor.Collection('sets');
 
-Schemas.Posts = new SimpleSchema
-	title:
-		type:String
+Schemas.Sets = new SimpleSchema
+	name:
+		type: String
 		max: 60
 
-	content:
+	language:
 		type: String
-		autoform:
-			rows: 5
+
+	description:
+		type: String
+		optional: true
+
+	words:
+		type: [String]
+		optional: true
 
 	createdAt: 
 		type: Date
 		autoValue: ->
 			if this.isInsert
 				new Date()
-
 	updatedAt:
 		type:Date
 		optional:true
@@ -37,9 +42,9 @@ Schemas.Posts = new SimpleSchema
 					label: user.emails[0].address
 					value: user._id
 
-Posts.attachSchema(Schemas.Posts)
+Sets.attachSchema(Schemas.Sets)
 
 if Meteor.isClient
-	window.Posts = Posts
+	window.Sets = Sets
 else if Meteor.isServer
-	global.Posts = Posts
+	global.Sets = Sets
