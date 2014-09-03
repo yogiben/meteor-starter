@@ -1,3 +1,23 @@
 <template name="words">
-	{{$.Session.get 'language_name'}}
+	<div class="row">
+		<div class="col-md-12">
+			<h4>Quick Add</h4>
+			{{#autoForm id="quickAdd" collection="Words" type="insert"}}
+			{{>afQuickField name="target"}}
+			{{>afQuickField name="source"}}
+			{{>afQuickField name="sets"}}
+			<div class="hidden">{{>afQuickField name="language"}}</div>
+			<button type="submit" class="btn btn-primary">Add</button>
+			{{/autoForm}}
+		<hr/>
+		</div>
+		<div class="col-md-12">
+			<h4>Sets</h4>
+
+		</div>
+		<div class="col-md-12">
+			<h4>Sets</h4>
+
+		</div>
+	</div>
 </template>

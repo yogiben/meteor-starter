@@ -33,3 +33,12 @@ UI.registerHelper '_', ->
 
 UI.registerHelper 'User', ->
 	Meteor.user()
+
+UI.registerHelper 'Words', ->
+	Session.get 'Words'
+
+UI.registerHelper 'Sets', ->
+	Session.get 'Sets'
+
+UI.registerHelper 'Tests', ->
+	Session.get 'Tests'

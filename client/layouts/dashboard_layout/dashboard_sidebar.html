@@ -21,7 +21,7 @@
 				</li>
 				{{#each $.Session.get 'Learning'}}
 				<li>
-					<a href="{{pathFor 'words' language=string}}">
+					<a href="{{pathFor 'words' username=User.username language=string}}">
 						<span>{{name}}</span>
 					</a>
 				</li>

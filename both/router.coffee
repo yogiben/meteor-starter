@@ -53,7 +53,7 @@ Router.map ->
     action: ->
       Session.set 'language', @params.language
       Session.set 'title', Languages[@params.language].name
-      Session.set 'subtitle', ''
+      Session.set 'subtitle', 'Learning ' + 666 + ' of ' + 999 + ' words'
       @render()
 
 Router.waitOn ->

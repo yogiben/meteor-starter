@@ -12,12 +12,40 @@ Schemas.WordsAttempts = new SimpleSchema
 
 Schemas.Words = new SimpleSchema
 	source:
-		type:String
+		type: String
 		max: 200
+		label: 'English'
 
 	target:
 		type: String
 		max: 200
+		# label: ->
+		# 	if Meteor.isClient
+		# 		Languages[Session.get('Language')].name
+		# 	else
+		# 		'Target'
+
+	language:
+		type: String
+		autoValue: ->
+			if Meteor.isClient
+				Session.get 'language'
+		autoform:
+			options: ->
+				if Session.get 'language'
+					[
+						label: Session.get('Language').name
+						value: Session.get('Language').string
+					]
+				else
+					_.map Session.get('Learning'), (Language)->
+						label: Language.name
+						value: Language.string
+
+	sets:
+		type: [String]
+
+
 
 	transliteration:
 		type: String
@@ -28,15 +56,15 @@ Schemas.Words = new SimpleSchema
 		type: Number
 		autoValue: ->
 			if @isInsert
-				true
+				0
 
-	mem:
+	mems:
 		type: [String]
+		optional: true
 
-	content:
-		type: String
-		autoform:
-			rows: 5
+	history:
+		type: [Schemas.WordsAttempts]
+		optional:true
 
 	createdAt: 
 		type: Date
@@ -56,7 +84,6 @@ Schemas.Words = new SimpleSchema
 		autoValue: ->
 			if this.isInsert
 				Meteor.userId()
-
 		autoform:
 			options: ->
 				_.map Meteor.users.find().fetch(), (user)->
