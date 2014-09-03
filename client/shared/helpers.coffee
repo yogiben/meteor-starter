@@ -10,6 +10,12 @@ UI.registerHelper 'niceName',->
 UI.registerHelper 'Users', ->
 	Meteor.users
 
+UI.registerHelper 'Language', ->
+	Session.get 'Language'
+
+UI.registerHelper 'Languages',->
+	Session.get 'language'
+
 UI.registerHelper 'User', ->
 	Meteor.user()
 

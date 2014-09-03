@@ -14,7 +14,7 @@
 						<ol class="breadcrumb">
 							<li><a href="/admin/">Dashboard</a></li>
 							{{#if $.Session.get 'language'}}
-							<li><a href="/dashboard/{{$.Session.get 'language'}}/">LL</a></li>
+							<li><a href="/dashboard/{{$.Session.get 'language'}}/">{{Language.name}}</a></li>
 							{{/if}}
 <!-- 							
 							{{#if $.Session.equals 'admin_collection_page' 'new'}}

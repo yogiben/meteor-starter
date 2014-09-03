@@ -23,14 +23,14 @@ Router.map ->
     path: "/dashboard/add"
     layoutTemplate: "dashboardLayout"
     action: ->
-      Session.set 'language_name', @params.language
+      Session.set 'language', @params.language
       @render()
   @route "addL",
     template: 'add'
     path: "/dashboard/:language/add"
     layoutTemplate: "dashboardLayout"
     action: ->
-      Session.set 'language_name', @params.language
+      Session.set 'language', @params.language
       @render()
 
   @route "languages",
@@ -45,7 +45,7 @@ Router.map ->
     path: "/dashboard/:language/"
     layoutTemplate: "dashboardLayout"
     action: ->
-      Session.set 'language_name', @params.language
+      Session.set 'language', @params.language
       Session.set 'title', Languages[@params.language].name
       Session.set 'subtitle', ''
       @render()

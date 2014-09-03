@@ -19,13 +19,13 @@
 						<i class="fa fa-dashboard"></i> <span>Dashboard</span>
 					</a>
 				</li>
+				{{#each $.Session.get 'Learning'}}
 				<li>
-					<a href="{{pathFor 'words' language='spanish'}}">
-						<span>Spanish</span>
+					<a href="{{pathFor 'words' language=string}}">
+						<span>{{name}}</span>
 					</a>
 				</li>
-				{{#each languages}}
-				<li class="treeview">
+				<!-- <li class="treeview">
 					<a href="#">
 						<i class="fa fa-{{this.icon}}"></i>
 						<span>{{this.label}}</span>
@@ -35,7 +35,7 @@
 						<li><a href="{{pathFor 'adminDashboardNew' collection=this.name}}"><i class="fa fa-angle-double-right"></i> New</a></li>
 						<li><a href="{{pathFor 'adminDashboardView' collection=this.name}}"><i class="fa fa-angle-double-right"></i> View All</a></li>
 					</ul>
-				</li>
+				</li> -->
 				{{/each}}
 			</ul>
 		</section>
