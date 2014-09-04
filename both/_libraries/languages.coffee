@@ -14,7 +14,7 @@ Languages =
 		targetName: '中文'
 		transliteration: true
 		placeholder: '你好'
-		placeholderMultiple: 'Hola - ni2 hao3 - 你好'
+		placeholderMultiple: '你好 - ni2 hao3 - hello'
 
 
 if Meteor.isClient
