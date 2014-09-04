@@ -4,16 +4,44 @@
 			{{> add}}
 			</div>
 		<div class="col-md-12">
-			<h4>Sets</h4>
-		</div>
-		<div class="col-md-12">
-			<h4>Sets</h4>
+			<h4>Words</h4>
 			{{#each Sets}}
-			<a href="#afModal" data-target="modal" class="btn btn-primary" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a>
-			<a href="{{pathFor 'set' username=User.username language=language set=name}}" key="set" value="{{_id}}" class="btn {{#if _.isEqual Set._id _id}}btn-primary{{else}}btn-default{{/if}} session-set">{{name}}</a>
+			{{#if _.isEqual Set._id _id}}
+			<a href="{{pathFor 'words' username=User.username language=language}}" key="set" value="{{_id}}" class="btn btn-primary session-set">{{name}}</a>
+			{{else}}
+			<a href="{{pathFor 'set' username=User.username language=language set=name}}" key="set" value="{{_id}}" class="btn btn-default session-set">{{name}}</a>
+			{{/if}}
 			{{else}}
 			<p>No sets yet</p>
 			{{/each}}
+			{{#if Words}}
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>{{Language.name}}</th>
+						{{#if Language.transliteration}}
+						<th>Pronouncatiation</th>
+						{{/if}}
+						<th>English</th>
+						<th>Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each Words}}
+					<tr>
+						<td>{{target}}</td>
+						<td>{{transliteration}}</td>
+						<td>{{source}}</td>
+						<td><a href="#afModal" doc="{{_id}}" class="btn btn-primary btn-xs session-set" key="word" value="{{_id}}" collection="Words" omitFields="createdAt,owner,langauge,level,mems,history,updatedAt,sets" operation="update" buttonContent="Save" title="Edit Word" buttonClass="btn-success"><i class="fa fa-pencil"></i></a></td>
+						<td><a href="#afModal" class="btn btn-danger btn-xs" collection="Words" operation="remove" doc="{{_id}}" title="Delete Word"><i class="fa fa-times"></i></a></td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+			{{else}}
+			<p class="text-center">No words yet</p>
+			{{/if}}
 		</div>
 	</div>
 </template>

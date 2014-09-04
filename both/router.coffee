@@ -52,7 +52,8 @@ Router.map ->
     action: ->
       Session.set 'language', @params.language
       Session.set 'title', Languages[@params.language].name
-      Session.set 'subtitle', 'Learning ' + 666 + ' of ' + 999 + ' words'
+      Session.set 'subtitle', 'Learning ' + 666 + ' of ' + Session.get('Words').length + ' words'
+      Session.set 'set', null
       @render()
 
   @route "set",
@@ -62,7 +63,7 @@ Router.map ->
     action: ->
       Session.set 'language', @params.language
       Session.set 'title', Languages[@params.language].name
-      Session.set 'subtitle', 'Learning ' + 666 + ' of ' + 999 + ' words'
+      Session.set 'subtitle', 'Learning ' + 666 + ' of ' + Session.get('Words').length + ' words'
       Session.set 'set', @params.set
       @render()
 

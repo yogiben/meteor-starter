@@ -31,8 +31,19 @@ Template.dashboardLayout.events
 		if not _.contains addSets
 			addSets.push addSet
 			Session.set 'addSets',addSets
+			refreshSets()
 	'click .addSet.active': (e,t) ->
 		addSet = $(e.currentTarget).attr('set')
 		addSets = Session.get 'addSets'
 		addSets = _.without addSets, addSet
 		Session.set 'addSets',addSets
+		refreshSets()
+
+refreshSets = ->
+	addSets = []
+	_.each Session.get('addSets'), (addSet)->
+		addSets.push addSet
+	$('input[name="sets"]').val(addSets.toString())
+
+if Meteor.isClient
+	window['refreshSets'] = refreshSets

@@ -4,6 +4,9 @@ Deps.autorun ->
 	Meteor.subscribe 'sets'
 	Meteor.subscribe 'tests'
 
+	if Session.get 'word'
+		Session.set 'Word',Words.findOne {_id:Session.get('word')}
+
 	if Session.get 'language'
 		Session.set 'Language', Languages[Session.get 'language']
 		Session.set 'Sets', Sets.find({language: Session.get 'language'}).fetch()
@@ -27,7 +30,7 @@ Deps.autorun ->
 		Session.set 'Learning', _.map Session.get('learning'), (string)->
 			Languages[string]
 
-	Session.set 'Words', Words.find( Session.get('filter') ).fetch()
+	Session.set 'Words', Words.find( Session.get('filter') , {sort : {createdAt:-1}} ).fetch()
 	Session.set 'Sets', Sets.find( Session.get('languageFilter') ).fetch()
 	Session.set 'Tests', Tests.find( Session.get('languageFilter') ).fetch()
 
@@ -38,17 +41,17 @@ Deps.autorun ->
 		filter =
 			$and : [
 				{language: Session.get 'language'}
-				{set: Session.get 'set'}
+				{sets: { $all : [ Session.get('Set')._id ] }}
 			]
 		Session.set 'filter', filter
 	else if Session.get 'language'
 		filter =
 			language: Session.get 'language'
 		Session.set 'filter', filter
-	else if Session.get 'set'
-		filter =
-			set: Session.get 'set'
-		Session.set 'filter', filter
+	# else if Session.get 'set'
+	# 	filter =
+	# 		set: Session.get 'set'
+	# 	Session.set 'filter', filter
 	else
 		Session.set 'filter', {}
 
@@ -83,7 +86,12 @@ Deps.autorun ->
 			}
 
 	Session.setDefault 'addSets',[]
+	Session.setDefault 'languageAddSets',[]
 
+	if Session.get('addSets') and Session.get('language')
+		languageAddSets = _.filter Session.get('addSets'), (addSet)->
+			Sets.findOne({_id:addSet}).language == Session.get('language')
+		Session.set 'languageAddSets', languageAddSets
 
 
 

@@ -2,13 +2,12 @@
 	<h4><a class="addType session-set {{#if $.Session.equals 'addType' 'quick'}}active{{/if}}" key="addType" value="quick">Quick Add</a>
 			 / 
 			<a class="addType session-set {{#if $.Session.equals 'addType' 'multiple'}}active{{/if}}" key="addType" value="multiple">Multiple</a></h4>
-			{{#autoForm id="quickAdd" collection="Words" type="insert"}}
+			{{#autoForm id="add" collection="Words" type="insert"}}
 			<p class="row">
 				{{> UI.dynamic template=addType}}
 			</p>
 			{{> addSets}}
 			<div class="hidden">{{>afQuickField name="language"}}</div>
-			<br/>
 			<button type="submit" class="btn btn-primary">Add Word</button>
 		{{/autoForm}}
 </template>
@@ -23,7 +22,7 @@
 	<div class="col-md-3">
 	<div class="input-group">
 		  <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
-		  <input type="text" name="target" placeholder="{{Config.placeholder}}" required="" data-schema-key="source" maxlength="200" class="form-control">
+		  <input type="text" name="source" placeholder="{{Config.placeholder}}" required="" data-schema-key="source" maxlength="200" class="form-control">
 		</div>
 	</div>
 </template>
@@ -37,9 +36,10 @@
 
 <template name="addSets">
 	<p>
-		<a href="#afModal" data-target="modal" class="btn btn-primary btn-xs" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a>
+		<!-- <a href="#afModal" data-target="modal" class="btn btn-primary btn-xs" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a> -->
 		{{#each Sets}}
 		<a value="{{_id}}" set="{{_id}}" class="addSet btn {{#if _.contains addSets _id}}btn-primary active{{else}}btn-default{{/if}} btn-xs">{{name}}</a>
 		{{/each}}
+		<input type="hidden" name="sets" maxlength="200" class="form-control">
 	</p>
 </template>

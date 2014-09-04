@@ -1,4 +1,4 @@
-AutoForm.hooks postsForm:
-  docToForm: (doc) ->
-    doc.sets = ->
-    	# _.each $(.)
+AutoForm.hooks add:
+  formToDoc: (doc) ->
+    doc.sets = Session.get('languageAddSets')
+    doc
