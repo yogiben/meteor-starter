@@ -19,3 +19,9 @@
 #     return
 
 #   return
+
+Template.dashboardLayout.events
+	'click .session-set': (e,t) ->
+		key = $(e.currentTarget).attr('key')
+		value =  $(e.currentTarget).attr('value')
+		Session.set key, value

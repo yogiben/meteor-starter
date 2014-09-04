@@ -9,10 +9,26 @@ Schemas.Sets = new SimpleSchema
 
 	language:
 		type: String
+		autoValue: ->
+			if Meteor.isClient
+				Session.get 'language'
+		autoform:
+			options: ->
+				if Session.get 'language'
+					[
+						label: Session.get('Language').name
+						value: Session.get('Language').string
+					]
+				else
+					_.map Session.get('Learning'), (Language)->
+						label: Language.name
+						value: Language.string
 
 	description:
 		type: String
 		optional: true
+		autoform:
+			rows: 3
 
 	words:
 		type: [String]
@@ -44,11 +60,13 @@ Schemas.Sets = new SimpleSchema
 
 	public:
 		type: Boolean
+		optional: true
 		autoValue: ->
 			false
 	
 	starter:
 		type: Boolean
+		optional: true
 		autoValue: ->
 			false
 

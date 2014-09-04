@@ -44,6 +44,7 @@ Schemas.Words = new SimpleSchema
 
 	sets:
 		type: [String]
+		optional:true
 
 
 
@@ -57,7 +58,6 @@ Schemas.Words = new SimpleSchema
 		autoValue: ->
 			if @isInsert
 				0
-
 	mems:
 		type: [String]
 		optional: true

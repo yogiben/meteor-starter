@@ -13,11 +13,15 @@
 		</div>
 		<div class="col-md-12">
 			<h4>Sets</h4>
-
+			<a href="#afModal" data-target="modal" class="btn btn-primary" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set">New set</a>
 		</div>
 		<div class="col-md-12">
 			<h4>Sets</h4>
-
+			{{#each $.Session.get 'Sets'}}
+			<a href="{{pathFor 'set' username=User.username language=language set=name}}" key="set" value="{{_id}}" class="btn {{#if _.isEqual Set._id _id}}btn-primary{{else}}btn-default{{/if}} session-set">{{name}}</a>
+			{{else}}
+			<p>No sets yet</p>
+			{{/each}}
 		</div>
 	</div>
 </template>

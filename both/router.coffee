@@ -49,11 +49,21 @@ Router.map ->
   @route "words",
     path: "/:username/:language/"
     layoutTemplate: "dashboardLayout"
-
     action: ->
       Session.set 'language', @params.language
       Session.set 'title', Languages[@params.language].name
       Session.set 'subtitle', 'Learning ' + 666 + ' of ' + 999 + ' words'
+      @render()
+
+  @route "set",
+    path: "/:username/:language/:set"
+    template: 'words'
+    layoutTemplate: "dashboardLayout"
+    action: ->
+      Session.set 'language', @params.language
+      Session.set 'title', Languages[@params.language].name
+      Session.set 'subtitle', 'Learning ' + 666 + ' of ' + 999 + ' words'
+      Session.set 'set', @params.set
       @render()
 
 Router.waitOn ->

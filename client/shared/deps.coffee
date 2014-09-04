@@ -12,7 +12,11 @@ Deps.autorun ->
 		Session.set 'Sets', null
 
 	if Session.get 'set'
-		Session.set 'Set', Sets.findOne {_id: Session.get('set')}
+		Session.set 'Set', Sets.findOne 
+			$and: [
+				owner: Meteor.userId()
+				name: Session.get 'set'
+			]
 	else
 		Session.set 'Set', null
 
@@ -24,10 +28,10 @@ Deps.autorun ->
 			Languages[string]
 
 	Session.set 'Words', Words.find( Session.get('filter') ).fetch()
-	Session.set 'Sets', Sets.find( Session.get('filter') ).fetch()
-	Session.set 'Tests', Tests.find( Session.get('filter') ).fetch()
+	Session.set 'Sets', Sets.find( Session.get('languageFilter') ).fetch()
+	Session.set 'Tests', Tests.find( Session.get('languageFilter') ).fetch()
 
-	#Filters
+	#Word Filter
 	Session.setDefault 'filter', {}
 
 	if Session.get('language') and Session.get('set')
@@ -45,6 +49,16 @@ Deps.autorun ->
 		filter =
 			set: Session.get 'set'
 		Session.set 'filter', filter
+	else
+		Session.set 'filter', {}
+
+	#Sets and Test filter
+	if Session.get 'language'
+		languageFilter =
+			language: Session.get 'language'
+		Session.set 'languageFilter', languageFilter
+	else
+		Session.set 'languageFilter', {}
 
 
 	#Accounts entry routing bug
@@ -56,3 +70,6 @@ Deps.autorun ->
 
 	if Meteor.user()
 		Session.set 'User', Meteor.user()
+
+	if Meteor.user()
+		Session.set 'username', Meteor.user().username

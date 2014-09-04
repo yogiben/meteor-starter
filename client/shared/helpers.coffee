@@ -27,6 +27,12 @@ UI.registerHelper 'toArray', ->
 	_.map Languages, (Language)->
 		Language
 
+UI.registerHelper 'set', ->
+	Session.get 'set'
+
+UI.registerHelper 'Set', ->
+	Session.get 'Set'
+
 
 UI.registerHelper '_', ->
 	_
