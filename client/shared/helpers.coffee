@@ -36,6 +36,9 @@ UI.registerHelper 'set', ->
 UI.registerHelper 'Set', ->
 	Session.get 'Set'
 
+UI.registerHelper 'multiple', ->
+	Session.get 'multiple'
+
 
 UI.registerHelper '_', ->
 	_

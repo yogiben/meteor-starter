@@ -94,4 +94,4 @@ Deps.autorun ->
 		Session.set 'languageAddSets', languageAddSets
 
 
-
+	Session.setDefault 'multiple', []

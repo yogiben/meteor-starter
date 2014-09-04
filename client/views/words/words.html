@@ -2,7 +2,8 @@
 	<div class="row">
 		<div class="col-md-12">
 			{{> add}}
-			</div>
+			<hr/>
+		</div>
 		<div class="col-md-12">
 			<h4>Words</h4>
 			{{#each Sets}}
@@ -31,7 +32,9 @@
 					{{#each Words}}
 					<tr>
 						<td>{{target}}</td>
+						{{#if Language.transliteration}}
 						<td>{{transliteration}}</td>
+						{{/if}}
 						<td>{{source}}</td>
 						<td><a href="#afModal" doc="{{_id}}" class="btn btn-primary btn-xs session-set" key="word" value="{{_id}}" collection="Words" omitFields="createdAt,owner,langauge,level,mems,history,updatedAt,sets" operation="update" buttonContent="Save" title="Edit Word" buttonClass="btn-success"><i class="fa fa-pencil"></i></a></td>
 						<td><a href="#afModal" class="btn btn-danger btn-xs" collection="Words" operation="remove" doc="{{_id}}" title="Delete Word"><i class="fa fa-times"></i></a></td>

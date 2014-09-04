@@ -8,7 +8,6 @@
 			</p>
 			{{> addSets}}
 			<div class="hidden">{{>afQuickField name="language"}}</div>
-			<button type="submit" class="btn btn-primary">Add Word</button>
 		{{/autoForm}}
 </template>
 
@@ -25,18 +24,25 @@
 		  <input type="text" name="source" placeholder="{{Config.placeholder}}" required="" data-schema-key="source" maxlength="200" class="form-control">
 		</div>
 	</div>
+	<div class="col-md-3">
+		<button type="submit" class="btn btn-primary btn-sm">Add Word</button>
+	</div>
 </template>
 
 <template name="multiple">
-	<div class="col-md-3">
+	<div class="col-md-6">
 		<small>Separate with a '-' and new line</small>
 		<textarea name="multiple" id="multiple" cols="30" rows="10" class="form-control" placeholder="{{Language.placeholderMultiple}}"></textarea>
+	</div>
+	<div class="col-md-6">
+		<p>{{getLength multiple}} words</p>
+		<button id="addMultiple" class="btn btn-primary {{#if $not multiple}}disabled{{/if}}">Add</button>
 	</div>
 </template>
 
 <template name="addSets">
 	<p>
-		<!-- <a href="#afModal" data-target="modal" class="btn btn-primary btn-xs" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a> -->
+		<a href="#afModal" data-target="modal" class="btn btn-default btn-xs" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a>
 		{{#each Sets}}
 		<a value="{{_id}}" set="{{_id}}" class="addSet btn {{#if _.contains addSets _id}}btn-primary active{{else}}btn-default{{/if}} btn-xs">{{name}}</a>
 		{{/each}}
