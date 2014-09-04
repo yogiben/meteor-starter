@@ -1,23 +1,15 @@
 <template name="words">
 	<div class="row">
 		<div class="col-md-12">
-			<h4>Quick Add</h4>
-			{{#autoForm id="quickAdd" collection="Words" type="insert"}}
-			{{>afQuickField name="target"}}
-			{{>afQuickField name="source"}}
-			{{>afQuickField name="sets"}}
-			<div class="hidden">{{>afQuickField name="language"}}</div>
-			<button type="submit" class="btn btn-primary">Add</button>
-			{{/autoForm}}
-		<hr/>
+			{{> add}}
+			</div>
+		<div class="col-md-12">
+			<h4>Sets</h4>
 		</div>
 		<div class="col-md-12">
 			<h4>Sets</h4>
-			<a href="#afModal" data-target="modal" class="btn btn-primary" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set">New set</a>
-		</div>
-		<div class="col-md-12">
-			<h4>Sets</h4>
-			{{#each $.Session.get 'Sets'}}
+			{{#each Sets}}
+			<a href="#afModal" data-target="modal" class="btn btn-primary" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a>
 			<a href="{{pathFor 'set' username=User.username language=language set=name}}" key="set" value="{{_id}}" class="btn {{#if _.isEqual Set._id _id}}btn-primary{{else}}btn-default{{/if}} session-set">{{name}}</a>
 			{{else}}
 			<p>No sets yet</p>

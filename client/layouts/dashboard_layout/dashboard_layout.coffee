@@ -25,3 +25,14 @@ Template.dashboardLayout.events
 		key = $(e.currentTarget).attr('key')
 		value =  $(e.currentTarget).attr('value')
 		Session.set key, value
+	'click .addSet': (e,t) ->
+		addSet = $(e.currentTarget).attr('set')
+		addSets = Session.get 'addSets'
+		if not _.contains addSets
+			addSets.push addSet
+			Session.set 'addSets',addSets
+	'click .addSet.active': (e,t) ->
+		addSet = $(e.currentTarget).attr('set')
+		addSets = Session.get 'addSets'
+		addSets = _.without addSets, addSet
+		Session.set 'addSets',addSets

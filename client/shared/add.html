@@ -1,0 +1,45 @@
+<template name="add">
+	<h4><a class="addType session-set {{#if $.Session.equals 'addType' 'quick'}}active{{/if}}" key="addType" value="quick">Quick Add</a>
+			 / 
+			<a class="addType session-set {{#if $.Session.equals 'addType' 'multiple'}}active{{/if}}" key="addType" value="multiple">Multiple</a></h4>
+			{{#autoForm id="quickAdd" collection="Words" type="insert"}}
+			<p class="row">
+				{{> UI.dynamic template=addType}}
+			</p>
+			{{> addSets}}
+			<div class="hidden">{{>afQuickField name="language"}}</div>
+			<br/>
+			<button type="submit" class="btn btn-primary">Add Word</button>
+		{{/autoForm}}
+</template>
+
+<template name="quick">
+	<div class="col-md-3">
+		<div class="input-group">
+		  <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span>
+		  <input type="text" name="target" placeholder="{{Language.placeholder}}" required="" data-schema-key="target" maxlength="200" class="form-control">
+		</div>
+	</div>
+	<div class="col-md-3">
+	<div class="input-group">
+		  <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span>
+		  <input type="text" name="target" placeholder="{{Config.placeholder}}" required="" data-schema-key="source" maxlength="200" class="form-control">
+		</div>
+	</div>
+</template>
+
+<template name="multiple">
+	<div class="col-md-3">
+		<small>Separate with a '-' and new line</small>
+		<textarea name="multiple" id="multiple" cols="30" rows="10" class="form-control" placeholder="{{Language.placeholderMultiple}}"></textarea>
+	</div>
+</template>
+
+<template name="addSets">
+	<p>
+		<a href="#afModal" data-target="modal" class="btn btn-primary btn-xs" collection="Sets" omitFields="createdAt,updatedAt,owner,public,starter,words,description" operation="insert" buttonContent="Create set" title="Add a new set"><i class="fa fa-plus"></i></a>
+		{{#each Sets}}
+		<a value="{{_id}}" set="{{_id}}" class="addSet btn {{#if _.contains addSets _id}}btn-primary active{{else}}btn-default{{/if}} btn-xs">{{name}}</a>
+		{{/each}}
+	</p>
+</template>

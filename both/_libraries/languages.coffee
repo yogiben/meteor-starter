@@ -5,14 +5,16 @@ Languages =
 		code: 'es'
 		targetName: 'Español'
 		transliteration: false
-		targetPlaceholder: 'Hola'
+		placeholder: 'Hola'
+		placeholderMultiple: 'Hola - Hello'
 	chinese:
 		name: 'Chinese'
 		string: 'chinese'
 		code: 'es'
 		targetName: '中文'
 		transliteration: true
-		targetPlaceholder: '你好'
+		placeholder: '你好'
+		placeholderMultiple: 'Hola - ni2 hao3 - 你好'
 
 
 if Meteor.isClient

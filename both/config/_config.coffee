@@ -12,6 +12,7 @@ Config =
 	facebook: 'benjaminpeterjones'
 	blog: 'http://benjaminpeterjones.com'
 	about: 'http://benjaminpeterjones.com'
+	placeholder: 'Hello'
 
 if Meteor.isClient
 	window.Config = Config

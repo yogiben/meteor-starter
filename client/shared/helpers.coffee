@@ -48,3 +48,9 @@ UI.registerHelper 'Sets', ->
 
 UI.registerHelper 'Tests', ->
 	Session.get 'Tests'
+
+UI.registerHelper 'addType',->
+	Session.get 'addType'
+
+UI.registerHelper 'addSets',->
+	Session.get 'addSets'

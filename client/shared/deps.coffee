@@ -60,6 +60,8 @@ Deps.autorun ->
 	else
 		Session.set 'languageFilter', {}
 
+	Session.setDefault 'addType','quick'
+
 
 	#Accounts entry routing bug
 	if Meteor.userId() and not _.isNull(Router.current()) and Router.current().route.name == 'entrySignIn'
@@ -73,3 +75,15 @@ Deps.autorun ->
 
 	if Meteor.user()
 		Session.set 'username', Meteor.user().username
+
+	if Session.get 'learning'
+		_.each Session.get('learning'), (learning)->
+			Session.setDefault learning, {
+				sets: []
+			}
+
+	Session.setDefault 'addSets',[]
+
+
+
+
