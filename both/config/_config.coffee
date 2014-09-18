@@ -12,6 +12,7 @@ Config =
 	facebook: 'benjaminpeterjones'
 	blog: 'http://benjaminpeterjones.com'
 	about: 'http://benjaminpeterjones.com'
+	username: false
 
 if Meteor.isClient
 	window.Config = Config
