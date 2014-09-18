@@ -1,8 +1,8 @@
 Schemas = {}
 
-@Posts = new Meteor.Collection('posts');
+@Comments = new Meteor.Collection('comments');
 
-Schemas.Posts = new SimpleSchema
+Schemas.Comments = new SimpleSchema
 	title:
 		type:String
 		max: 60
@@ -24,6 +24,15 @@ Schemas.Posts = new SimpleSchema
 		autoValue: ->
 			if this.isUpdate
 				new Date()
+
+	post:
+		type: String
+		autoform:
+			options: ->
+				_.map Posts.find().fetch(), (post)->
+					label: post.title
+					value: post._id
+
 	owner: 
 		type: String
 		regEx: SimpleSchema.RegEx.Id
@@ -36,4 +45,4 @@ Schemas.Posts = new SimpleSchema
 					label: user.emails[0].address
 					value: user._id
 
-Posts.attachSchema(Schemas.Posts)
+Comments.attachSchema(Schemas.Comments)

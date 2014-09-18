@@ -11,9 +11,6 @@ AdminConfig =
 			color: 'green'
 			icon: 'comments'
 		}
-		Pages: {
-			color: 'yellow'
-		}
 	dashboard:
 		homeUrl: '/dashboard'
 		# widgets: [
