@@ -1,4 +1,6 @@
 AutoForm.hooks
 	updateProfile:
-		onSuccess: ->
-			Router.go('home')
+		onSuccess: (operation, result, template)->
+			App.alertSuccess 'Profile Updated'
+		onError: (operation, error, template)->
+			App.alertError error

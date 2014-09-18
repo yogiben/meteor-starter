@@ -1,6 +1,7 @@
 <template name="profile">
 	<div class="container">
 		<div class="row" id="champion-messages">
+			{{> alert}}
 			<h1>{{niceName}}</h1>
 			{{#autoForm id="updateProfile" collection=Users doc=currentUser type="update"}}
 			{{> afQuickField name='profile'}}
