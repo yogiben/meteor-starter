@@ -3,7 +3,18 @@
 		<div class="row" id="champion-messages">
 			{{> alert}}
 			<h1>{{niceName}}</h1>
-			{{#autoForm id="updateProfile" collection=Users doc=currentUser type="update"}}
+			<div class="panel panel-default">
+				<div class="panel-heading">
+						<h3 class="panel-title">Profile Picture</h3>
+				</div>
+				<div class="panel-body">
+					{{#autoForm id="updatePicture" collection=Users doc=currentUser type="update" omitFields="picture"}}
+						{{> afQuickField name='profile.picture'}}
+					<button type="submit" class="btn btn-primary">Update</button>
+					{{/autoForm}}
+				</div>
+			</div>
+			{{#autoForm id="updateProfile" collection=Users doc=currentUser type="update" omitFields="picture"}}
 			{{> afQuickField name='profile'}}
 			<button type="submit" class="btn btn-primary">Update</button>
 			{{/autoForm}}
