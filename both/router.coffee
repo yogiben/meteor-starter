@@ -14,5 +14,17 @@ Router.map ->
   	path: "/dashboard"
   @route "profile",
     path: "/profile"
+    waitOn: ->
+      Meteor.subscribe 'profilePictures'
   @route "account",
     path: "/account"
+
+
+# Router.onRun (->
+#   console.log @
+# ),
+#   except: "home"
+
+Router.waitOn ->
+  Meteor.subscribe 'user'
+  Meteor.subscribe 'userPicture'

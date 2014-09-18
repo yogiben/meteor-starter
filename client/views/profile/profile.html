@@ -8,8 +8,8 @@
 						<h3 class="panel-title">Profile Picture</h3>
 				</div>
 				<div class="panel-body">
-					{{#autoForm id="updatePicture" collection=Users doc=currentUser type="update" omitFields="picture"}}
-						{{> afQuickField name='profile.picture'}}
+					{{#autoForm id="updatePicture" collection=Users doc=currentUser type="update" omitFields="profile.picture"}}
+						{{> afFileUpload name="profile.picture" collection='ProfilePictures'}}
 					<button type="submit" class="btn btn-primary">Update</button>
 					{{/autoForm}}
 				</div>
