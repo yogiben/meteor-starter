@@ -14,3 +14,5 @@ Router.map ->
   	path: "/dashboard"
   @route "profile",
     path: "/profile"
+  @route "account",
+    path: "/account"
