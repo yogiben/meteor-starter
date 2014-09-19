@@ -17,5 +17,7 @@ joshowens:accounts-entry
 mizzao:bootstrap-3
 chrismbeckett:fontawesome4
 raix:handlebar-helpers
-yogiben:admin@0.9.3
-
+yogiben:admin
+cfs:standard-packages
+cfs:gridfs
+yogiben:autoform-file

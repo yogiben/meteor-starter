@@ -1,6 +1,11 @@
 Schemas = {}
 
 Schemas.UserProfile = new SimpleSchema(
+
+  picture:
+    type: String
+    optional:true
+
   firstName:
     type: String
     optional: true
@@ -12,6 +17,12 @@ Schemas.UserProfile = new SimpleSchema(
   birthday:
     type: Date
     optional: true
+
+  bio:
+    type: String
+    optional: true
+    autoform:
+      rows: 4
 
   country:
     type: String
@@ -226,6 +237,12 @@ Schemas.UserProfile = new SimpleSchema(
 )
 
 Schemas.User = new SimpleSchema(
+
+  username:
+    type: String
+    regEx: /^[a-z0-9A-Z_]{3,15}$/
+    optional: true
+
   
   emails:
     type: [Object]
