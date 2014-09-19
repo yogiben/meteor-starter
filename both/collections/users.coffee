@@ -5,6 +5,7 @@ Schemas.UserProfile = new SimpleSchema(
   picture:
     type: String
     optional:true
+    label: 'Profile picture'
 
   firstName:
     type: String
