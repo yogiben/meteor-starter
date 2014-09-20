@@ -10,7 +10,8 @@
 						<h3 class="panel-title">Account Details</h3>
 				  </div>
 				  <div class="panel-body">
-						Update email - change password
+				  		{{> alert}}
+						{{> updatePassword}}
 				  </div>
 			</div>
 			<div class="panel panel-danger">
@@ -41,8 +42,20 @@
 						</p>
 				  </div>
 			</div>
-
-
 		</div>
 	</div>
+</template>
+
+<template name="updatePassword">
+  {{#autoForm schema=NCSchemas.updatePassword id="updatePassword"}}
+  <fieldset>
+    <legend>Change Password</legend>
+    {{> afQuickField name="old" type="password"}}
+    {{> afQuickField name="new" type="password"}}
+    {{> afQuickField name="confirm" type="password"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Change Password</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
 </template>
