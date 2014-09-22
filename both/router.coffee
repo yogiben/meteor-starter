@@ -11,7 +11,13 @@ Router.map ->
     path: "/"
     layoutTemplate: "homeLayout"
   @route "dashboard",
-  	path: "/dashboard"
+    path: "/dashboard"
+    waitOn: ->
+      [
+        Meteor.subscribe 'posts'
+      ]
+    data: ->
+      Posts: Posts.find().fetch()
   @route "profile",
     path: "/profile"
     waitOn: ->
