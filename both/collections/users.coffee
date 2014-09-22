@@ -5,6 +5,7 @@ Schemas.UserProfile = new SimpleSchema(
   picture:
     type: String
     optional:true
+    label: 'Profile picture'
 
   firstName:
     type: String
@@ -27,13 +28,14 @@ Schemas.UserProfile = new SimpleSchema(
   country:
     type: String
     allowedValues: [
+      "Select Country"
       "Afghanistan"
       "Albania"
       "Algeria"
       "Andorra"
       "Angola"
       "Anguilla"
-      "Antigua &amp; Barbuda"
+      "Antigua & Barbuda"
       "Argentina"
       "Armenia"
       "Aruba"
@@ -51,7 +53,7 @@ Schemas.UserProfile = new SimpleSchema(
       "Bermuda"
       "Bhutan"
       "Bolivia"
-      "Bosnia &amp; Herzegovina"
+      "Bosnia & Herzegovina"
       "Botswana"
       "Brazil"
       "British Virgin Islands"
@@ -182,7 +184,7 @@ Schemas.UserProfile = new SimpleSchema(
       "Romania"
       "Russia"
       "Rwanda"
-      "Saint Pierre &amp; Miquelon"
+      "Saint Pierre & Miquelon"
       "Samoa"
       "San Marino"
       "Satellite"
@@ -198,7 +200,7 @@ Schemas.UserProfile = new SimpleSchema(
       "South Korea"
       "Spain"
       "Sri Lanka"
-      "St Kitts &amp; Nevis"
+      "St Kitts & Nevis"
       "St Lucia"
       "St Vincent"
       "St. Lucia"
@@ -215,11 +217,11 @@ Schemas.UserProfile = new SimpleSchema(
       "Timor L'Este"
       "Togo"
       "Tonga"
-      "Trinidad &amp; Tobago"
+      "Trinidad & Tobago"
       "Tunisia"
       "Turkey"
       "Turkmenistan"
-      "Turks &amp; Caicos"
+      "Turks & Caicos"
       "Uganda"
       "Ukraine"
       "United Arab Emirates"

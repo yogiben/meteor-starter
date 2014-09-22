@@ -1,48 +1,59 @@
 <template name="account">
 	<div class="container">
 		<div class="row" id="champion-messages">
-			<!-- {{#autoForm id="updateEmail" collection=Users doc=currentUser type="update"}}
-			{{> afQuickField name='profile'}}
-			<button type="submit" class="btn btn-primary">Update</button>
-			{{/autoForm}} -->
-			<div class="panel panel-default">
-				  <div class="panel-heading">
-						<h3 class="panel-title">Account Details</h3>
-				  </div>
-				  <div class="panel-body">
-						Update email - change password
-				  </div>
-			</div>
-			<div class="panel panel-danger">
-				  <div class="panel-heading">
-						<h3 class="panel-title">Delete Account</h3>
-				  </div>
-				  <div class="panel-body">
-						<p>There's no coming back from this one</p>
-						<p>
-							<a class="btn btn-danger" data-toggle="modal" href='#delete-account'>Delete Account</a>
-							<div class="modal fade" id="delete-account">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-											<h4 class="modal-title">Delete account</h4>
-										</div>
-										<div class="modal-body">
-											Are you sure you want to delete your account?
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											<button type="button" class="btn btn-danger">Delete</button>
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-default">
+					  <div class="panel-heading">
+							<h3 class="panel-title">Account Details</h3>
+					  </div>
+					  <div class="panel-body">
+					  		{{> alert}}
+							{{> updatePassword}}
+					  </div>
+				</div>
+				<div class="panel panel-danger">
+					  <div class="panel-heading">
+							<h3 class="panel-title">Delete Account</h3>
+					  </div>
+					  <div class="panel-body">
+							<p>There's no coming back from this one</p>
+							<p>
+								<a class="btn btn-danger" data-toggle="modal" href='#delete-account'>Delete Account</a>
+								<div class="modal fade" id="delete-account">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+												<h4 class="modal-title">Delete account</h4>
+											</div>
+											<div class="modal-body">
+												Are you sure you want to delete your account?
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-danger">Delete</button>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</p>
-				  </div>
+							</p>
+					  </div>
+				</div>
 			</div>
-
-
 		</div>
 	</div>
+</template>
+
+<template name="updatePassword">
+  {{#autoForm schema=NCSchemas.updatePassword id="updatePassword"}}
+  <fieldset>
+    <legend>Change Password</legend>
+    {{> afQuickField name="old" type="password"}}
+    {{> afQuickField name="new" type="password"}}
+    {{> afQuickField name="confirm" type="password"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Change Password</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
 </template>

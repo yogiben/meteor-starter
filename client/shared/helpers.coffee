@@ -1,14 +1,17 @@
-UI.registerHelper 'Config', ->
+Template.registerHelper 'Config', ->
 	Config
 
-UI.registerHelper 'niceName',->
+Template.registerHelper 'niceName',->
 	if Meteor.user().profile.firstName
 		Meteor.user().profile.firstName
 	else
 		Meteor.user().emails[0].address
 
-UI.registerHelper 'Users', ->
+Template.registerHelper 'Users', ->
 	Meteor.users
 
-UI.registerHelper 'User', ->
+Template.registerHelper 'User', ->
 	Meteor.user()
+
+Template.registerHelper 'NCSchemas', ->
+	NCSchemas

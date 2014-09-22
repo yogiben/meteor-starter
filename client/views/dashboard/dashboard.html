@@ -1,13 +1,42 @@
 <template name="dashboard">
 	<div class="container">
 		<div class="row" id="champion-messages">
-			<h1>Dashboard</h1>
-			<p>
-				username: <strong>test@code2create</strong>
-				pass: <strong>meteor0.9</strong>
-				<br/>
-				<a href="/admin" class="btn btn-primary">Go to admin</a>
-			</p>
+			<div class="col-md-3">
+				{{> add}}
+			</div>
+			<div class="col-md-9">
+				{{> alert}}
+				{{> posts}}
+			</div>
 		</div>
 	</div>
+</template>
+
+
+<template name="add">
+	<div class="panel panel-default">
+		  <div class="panel-heading">
+				<h3 class="panel-title">Add a Post</h3>
+		  </div>
+		  <div class="panel-body">
+				{{#autoForm id="add" collection="Posts" type="insert"}}
+				{{> afQuickField name="title"}}
+				{{> afQuickField name="content"}}
+				<button type="submit" class="btn btn-primary">Add Post</button>
+				{{/autoForm}}
+		  </div>
+	</div>
+</template>
+
+<template name="posts">
+	{{#each Posts}}
+		<div class="panel panel-default">
+			  <div class="panel-heading">
+					<h3 class="panel-title">{{title}}</h3>
+			  </div>
+			  <div class="panel-body">
+					{{content}}
+			  </div>
+		</div>
+	{{/each}}
 </template>
