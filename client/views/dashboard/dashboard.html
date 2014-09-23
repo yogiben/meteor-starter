@@ -3,6 +3,7 @@
 		<div class="row" id="champion-messages">
 			<div class="col-md-3">
 				{{> add}}
+				{{> favorites}}
 			</div>
 			<div class="col-md-9">
 				{{> alert}}
@@ -37,6 +38,28 @@
 			  <div class="panel-body">
 					{{content}}
 			  </div>
+			  <div class="panel-footer">
+			  	{{> favoriteButton _id=_id}}
+			  </div>
 		</div>
 	{{/each}}
+</template>
+
+<template name="favorites">
+	{{#if Favorites 'Posts'}}
+	<div class="panel panel-default">
+		<div class="panel-heading">
+				<h3 class="panel-title">Favorites</h3>
+		</div>
+		<div class="panel-body">
+			<ul>
+			{{#each Favorites 'Posts'}}
+				<li>
+					<a>{{title}}</a>
+				</li>
+			{{/each}}
+			</ul>
+		</div>
+	</div>
+	{{/if}}
 </template>

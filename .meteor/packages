@@ -20,4 +20,6 @@ yogiben:admin
 cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
+yogiben:favorites
+aldeed:template-extension
 
