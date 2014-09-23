@@ -15,6 +15,7 @@ Router.map ->
     waitOn: ->
       [
         Meteor.subscribe 'posts'
+        Meteor.subscribe 'favorites'
       ]
     data: ->
       Posts: Posts.find().fetch()
