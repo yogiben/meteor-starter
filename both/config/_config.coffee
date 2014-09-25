@@ -13,3 +13,4 @@
 	blog: 'http://benjaminpeterjones.com'
 	about: 'http://benjaminpeterjones.com'
 	username: false
+	homeRoute: '/dashboard'

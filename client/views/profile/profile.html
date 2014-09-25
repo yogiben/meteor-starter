@@ -4,8 +4,7 @@
 			<div class="col-md-12">{{> alert}}</div>
 			<div class="col-md-4">
 				{{#autoForm id="updatePicture" collection=Users doc=currentUser type="update"}}
-
-							{{> afFileUpload name="profile.picture" collection='ProfilePictures'}}
+					{{> afFileUpload name="profile.picture" collection='ProfilePictures'}}
 				<button type="submit" class="btn btn-primary">Update</button>
 				{{/autoForm}}
 			</div>
