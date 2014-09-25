@@ -68,7 +68,7 @@ mobile-status-bar@1.0.0
 mongo-livedata@1.0.4
 mongo@1.0.5
 mrt:accounts-t9n@0.0.13
-mrt:moment@2.6.0
+mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
 npm-bcrypt@0.7.7
 observe-sequence@1.0.2
@@ -99,4 +99,5 @@ yogiben:admin@0.9.5
 yogiben:autoform-file@0.0.1
 yogiben:comments@0.0.2
 yogiben:favorites@0.0.2
+yogiben:notifications@0.0.2
 yogiben:user-helpers@0.0.1
