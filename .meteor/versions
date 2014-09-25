@@ -5,6 +5,7 @@ aldeed:autoform@0.17.1
 aldeed:collection2@0.4.6
 aldeed:simple-schema@0.7.0
 aldeed:template-extension@2.0.0
+app-style@0.3.0
 application-configuration@1.0.2
 autoupdate@1.1.0
 base64@1.0.0
@@ -42,7 +43,6 @@ email@1.0.2
 fastclick@1.0.0
 follower-livedata@1.0.1
 geojson-utils@1.0.0
-grokbot:bootstrap-flatly@0.0.4
 handlebars@1.0.0
 html-tools@1.0.0
 htmljs@1.0.1
