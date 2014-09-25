@@ -1,5 +1,5 @@
 Accounts.config
-	sendVerificationEmail : true
+	sendVerificationEmail : false
 
 if Meteor.isClient
 	Meteor.startup ->

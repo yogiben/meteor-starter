@@ -14,10 +14,14 @@ alanning:roles
 aldeed:collection2
 aldeed:simple-schema
 joshowens:accounts-entry
-mizzao:bootstrap-3
 chrismbeckett:fontawesome4
 raix:handlebar-helpers
 yogiben:admin
 cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
+aldeed:template-extension
+yogiben:favorites
+yogiben:comments
+yogiben:user-helpers
+grokbot:bootstrap-flatly

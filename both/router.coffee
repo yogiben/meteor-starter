@@ -15,9 +15,11 @@ Router.map ->
     waitOn: ->
       [
         Meteor.subscribe 'posts'
+        Meteor.subscribe 'favorites'
+        Meteor.subscribe 'comments'
       ]
     data: ->
-      Posts: Posts.find().fetch()
+      Posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
   @route "profile",
     path: "/profile"
     waitOn: ->
