@@ -6,10 +6,20 @@ AdminConfig =
 		Posts: {
 			color: 'red'
 			icon: 'pencil'
+			tableColumns: [
+              {label: 'Title',name:'title'}
+              {label:'User',name:'owner',collection:'Users'}
+            ]
 		}
 		Comments: {
 			color: 'green'
 			icon: 'comments'
+			auxCollections: ['Posts']
+			tableColumns: [
+              {label: 'Content';name:'content'}
+              {label:'Post';name:'doc',collection: 'Posts',collection_property:'title'}
+              {label:'User',name:'owner',collection:'Users'}
+            ]
 		}
 	dashboard:
 		homeUrl: '/dashboard'
