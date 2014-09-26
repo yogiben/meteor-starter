@@ -23,6 +23,7 @@
 			<div class="navbar-collapse collapse">
 				{{#if currentUser}}
 				<ul class="nav navbar-nav navbar-right">
+					{{> notificationsDropdown}}
 					{{#if isInRole 'admin'}}
 					<li><a href="{{pathFor 'adminDashboard'}}">Admin</a></li> 
 					{{/if}}
@@ -35,7 +36,6 @@
 							<li><a href="/sign-out">Logout</a></li>
 						</ul>
 					</li>
-
 					<li class="visible-xs">
 						<a href="{{pathFor 'profile'}}" class="close-navbar">Edit profile</a>
 					</li>

@@ -33,17 +33,21 @@
 	{{#each orderByFavorites Posts}}
 		<div class="panel panel-default">
 			  <div class="panel-heading">
-					<h3 class="panel-title">{{title}}</h3>
+					<h3 class="panel-title">
+						{{title}}
+						<span class="pull-right">
+							<i class="fa fa-thumbs-up"></i> {{favoriteCount _id}}
+							<i class="fa fa-comments"></i> {{commentCount _id}}
+						</span>
+					</h3>
 			  </div>
 			  <div class="panel-body">
 					{{content}}
 			  </div>
 			  <div class="panel-footer">
 			  	{{> favoriteButton _id=_id}}
-			  	<hr/>
+			  	{{> commentFormToggle }}
 			  	{{> comments}}
-			  	<hr />
-			  	{{> commentForm }}
 			  </div>
 		</div>
 	{{/each}}

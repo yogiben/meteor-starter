@@ -24,4 +24,6 @@ aldeed:template-extension
 yogiben:favorites
 yogiben:comments
 yogiben:user-helpers
-grokbot:bootstrap-flatly
+yogiben:notifications
+app-style
+
