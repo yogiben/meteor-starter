@@ -67,6 +67,7 @@ minimongo@1.0.3
 mobile-status-bar@1.0.0
 mongo-livedata@1.0.4
 mongo@1.0.5
+mquandalle:jade@0.2.7
 mrt:accounts-t9n@0.0.13
 mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
@@ -96,6 +97,7 @@ url@1.0.0
 webapp-hashing@1.0.0
 webapp@1.1.1
 yogiben:admin@0.9.5
+yogiben:alerts@0.0.2
 yogiben:autoform-file@0.0.1
 yogiben:comments@0.0.3
 yogiben:favorites@0.0.2
