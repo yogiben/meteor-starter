@@ -9,12 +9,15 @@
 
 					<div id="main-nav" class="navbar-collapse">          
 						<ul class="social-links">
-							{{#if Config.twitter}}
-							<a href="http://twitter.com/{{Config.twitter}}" target="_blank"><li class="fa fa-twitter"></li></a>
+						<!-- 	{{#if Config.socialMedia.twitter}}
+							<a href="{{Config.socialMedia.twitter}}" target="_blank"><li class="fa fa-twitter"></li></a>
 							{{/if}}
-							{{#if Config.facebook}}
-							<a href="http://facebook.com/{{Config.facebook}}" target="_blank"><li class="fa fa-facebook"></li></a>
-							{{/if}}
+							{{#if Config.socialMedia.facebook}}
+							<a href="{{Config.socialMedia.facebook}}" target="_blank"><li class="fa fa-facebook"></li></a>
+							{{/if}} -->
+							{{#each Config.socialMedia}}
+							<a href="{{[0]}}" target="_blank"><li class="fa fa-{{[1]}}"></li></a>
+							{{/each}}
 						</ul>
 					</div>
 				</div>
