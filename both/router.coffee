@@ -1,7 +1,7 @@
 Router.configure
   layoutTemplate: "masterLayout"
-  loadingTemplate: "Loading"
-  notFoundTemplate: "NotFound"
+  loadingTemplate: "loading"
+  notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
 
 Router.onBeforeAction "loading"

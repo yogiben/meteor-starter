@@ -1,2 +1,26 @@
 @import "/client/variables.less";
 @import "/packages/yogiben:bootstrap/bootstrap.import.less";
+
+@footer-height: 250px;
+
+html, body
+{
+	height:100%;
+}
+
+.layout {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -@footer-height; /* the bottom margin is the negative value of the footer's height */
+}
+
+
+footer, .push {
+	clear: both;
+}
+
+footer, .push
+{
+	height: @footer-height;
+}
