@@ -5,7 +5,6 @@ aldeed:autoform@3.2.0
 aldeed:collection2@2.1.0
 aldeed:simple-schema@1.0.3
 aldeed:template-extension@2.0.0
-app-style@0.3.0
 application-configuration@1.0.2
 autoupdate@1.1.1
 base64@1.0.0
@@ -99,6 +98,7 @@ webapp@1.1.2
 yogiben:admin@0.9.6
 yogiben:alerts@0.0.2
 yogiben:autoform-file@0.0.1
+yogiben:bootstrap@0.3.1
 yogiben:comments@0.0.5
 yogiben:favorites@0.0.2
 yogiben:notifications@0.0.2
