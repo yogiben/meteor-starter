@@ -15,7 +15,7 @@ aldeed:collection2
 aldeed:simple-schema
 joshowens:accounts-entry
 chrismbeckett:fontawesome4
-yogiben:admin
+raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
@@ -24,6 +24,7 @@ yogiben:favorites
 yogiben:comments
 yogiben:user-helpers
 yogiben:notifications
-app-style
 yogiben:alerts
+yogiben:admin
+yogiben:bootstrap
 

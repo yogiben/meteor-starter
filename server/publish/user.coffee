@@ -1,6 +1,9 @@
 Meteor.publish 'user', ->
 	Meteor.users.find this.userId
 
+Meteor.publish 'users', ->
+	Meteor.users.find {}, {fields: {profile: 1, emails: 1}}
+
 Meteor.publish 'userPicture', ->
 	if Meteor.users.findOne({_id:this.userId})
 		_id = Meteor.users.findOne({_id:this.userId}).profile.picture
