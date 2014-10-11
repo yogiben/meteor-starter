@@ -16,7 +16,6 @@ aldeed:simple-schema
 joshowens:accounts-entry
 chrismbeckett:fontawesome4
 raix:handlebar-helpers
-yogiben:admin
 cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
@@ -27,4 +26,3 @@ yogiben:user-helpers
 yogiben:notifications
 app-style
 yogiben:alerts
-

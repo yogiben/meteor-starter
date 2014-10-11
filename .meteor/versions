@@ -1,9 +1,9 @@
 accounts-base@1.1.0
 accounts-password@1.0.1
 alanning:roles@1.2.13
-aldeed:autoform@0.17.1
-aldeed:collection2@0.4.6
-aldeed:simple-schema@0.7.0
+aldeed:autoform@3.2.0
+aldeed:collection2@2.1.0
+aldeed:simple-schema@1.0.3
 aldeed:template-extension@2.0.0
 app-style@0.3.0
 application-configuration@1.0.2
@@ -96,10 +96,9 @@ underscore@1.0.0
 url@1.0.0
 webapp-hashing@1.0.0
 webapp@1.1.1
-yogiben:admin@0.9.5
 yogiben:alerts@0.0.2
 yogiben:autoform-file@0.0.1
-yogiben:comments@0.0.4
+yogiben:comments@0.0.5
 yogiben:favorites@0.0.2
 yogiben:notifications@0.0.2
-yogiben:user-helpers@0.0.1
+yogiben:user-helpers@0.0.6
