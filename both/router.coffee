@@ -28,11 +28,6 @@ Router.map ->
     path: "/account"
 
 
-# Router.onRun (->
-#   console.log @
-# ),
-#   except: "home"
-
 Router.waitOn ->
   Meteor.subscribe 'user'
   Meteor.subscribe 'userPicture'
