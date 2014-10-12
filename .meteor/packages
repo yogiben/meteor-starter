@@ -19,14 +19,13 @@ raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
 aldeed:template-extension
-yogiben:favorites
 yogiben:comments
 yogiben:user-helpers
 yogiben:notifications
-yogiben:alerts
-yogiben:admin
-yogiben:bootstrap
 yogiben:helpers
 yogiben:autoform-modals
 yogiben:autoform-file
+yogiben:admin@0.9.8
+yogiben:alerts
+yogiben:favorites
 
