@@ -18,7 +18,6 @@ chrismbeckett:fontawesome4
 raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
-yogiben:autoform-file
 aldeed:template-extension
 yogiben:favorites
 yogiben:comments
@@ -29,4 +28,5 @@ yogiben:admin
 yogiben:bootstrap
 yogiben:helpers
 yogiben:autoform-modals
+yogiben:autoform-file
 
