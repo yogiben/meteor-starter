@@ -42,7 +42,11 @@
 					</h3>
 			  </div>
 			  <div class="panel-body">
-					{{content}}
+					<p>{{content}}</p>
+					
+					{{#if $eq owner User._id}}
+					<a href="#afModal" data-toggle="modal" class="btn btn-primary btn-xs" collection="Posts" operation="update" doc="{{_id}}" omitFields="createdAt,updatedAt,owner">Edit post</a>
+					{{/if}}
 			  </div>
 			  <div class="panel-footer">
 			  	{{> favoriteButton _id=_id}}
