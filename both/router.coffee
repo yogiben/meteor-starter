@@ -1,7 +1,7 @@
 Router.configure
   layoutTemplate: "masterLayout"
-  loadingTemplate: "Loading"
-  notFoundTemplate: "NotFound"
+  loadingTemplate: "loading"
+  notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
 
 Router.onBeforeAction "loading"
@@ -27,11 +27,6 @@ Router.map ->
   @route "account",
     path: "/account"
 
-
-# Router.onRun (->
-#   console.log @
-# ),
-#   except: "home"
 
 Router.waitOn ->
   Meteor.subscribe 'user'

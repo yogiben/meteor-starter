@@ -18,13 +18,14 @@ chrismbeckett:fontawesome4
 raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
-yogiben:autoform-file
 aldeed:template-extension
-yogiben:favorites
 yogiben:comments
 yogiben:user-helpers
 yogiben:notifications
-app-style
+yogiben:helpers
+yogiben:autoform-modals
+yogiben:autoform-file
+yogiben:admin@0.9.8
 yogiben:alerts
-yogiben:admin
+yogiben:favorites
 
