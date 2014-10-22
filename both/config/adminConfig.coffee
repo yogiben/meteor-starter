@@ -34,6 +34,8 @@ AdminConfig =
 		# 			class: 'col-lg-3 col-xs-6'
 		# 	}
 		# ]
+	autoForm: 
+	        omitFields: ['createdAt', 'updatedAt']
 
 if Meteor.isClient
 	window.AdminConfig = AdminConfig

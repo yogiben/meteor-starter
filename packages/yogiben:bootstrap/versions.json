@@ -2,22 +2,22 @@
   "dependencies": [
     [
       "jquery",
-      "1.0.0"
+      "1.0.1"
     ],
     [
       "less",
-      "1.0.9"
+      "1.0.10"
     ],
     [
       "meteor",
-      "1.1.1"
+      "1.1.2"
     ],
     [
       "underscore",
-      "1.0.0"
+      "1.0.1"
     ]
   ],
   "pluginDependencies": [],
-  "toolVersion": "meteor-tool@1.0.33",
+  "toolVersion": "meteor-tool@1.0.34",
   "format": "1.0"
 }

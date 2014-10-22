@@ -25,7 +25,8 @@ yogiben:notifications
 yogiben:helpers
 yogiben:autoform-modals
 yogiben:autoform-file
-yogiben:admin@0.9.8
 yogiben:alerts
 yogiben:favorites
+yogiben:bootstrap
+yogiben:admin
 
