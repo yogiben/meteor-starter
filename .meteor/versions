@@ -3,8 +3,8 @@ accounts-password@1.0.3
 alanning:roles@1.2.13
 aldeed:autoform@3.2.0
 aldeed:collection2@2.2.0
-aldeed:simple-schema@1.1.0
-aldeed:template-extension@3.0.0
+aldeed:simple-schema@1.0.3
+aldeed:template-extension@2.0.0
 application-configuration@1.0.3
 autoupdate@1.1.2
 base64@1.0.1
@@ -19,6 +19,7 @@ cfs:collection-filters@0.0.0
 cfs:collection@0.0.0
 cfs:data-man@0.0.0
 cfs:file@0.0.0
+cfs:graphicsmagick@0.0.1
 cfs:gridfs@0.0.0
 cfs:http-methods@0.0.24
 cfs:http-publish@0.0.0
@@ -95,13 +96,13 @@ underscore@1.0.1
 url@1.0.1
 webapp-hashing@1.0.1
 webapp@1.1.3
-yogiben:admin@1.0.0
+yogiben:admin@0.9.9
 yogiben:alerts@0.0.2
 yogiben:autoform-file@0.0.1
 yogiben:autoform-modals@0.2.2
 yogiben:bootstrap@0.3.1
 yogiben:comments@0.0.6
 yogiben:favorites@0.0.3
-yogiben:helpers@0.0.0
+yogiben:helpers@0.0.1
 yogiben:notifications@0.0.4
-yogiben:user-helpers@0.0.6
+yogiben:user-helpers@0.0.8
