@@ -1,6 +1,13 @@
 @ProfilePictures = new FS.Collection("profilePictures",
 	stores: [
-		new FS.Store.GridFS("images"),
+		new FS.Store.GridFS("images", {
+
+			transformWrite: (fileObj, readStream, writeStream)->
+				if gm.isAvailable
+					gm(readStream, fileObj.name()).autoOrient().stream().pipe(writeStream)
+				else
+					readStream.pipe(writeStream)
+		}),
 		new FS.Store.GridFS("thumbs", {
 
 			transformWrite: (fileObj, readStream, writeStream)->

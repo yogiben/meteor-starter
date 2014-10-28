@@ -20,8 +20,6 @@ cfs:standard-packages
 cfs:gridfs
 aldeed:template-extension
 yogiben:comments
-yogiben:user-helpers
-yogiben:helpers
 yogiben:autoform-modals
 yogiben:autoform-file
 yogiben:alerts
@@ -30,4 +28,6 @@ yogiben:admin
 yogiben:notifications
 yogiben:bootstrap
 cfs:graphicsmagick
+yogiben:helpers
+yogiben:user-helpers
 
