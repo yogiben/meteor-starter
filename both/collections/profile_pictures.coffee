@@ -2,9 +2,13 @@
 	stores: [
 		new FS.Store.GridFS("images"),
 		new FS.Store.GridFS("thumbs", {
-			# transformWrite: (fileObj, readStream, writeStream)-> {
-			# 	gm(readStream, fileObj.name()).resize('120', '120').stream().pipe(writeStream);
-			# }
+
+			transformWrite: (fileObj, readStream, writeStream)->
+				if gm.isAvailable
+					size = {width: 100, height: 100}
+					gm(readStream, fileObj.name()).autoOrient().resize(size.width + "^>", size.height + "^>").gravity("Center").extent(size.width, size.height).stream().pipe(writeStream)
+				else
+					readStream.pipe(writeStream)
 		})
 	],
 	filter: {
