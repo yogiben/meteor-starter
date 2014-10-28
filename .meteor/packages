@@ -21,7 +21,6 @@ cfs:gridfs
 aldeed:template-extension
 yogiben:comments
 yogiben:user-helpers
-yogiben:notifications
 yogiben:helpers
 yogiben:autoform-modals
 yogiben:autoform-file
@@ -29,4 +28,5 @@ yogiben:alerts
 yogiben:favorites
 yogiben:bootstrap
 yogiben:admin
+yogiben:notifications
 
