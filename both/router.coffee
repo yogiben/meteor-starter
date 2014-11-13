@@ -4,7 +4,6 @@ Router.configure
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
 
-Router.onBeforeAction "loading"
 Router.map ->
   
   @route "home",
