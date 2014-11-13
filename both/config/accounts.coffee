@@ -1,5 +1,5 @@
 Accounts.config
-	sendVerificationEmail : false
+	sendVerificationEmail : true
 
 if Meteor.isClient
 	Meteor.startup ->
@@ -15,7 +15,3 @@ if Meteor.isClient
 				dashboardRoute: '/dashboard'
 				profileRoute: 'profile'
 				passwordSignupFields: 'EMAIL_ONLY'
-
-if Meteor.isServer
-	Accounts.emailTemplates.siteName = Config.siteName
-	Accounts.emailTemplates.from = Config.fromEmail

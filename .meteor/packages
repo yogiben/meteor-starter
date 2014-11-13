@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-iron:router
 coffeescript
 less
 accounts-base
@@ -19,15 +18,18 @@ raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
 aldeed:template-extension
-yogiben:comments
-yogiben:autoform-modals
-yogiben:autoform-file
 yogiben:alerts
-yogiben:favorites
-yogiben:admin
-yogiben:notifications
 yogiben:bootstrap
 cfs:graphicsmagick
 yogiben:helpers
 yogiben:user-helpers
+yogiben:autoform-file
+yogiben:admin
+iron:router@1.0.0
+yogiben:autoform-modals
+yogiben:favorites@0.0.4
+yogiben:comments@0.0.8
+yogiben:notifications@0.0.6
+yogiben:pretty-emails
+yogiben:pretty-email
 

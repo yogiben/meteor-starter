@@ -3,6 +3,7 @@
 		<div class="row" id="champion-messages">
 			<div class="col-md-3">
 				{{> add}}
+				{{> addWithModal}}
 				{{> favorites}}
 			</div>
 			<div class="col-md-9">
@@ -16,23 +17,34 @@
 
 <template name="add">
 	<div class="panel panel-default">
-		  <div class="panel-heading">
+			<div class="panel-heading">
 				<h3 class="panel-title">Add a Post</h3>
-		  </div>
-		  <div class="panel-body">
+			</div>
+			<div class="panel-body">
 				{{#autoForm id="add" collection="Posts" type="insert"}}
 				{{> afQuickField name="title"}}
 				{{> afQuickField name="content"}}
 				<button type="submit" class="btn btn-primary">Add Post</button>
 				{{/autoForm}}
-		  </div>
+			</div>
+	</div>
+</template>
+
+<template name="addWithModal">
+	<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Add with a modal</h3>
+			</div>
+			<div class="panel-body">
+				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content">Add a new post</a>
+			</div>
 	</div>
 </template>
 
 <template name="posts">
 	{{#each orderByFavorites Posts}}
 		<div class="panel panel-default">
-			  <div class="panel-heading">
+				<div class="panel-heading">
 					<h3 class="panel-title">
 						{{title}}
 						<span class="pull-right">
@@ -40,8 +52,8 @@
 							<i class="fa fa-comments"></i> {{commentCount _id}}
 						</span>
 					</h3>
-			  </div>
-			  <div class="panel-body">
+				</div>
+				<div class="panel-body">
 					<div class="media">
 						<a class="pull-left" href="#">
 							{{> profileThumb _id=owner}}
@@ -57,12 +69,12 @@
 							{{/if}}
 						</div>
 					</div>
-			  </div>
-			  <div class="panel-footer">
-			  	{{> favoriteButton _id=_id}}
-			  	{{> commentFormToggle }}
-			  	{{> comments}}
-			  </div>
+				</div>
+				<div class="panel-footer">
+					{{> favoriteButton _id=_id}}
+					{{> commentFormToggle }}
+					{{> comments}}
+				</div>
 		</div>
 	{{/each}}
 </template>
