@@ -3,7 +3,7 @@
 		<div class="row" id="champion-messages">
 			<div class="col-md-3">
 				{{> add}}
-				{{> addWithModal}}
+				<!-- {{> addWithModal}} -->
 				{{> favorites}}
 			</div>
 			<div class="col-md-9">
@@ -24,6 +24,8 @@
 				{{#autoForm id="add" collection="Posts" type="insert"}}
 				{{> afQuickField name="title"}}
 				{{> afQuickField name="content"}}
+				<!-- {{> afQuickField name="picture"}} -->
+				{{> afFileUpload name="picture" collection="Attachments"}}
 				<button type="submit" class="btn btn-primary">Add Post</button>
 				{{/autoForm}}
 			</div>
@@ -36,7 +38,7 @@
 				<h3 class="panel-title">Add with a modal</h3>
 			</div>
 			<div class="panel-body">
-				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content">Add a new post</a>
+				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content,picture">Add a new post</a>
 			</div>
 	</div>
 </template>
@@ -54,6 +56,11 @@
 					</h3>
 				</div>
 				<div class="panel-body">
+					<p class="text-center">
+						{{#with getDoc 'Attachments' picture}}
+							<img src="{{url}}" class="img-thumbnail img-rounded">
+						{{/with}}
+					</p>
 					<div class="media">
 						<a class="pull-left" href="#">
 							{{> profileThumb _id=owner}}

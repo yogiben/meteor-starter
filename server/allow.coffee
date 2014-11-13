@@ -13,3 +13,11 @@ Posts.allow
 		userId == doc.owner
 	remove: (userId, doc) ->
 		userId == doc.owner
+
+Attachments.allow
+	insert: (userId, doc) ->
+		true
+	update: (userId, doc, fieldNames, modifier) ->
+		true
+	download: (userId)->
+		true

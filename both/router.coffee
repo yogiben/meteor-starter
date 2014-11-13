@@ -16,6 +16,7 @@ Router.map ->
         Meteor.subscribe 'posts'
         Meteor.subscribe 'favorites'
         Meteor.subscribe 'comments'
+        Meteor.subscribe 'attachments'
       ]
     data: ->
       Posts: Posts.find({},{sort: {createdAt: -1}}).fetch()

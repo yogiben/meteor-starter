@@ -23,7 +23,6 @@ yogiben:bootstrap
 cfs:graphicsmagick
 yogiben:helpers
 yogiben:user-helpers
-yogiben:autoform-file
 yogiben:admin
 iron:router@1.0.0
 yogiben:autoform-modals
@@ -32,4 +31,5 @@ yogiben:comments@0.0.8
 yogiben:notifications@0.0.6
 yogiben:pretty-emails
 yogiben:pretty-email
+yogiben:autoform-file
 
