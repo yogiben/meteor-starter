@@ -19,7 +19,6 @@ cfs:standard-packages
 cfs:gridfs
 aldeed:template-extension
 yogiben:alerts
-yogiben:bootstrap
 cfs:graphicsmagick
 yogiben:helpers
 yogiben:user-helpers
@@ -32,4 +31,3 @@ yogiben:pretty-emails
 yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
-
