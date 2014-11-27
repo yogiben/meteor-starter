@@ -4,6 +4,7 @@ AdminConfig =
 		Posts: {
 			color: 'red'
 			icon: 'pencil'
+			auxCollections: ['Attachments']
 			tableColumns: [
               {label: 'Title',name:'title'}
               {label:'User',name:'owner',collection:'Users'}

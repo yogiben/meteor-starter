@@ -6,6 +6,10 @@ Schemas.UserProfile = new SimpleSchema(
     type: String
     optional:true
     label: 'Profile picture'
+    autoform:
+      afFieldInput:
+        type: 'fileUpload'
+        collection: 'ProfilePictures'
 
   firstName:
     type: String
