@@ -104,13 +104,13 @@ webapp-hashing@1.0.1
 webapp@1.1.4
 yogiben:admin@1.0.4
 yogiben:alerts@0.0.2
-yogiben:autoform-file@0.0.3
+yogiben:autoform-file@0.1.2
 yogiben:autoform-modals@0.2.3
 yogiben:bootstrap@0.3.1
 yogiben:comments@0.0.8
 yogiben:favorites@0.0.4
-yogiben:helpers@0.0.3
+yogiben:helpers@0.0.1
 yogiben:notifications@0.0.6
 yogiben:pretty-email@0.0.2
-yogiben:pretty-emails@0.0.2
+yogiben:pretty-emails@0.0.1
 yogiben:user-helpers@0.0.8

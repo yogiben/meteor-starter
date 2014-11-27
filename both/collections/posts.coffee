@@ -27,9 +27,10 @@ Schemas.Posts = new SimpleSchema
 
 	picture:
 		type: String
-		# autoform:
-		# 	type: 'fileUpload'
-		# 	fileCollection: 'Attachments'
+		autoform:
+			afFieldInput:
+				type: 'fileUpload'
+				collection: 'Attachments'
 
 	owner: 
 		type: String
