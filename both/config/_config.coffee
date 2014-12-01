@@ -13,8 +13,12 @@
 	username: false
 	homeRoute: '/dashboard'
 	socialMedia:
-		[
-			['http://facebook.com/benjaminpeterjones','facebook']
-			['http://twitter.com/BenPeterJones','twitter']
-			['http://github.com/yogiben','github']
-		]
+		facebook:
+			url: 'http://facebook.com/benjaminpeterjones'
+			icon: 'facebook'
+		twitter:
+			url: 'http://twitter.com/BenPeterJones'
+			icon: 'twitter'
+		github:
+			url: 'http://github.com/yogiben'
+			icon: 'github'
