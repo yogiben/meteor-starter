@@ -1,7 +1,7 @@
 @Config =
 	name: 'My App'
 	title: 'Make Meteor Apps. Fast.'
-	subtitle: 'Create beautiful and functioning Meteor apps really quick'
+	subtitle: 'Create beautiful  Meteor apps really fast'
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
