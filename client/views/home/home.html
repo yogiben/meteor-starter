@@ -1,5 +1,5 @@
 	<template name="home">
-	<section id="intro">
+	<section id="intro" class="colored text-center">
 		<header>
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="container">
@@ -31,7 +31,7 @@
 					<div class="col-lg-12 col-sm-12">
 						<h1>{{Config.title}}</h1>
 						<h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
-						<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Get started</a>		
+						<a class="btn btn-success" href="{{pathFor 'entrySignUp'}}">Get started</a>		
 					</div>
 	<!-- 				<div class="col-lg-6 col-sm-6">
 						<img class="img-responsive" src="/img/image-header1.png" alt="">
@@ -40,30 +40,30 @@
 			</div>
 		</div>
 	</section>
-	<section id="features">
+	<section id="how-it-works" class="text-center">
 		<div class="container wow fadeIn animated">
-			<h1>How It Works</h1>
-			<h2>{{Config.name}} - {{Config.subtitle}}</h2>
+			<h3>How it works</h3>
+			<h4>{{Config.name}} - {{Config.subtitle}}</h4>
 		</div>
 		<div class="container">
-			<div class="row">
+			<div class="row" id="icon-row">
 				<div class="col-md-4 wow fadeInLeft animated" data-wow-delay="0.1s">
 					<div class="iconbox">
-						<i class="fa fa-plane"></i>
+						<i class="fa fa-plane fa-3x"></i>
 					</div>
 					<p class="icntitle">1. Step 1</p>
 					<p class="icnp">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 				</div>
 				<div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.2s">
 					<div class="iconbox">
-						<i class="fa fa-bolt"></i>
+						<i class="fa fa-bolt fa-3x"></i>
 					</div>
 					<p class="icntitle">2. Step 2</p>
 					<p class="icnp"> Oratio me istius philosophi non offendit; Qua tu etiam inprudens utebare non numquam.</p>
 				</div>
 				<div class="col-md-4 wow fadeInRight animated" data-wow-delay="0.3s">
 					<div class="iconbox">
-						<i class="fa fa-check"></i>
+						<i class="fa fa-check fa-3x"></i>
 					</div>
 					<p class="icntitle">3. Step 3</p>
 					<p class="icnp">Et ille ridens: Video, inquit, quid agas; Duo Reges: constructio interrete.</p>
@@ -77,55 +77,12 @@
 			<h2>You can use {{Config.siteName}} to do anything</h2>
 		</div>
 	</section> -->
-	<section id="faqs">
+	<section id="faqs" class="colored text-center">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<h3 style="margin-bottom:3px;">FAQs</h3>
-					<div class="panel-group" id="accordion">
-					  <div class="panel panel-default">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-					          Question 4
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseOne" class="panel-collapse collapse">
-					      <div class="panel-body">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedulo, inquam, faciam. Haeret in salebra. Verum hoc idem saepe faciamus. An potest cupiditas finiri?
-					      </div>
-					    </div>
-					  </div>
-					  <div class="panel panel-default">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-					          Question 3
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseTwo" class="panel-collapse collapse">
-					      <div class="panel-body">
-					        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sedulo, inquam, faciam. Haeret in salebra. Verum hoc idem saepe faciamus. An potest cupiditas finiri? Quorum sine causa fieri nihil putandum est. Duo Reges: constructio interrete. Nos commodius agimus. Experiamur igitur, inquit, etsi habet haec Stoicorum ratio difficilius quiddam et obscurius.
-					      </div>
-					    </div>
-					  </div>
-					  <div class="panel panel-default">
-					    <div class="panel-heading">
-					      <h4 class="panel-title">
-					        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-					        	Question 4
-					        </a>
-					      </h4>
-					    </div>
-					    <div id="collapseThree" class="panel-collapse collapse">
-					      <div class="panel-body">
-					       Quorum sine causa fieri nihil putandum est. Duo Reges: constructio interrete. Nos commodius agimus. Experiamur igitur, inquit, etsi habet haec Stoicorum ratio difficilius quiddam et obscurius.
-					      </div>
-					    </div>
-					  </div>
-					</div>
+					<h4>A revolutionary product</h4>
+					<p>Do really cool stuff really quickly</p>
 					<p class="text-center">
 						<a href="{{Config.about}}" target="_blank" class="btn btn-success">
 							Learn more
@@ -143,7 +100,7 @@
 			<div class="row">
 				<div class="col-md-4 text-center wow fadeInDown animated">
 					<h3>
-						Your life will be instantly better.
+						Your life will be instantly better
 					</h3>
 					<div class="text-center">
 					<a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>
