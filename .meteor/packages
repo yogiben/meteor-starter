@@ -32,4 +32,10 @@ yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
 yogiben:bootstrap
+accounts-facebook
+accounts-google
+accounts-twitter
+ian:accounts-ui-bootstrap-3
 
+
+npm-container
