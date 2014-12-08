@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{Config.homeRoute}}">{{{Config.logo}}}</a>
+				<a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}">{{{Config.logo}}}</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				{{#if currentUser}}

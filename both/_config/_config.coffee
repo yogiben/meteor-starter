@@ -11,7 +11,8 @@
 	blog: 'http://benjaminpeterjones.com'
 	about: 'http://benjaminpeterjones.com'
 	username: false
-	homeRoute: '/dashboard'
+	homeRoute: '/'
+	dashboardRoute: '/dashboard'
 	socialMedia:
 		facebook:
 			url: 'http://facebook.com/benjaminpeterjones'
@@ -22,3 +23,4 @@
 		github:
 			url: 'http://github.com/yogiben'
 			icon: 'github'
+	publicRoutes: ['home']

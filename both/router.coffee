@@ -31,3 +31,13 @@ Router.map ->
 Router.waitOn ->
   Meteor.subscribe 'user'
   Meteor.subscribe 'userPicture'
+
+
+#To allow non-logged in users to access more routes, add it in the config file
+signInRequired = -> 
+  AccountsEntry.signInRequired @
+  @next()
+
+publicRoutes = _.union Config.publicRoutes, ['entrySignUp','entryForgotPassword']
+
+Router.onBeforeAction signInRequired, {except: publicRoutes}
