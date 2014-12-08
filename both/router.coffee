@@ -47,5 +47,13 @@ signInRequired = ->
     @next()
 
 publicRoutes = _.union Config.publicRoutes, ['entrySignUp','entryForgotPassword']
-
 Router.onBeforeAction signInRequired, {except: publicRoutes}
+
+signInProhibited = ->
+  if Meteor.user()
+    Router.go('dashboard')
+  else
+    if @next
+      @next()
+      
+Router.onBeforeAction signInProhibited, {only: ['entrySignUp','entryForgotPassword']}
