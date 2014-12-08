@@ -1,3 +1,16 @@
+// Play with background image here
+#skroll-background-intro
+{
+  opacity: 0.7;
+
+  &>div
+  {
+    background-image:url(img/background-intro.jpg);
+  }
+}
+
+
+//Home stuff
 .home-layout {
     @media (max-width: 768px) {
         #ipad {
@@ -9,8 +22,10 @@
  #intro {
      padding-top: 0;
      padding-bottom: 200px;
+     height: 100vh;
+     background-color: black;
      h1 {
-         padding-top: 10vh;
+         padding-top: 20vh;
     }
 }
 #how-it-works {
@@ -50,3 +65,89 @@
   }
         
 }
+
+  .parallax-image-wrapper {
+    position:fixed;
+    left:0;
+    width:100%;
+    overflow:hidden;
+  }
+
+  .parallax-image-wrapper-50 {
+    height:50%;
+    top:-50%;
+  }
+
+  .parallax-image-wrapper-100 {
+    height:100%;
+    top:-100%;
+  }
+
+  .parallax-image {
+    display:none;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+  }
+
+  .parallax-image-50 {
+    height:200%;
+    top:-50%;
+  }
+
+  .parallax-image-100 {
+    height:100%;
+    top:0;
+  }
+
+  .parallax-image.skrollable-between {
+    display:block;
+  }
+
+  .no-skrollr .parallax-image-wrapper {
+    display:none !important;
+  }
+
+  #skrollr-body {
+    height:100%;
+    overflow:visible;
+    position:relative;
+  }
+
+  .gap {
+    background:transparent center no-repeat;
+    background-size:cover;
+  }
+
+  .skrollr .gap {
+    background:transparent !important;
+  }
+
+  .gap-50 {
+    height:50%;
+  }
+
+  .gap-100 {
+    height:100%;
+  }
+
+  .header, .content {
+    background:#fff;
+    padding:1em;
+
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+  }
+
+  .content-full {
+    height:100%;
+  }
+
+  #done {
+    height:100%;
+  }
