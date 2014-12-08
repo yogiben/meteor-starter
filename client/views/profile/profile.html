@@ -1,19 +1,16 @@
 <template name="profile">
 	<div class="container">
 		<div class="row" id="champion-messages">
+			{{#autoForm id="updateProfile" collection=Users doc=currentUser type="update"}}
 			<div class="col-md-12">{{> alert}}</div>
 			<div class="col-md-4">
-				{{#autoForm id="updatePicture" collection=Users doc=currentUser type="update"}}
 					{{> afQuickField name="profile.picture"}}
-				<button type="submit" class="btn btn-primary">Update</button>
-				{{/autoForm}}
 			</div>
 			<div class="col-md-8">
-				{{#autoForm id="updateProfile" collection=Users doc=currentUser type="update"}}
 				{{> afQuickField name='profile' omitFields="profile.picture"}}
 				<button type="submit" class="btn btn-primary">Update</button>
-				{{/autoForm}}
 			</div>
+			{{/autoForm}}
 		</div>
 	</div>
 </template>

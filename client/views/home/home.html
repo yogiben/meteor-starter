@@ -1,5 +1,5 @@
 <template name="home">
-<div id="skrollr-body">    
+<div id="skrollr-body">
     {{> skrollrBackground}}
     <section id="intro" class="colored text-center">
         <header>
@@ -27,7 +27,7 @@
                         <a class="btn btn-success" href="{{pathFor 'entrySignUp'}}">Get started</a>
                     </div>
                     <!--                 <div class="col-lg-6 col-sm-6">
-                        <img class="img-responsive" src="/img/image-header1.png" alt="">
+                                                <img class="img-responsive" src="/img/image-header1.png" alt="">
                     </div> -->
                 </div>
             </div>
@@ -65,10 +65,10 @@
         </div>
     </section>
     <!-- <section id="examples">
-        <div class="container wow fadeInUp animated">
-            <h1>Great features!</h1>
-            <h2>You can use {{Config.siteName}} to do anything</h2>
-        </div>
+                <div class="container wow fadeInUp animated">
+                        <h1>Great features!</h1>
+                        <h2>You can use {{Config.siteName}} to do anything</h2>
+                </div>
     </section> -->
     <section id="ipad" class="colored text-center">
         <div class="container">
@@ -78,7 +78,7 @@
                     <p>Do really cool stuff really quickly</p>
                     <p class="text-center">
                     <a href="{{Config.about}}" target="_blank" class="btn btn-success">
-                    Learn more
+                    Made by MeteorFactory
                     </a>
                     </p>
                 </div>
@@ -105,21 +105,47 @@
             </div>
         </div>
     </section>
-</div></template>
+</div>
+{{> footerHome}}
+</template>
 <template name="skrollrBackground">
+<div
+    id="skroll-background-intro"
+    class="parallax-image-wrapper parallax-image-wrapper-100"
+    data-anchor-target="#intro"
+    data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+    data-top-bottom="transform:translate3d(0px, 0%, 0px)">
     <div
-        id="skroll-background-intro"
-        class="parallax-image-wrapper parallax-image-wrapper-100"
+        class="parallax-image parallax-image-100"
         data-anchor-target="#intro"
-        data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-        data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-
-        <div
-            class="parallax-image parallax-image-100"
-            data-anchor-target="#intro"
-            data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-            data-top-bottom="transform: translate3d(0px, 80%, 0px);"
-        ></div>
-        <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
-    </div>
+        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+    ></div>
+    <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+</div>
+</template>
+<template name="footerHome">
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-offset-2 col-md-8">
+                    <ul class="social-networks">
+                        {{#each socialMedia}}
+                        <li><a href="{{url}}" target="_blank">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-{{icon}} fa-stack-1x fa-inverse"></i>
+                        </span></a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    {{{Config.footer}}}
+                </div>
+            </div>
+        </div>
+    </footer>
 </template>

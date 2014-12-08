@@ -29,8 +29,15 @@ Schemas.UserProfile = new SimpleSchema(
     autoform:
       rows: 4
 
+  location:
+    type: String
+    autoform:
+      type: 'map'
+      geolocation: true
+
   country:
     type: String
+    label: 'Nationality'
     allowedValues: [
       "Select Country"
       "Afghanistan"

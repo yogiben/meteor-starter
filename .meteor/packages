@@ -32,4 +32,6 @@ yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
 yogiben:bootstrap
+yogiben:autoform-map
+multiply:iron-router-progress
 

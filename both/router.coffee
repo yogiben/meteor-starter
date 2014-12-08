@@ -5,7 +5,6 @@ Router.configure
   routeControllerNameConverter: "camelCase"
 
 Router.map ->
-  
   @route "home",
     path: "/"
     layoutTemplate: "homeLayout"
@@ -33,10 +32,19 @@ Router.waitOn ->
   Meteor.subscribe 'userPicture'
 
 
+prepareView = ->
+  window.scrollTo(0,0)
+
+  #For skrollr :(
+  $('body').attr('style','')
+
+Router.onAfterAction prepareView
+
 #To allow non-logged in users to access more routes, add it in the config file
-signInRequired = -> 
+signInRequired = ->
   AccountsEntry.signInRequired @
-  @next()
+  if @next
+    @next()
 
 publicRoutes = _.union Config.publicRoutes, ['entrySignUp','entryForgotPassword']
 
