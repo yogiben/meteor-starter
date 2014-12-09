@@ -31,9 +31,12 @@ Schemas.UserProfile = new SimpleSchema(
 
   location:
     type: String
+    optional: true
     autoform:
       type: 'map'
       geolocation: true
+      searchBox: true
+      autolocate: true
 
   country:
     type: String
