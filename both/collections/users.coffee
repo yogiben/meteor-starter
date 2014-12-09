@@ -230,6 +230,7 @@ Schemas.UserProfile = new SimpleSchema(
       "Ukraine"
       "United Arab Emirates"
       "United Kingdom"
+      "United States"
       "Uruguay"
       "Uzbekistan"
       "Venezuela"
