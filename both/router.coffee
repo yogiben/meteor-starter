@@ -34,6 +34,7 @@ Router.waitOn ->
 
 prepareView = ->
   window.scrollTo(0,0)
+  $('body').removeClass('sidebar-active')
 
   #For skrollr :(
   $('body').attr('style','')

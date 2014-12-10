@@ -1,10 +1,11 @@
 <template name="masterLayout">
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
-		<div class="container close-navbar">
+		<div class="container">
 			{{> yield }}
 		</div>
 		<div class="push"></div>
+		<div id="xs-sidebar-overlay" class="close-sidebar"></div>
 	</div>
 	{{> footer}}
 	{{> autoformModals}}
