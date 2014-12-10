@@ -46,7 +46,7 @@ signInRequired = ->
   if @next
     @next()
 
-publicRoutes = _.union Config.publicRoutes, ['entrySignUp','entryForgotPassword']
+publicRoutes = _.union Config.publicRoutes, ['entrySignIn','entrySignUp','entryForgotPassword']
 Router.onBeforeAction signInRequired, {except: publicRoutes}
 
 signInProhibited = ->
@@ -56,4 +56,4 @@ signInProhibited = ->
     if @next
       @next()
       
-Router.onBeforeAction signInProhibited, {only: ['entrySignUp','entryForgotPassword']}
+Router.onBeforeAction signInProhibited, {only: ['entrySignUp','entrySignUp','entryForgotPassword']}
