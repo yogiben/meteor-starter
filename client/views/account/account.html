@@ -59,13 +59,24 @@
 </template>
 
 <template name="setUserName">
-  {{#autoForm collection="Meteor.users" doc=user type="update" id="setUserName"}}
-  <fieldset>
-    <legend>Choose your name</legend>
-    {{> afQuickField name="username"}}
-    <div>
-      <button type="submit" class="btn btn-primary">Save</button>
-    </div>
-  </fieldset>
-  {{/autoForm}}
+	<div class="container">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Account Details</h3>
+				</div>
+				<div class="panel-body">
+					{{#autoForm collection="Meteor.users" doc=user type="update" id="setUserName"}}
+					<fieldset>
+						<legend>Choose your name</legend>
+				    	{{> afQuickField name="username"}}
+				    	<div>
+				      		<button type="submit" class="btn btn-primary">Save</button>
+						</div>
+					</fieldset>
+					{{/autoForm}}
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
