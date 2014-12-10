@@ -3,10 +3,11 @@
 		<div class="container close-navbar">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<i class="fa fa-bars"></i>
 				</button>
+				<a href="{{pathFor 'profile'}}" class="xs-mobile-cta navbar-toggle">
+					<i class="fa fa-user"></i>
+				</a>
 				<a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}">{{{Config.logo}}}</a>
 			</div>
 			<div class="navbar-collapse collapse">

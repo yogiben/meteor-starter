@@ -24,8 +24,6 @@ Package.on_use(function (api) {
   api.add_files('lib/js/tab.js', 'client');
   api.add_files('lib/js/affix.js', 'client');
 
-  api.add_files('bootstrap.import.less', 'client');
-
   // fonts
   api.add_files('lib/fonts/glyphicons-halflings-regular.eot', 'client');
   api.add_files('lib/fonts/glyphicons-halflings-regular.svg', 'client');
