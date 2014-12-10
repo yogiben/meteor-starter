@@ -3,6 +3,10 @@ Router.configure
   loadingTemplate: "loading"
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
+  onBeforeAction: ->
+    if Meteor.userId() and not Meteor.user().username
+      @redirect '/setUserName'
+    @next()
 
 Router.map ->
   
@@ -26,6 +30,12 @@ Router.map ->
       Meteor.subscribe 'profilePictures'
   @route "account",
     path: "/account"
+  @route "setUserName",
+    path: "/setUserName"
+    onBeforeAction: ->
+      if Meteor.userId() and Meteor.user().username
+        @redirect '/dashboard'
+      @next()
 
 
 Router.waitOn ->

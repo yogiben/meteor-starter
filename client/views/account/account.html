@@ -57,3 +57,15 @@
   </fieldset>
   {{/autoForm}}
 </template>
+
+<template name="setUserName">
+  {{#autoForm collection="Meteor.users" doc=user type="update" id="setUserName"}}
+  <fieldset>
+    <legend>Choose your name</legend>
+    {{> afQuickField name="username"}}
+    <div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+  </fieldset>
+  {{/autoForm}}
+</template>

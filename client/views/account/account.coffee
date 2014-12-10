@@ -10,3 +10,7 @@ AutoForm.hooks updatePassword:
 				App.alertSuccess 'Password Updated'
 
 		false
+
+Template.setUserName.helpers
+	user: ->
+		Meteor.user()

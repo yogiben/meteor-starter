@@ -281,3 +281,6 @@ Schemas.User = new SimpleSchema(
 )
 
 Meteor.users.attachSchema Schemas.User
+
+# Export schemas
+@StarterSchemas = Schemas
