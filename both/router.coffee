@@ -4,7 +4,7 @@ Router.configure
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
   onBeforeAction: ->
-    if Meteor.userId() and not Meteor.user().username
+    if Config.username and Meteor.userId() and not Meteor.user().username
       @redirect '/setUserName'
     @next()
 
@@ -34,7 +34,7 @@ Router.map ->
   @route "setUserName",
     path: "/setUserName"
     onBeforeAction: ->
-      if Meteor.userId() and Meteor.user().username
+      if not Config.username or (Meteor.userId() and Meteor.user().username)
         @redirect '/dashboard'
       @next()
 
