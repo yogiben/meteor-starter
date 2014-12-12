@@ -3,6 +3,10 @@ Router.configure
   loadingTemplate: "loading"
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
+  onBeforeAction: ->
+    if Meteor.userId() and not Meteor.user().username
+      @redirect '/setUserName'
+    @next()
 
 Router.map ->
   @route "home",
@@ -25,6 +29,14 @@ Router.map ->
       Meteor.subscribe 'profilePictures'
   @route "account",
     path: "/account"
+    onStop: ->
+      Alert.clear()
+  @route "setUserName",
+    path: "/setUserName"
+    onBeforeAction: ->
+      if Meteor.userId() and Meteor.user().username
+        @redirect '/dashboard'
+      @next()
 
 
 Router.waitOn ->
@@ -35,6 +47,13 @@ Router.waitOn ->
 prepareView = ->
   window.scrollTo(0,0)
   $('body').removeClass('sidebar-active')
+
+  #Fuck off broken modals
+  $('.modal-backdrop').removeClass('in')
+  $bd =  $('.modal-backdrop')
+  setTimeout ->
+    $bd.remove()
+  , 300
 
   #For skrollr :(
   $('body').attr('style','')

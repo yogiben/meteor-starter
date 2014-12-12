@@ -240,6 +240,7 @@ Schemas.UserProfile = new SimpleSchema(
       "Ukraine"
       "United Arab Emirates"
       "United Kingdom"
+      "United States"
       "Uruguay"
       "Uzbekistan"
       "Venezuela"
@@ -262,6 +263,7 @@ Schemas.User = new SimpleSchema(
   
   emails:
     type: [Object]
+    optional: true
 
   "emails.$.address":
     type: String
@@ -289,3 +291,6 @@ Schemas.User = new SimpleSchema(
 )
 
 Meteor.users.attachSchema Schemas.User
+
+# Export schemas
+@StarterSchemas = Schemas
