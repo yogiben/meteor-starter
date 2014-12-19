@@ -1,5 +1,3 @@
-Schemas = {}
-
 Schemas.UserProfile = new SimpleSchema(
 
   picture:

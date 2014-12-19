@@ -1,5 +1,3 @@
-Schemas = {}
-
 @Posts = new Meteor.Collection('posts');
 
 Schemas.Posts = new SimpleSchema
