@@ -22,10 +22,14 @@
  #intro {
      padding-top: 0;
      padding-bottom: 200px;
-     height: 100vh;
      background-color: black;
      h1 {
-         padding-top: 20vh;
+         padding-top: 100px;
+    }
+    &.mobile
+    {
+      background: url('/img/background-intro.jpg');
+      background-size: cover;
     }
 }
 #how-it-works {
@@ -36,6 +40,7 @@
 }
 #ipad {
     padding-bottom: 0 !important;
+    overflow-x: hidden;
     h3 {
         padding-top: 100px;
    }
