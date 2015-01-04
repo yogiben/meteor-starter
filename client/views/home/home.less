@@ -1,3 +1,5 @@
+@home-intro-bg: url(img/background-intro.jpg);
+
 // Play with background image here
 #skroll-background-intro
 {
@@ -5,7 +7,7 @@
 
   &>div
   {
-    background-image:url(img/background-intro.jpg);
+    background-image: @home-intro-bg;
   }
 }
 
@@ -28,7 +30,7 @@
     }
     &.mobile
     {
-      background: url('/img/background-intro.jpg');
+      background: @home-intro-bg;
       background-size: cover;
     }
 }
