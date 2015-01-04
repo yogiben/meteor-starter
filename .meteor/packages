@@ -23,7 +23,7 @@ cfs:graphicsmagick
 yogiben:helpers
 yogiben:user-helpers
 iron:router@1.0.0
-yogiben:autoform-modals
+yogiben:autoform-modals@0.2.8
 yogiben:favorites@0.0.4
 yogiben:comments@0.0.8
 yogiben:notifications@0.0.6
@@ -31,7 +31,7 @@ yogiben:pretty-emails
 yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
-yogiben:autoform-map
+yogiben:autoform-map@0.0.2
 multiply:iron-router-progress
 manuelschoebel:ms-seo
 spiderable
