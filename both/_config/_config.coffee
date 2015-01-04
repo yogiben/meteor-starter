@@ -1,7 +1,7 @@
 @Config =
 	name: 'My App'
 	title: 'Make Meteor Apps. Fast.'
-	subtitle: 'Create beautiful  Meteor apps really fast'
+	subtitle: 'A  boilerplate from MeteorFactory.io'
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
@@ -23,4 +23,7 @@
 		github:
 			url: 'http://github.com/yogiben'
 			icon: 'github'
+		info:
+			url: 'http://meteorfactory.io'
+			icon: 'link'
 	publicRoutes: ['home']

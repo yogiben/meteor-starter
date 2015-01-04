@@ -23,9 +23,11 @@ Template.home.rendered = () ->
 	if  (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent or navigator.vendor or window.opera)
 		$('#intro').addClass('mobile')
 	else
-		skrollr.init
+		options =
 			forceHeight: false
 			smoothScrolling: false
+
+		skrollr.init(options).refresh()
 
 
 	$( document ).ready ->
