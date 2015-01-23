@@ -67,6 +67,9 @@ iron:router@1.0.7
 iron:url@1.0.7
 joshowens:accounts-entry@1.0.3
 joshowens:simple-form@0.2.2
+jparker:crypto-core@0.1.0
+jparker:crypto-md5@0.1.1
+jparker:gravatar@0.3.1
 jquery@1.11.3
 json@1.0.2
 launch-screen@1.0.1
