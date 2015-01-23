@@ -27,7 +27,7 @@ meteor
 * Change their password and delete their account
 
 #### Admin ####
-* Manage everything via an [admin dahsboard](https://github.com/yogiben/meteor-admin/)
+* Manage everything via an [admin dahsboard](https://github.com/yogiben/meteor-admin/) (go to `/admin`)
 
 #### Interactions ####
 * Create / edit posts with image upload
