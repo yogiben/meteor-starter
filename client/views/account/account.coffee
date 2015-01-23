@@ -12,6 +12,10 @@ AutoForm.hooks updatePassword:
 
 		false
 
+Template.account.events
+	'click .js-delete-account': ->
+		Meteor.call 'deleteAccount', Meteor.userId()
+
 Template.setUserName.helpers
 	user: ->
 		Meteor.user()
