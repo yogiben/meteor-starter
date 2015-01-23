@@ -3,7 +3,7 @@ Meteor Starter
 
 A Meteor boilerplate with a lot packed in. Written in Coffeescript.
 
-[Demo](starter.meteor.com)
+[Demo](http://starter.meteor.com)
 
 [Tutorials](http://learn.meteorfactory.io/meteor-starter/)
 
