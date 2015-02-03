@@ -21,6 +21,12 @@ Router.map ->
         Meteor.subscribe 'comments'
         Meteor.subscribe 'attachments'
       ]
+    onBeforeAction: ->
+      url = Session.get 'redirectToAfterSignIn'
+      if url
+        Session.set 'redirectToAfterSignIn', null
+        Router.go url
+      @next()
     data: ->
       Posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
   @route "profile",
@@ -66,7 +72,14 @@ signInRequired = ->
   if @next
     @next()
 
+saveRedirectUrl = ->
+  unless Meteor.loggingIn()
+    if not Meteor.user()
+      Session.set 'redirectToAfterSignIn', @url
+  @next()
+
 publicRoutes = _.union Config.publicRoutes, ['entrySignIn','entrySignUp','entryForgotPassword']
+Router.onBeforeAction saveRedirectUrl, {except: _.union publicRoutes, ['entrySignOut']}
 Router.onBeforeAction signInRequired, {except: publicRoutes}
 
 signInProhibited = ->

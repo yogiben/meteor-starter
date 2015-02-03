@@ -3,9 +3,11 @@ Meteor Starter
 
 A Meteor boilerplate with a lot packed in. Written in Coffeescript.
 
-[Demo](starter.meteor.com)
+[Demo](http://starter.meteor.com) - For admin, log in with: `starter@meteorfactory.io` and `meteorrocks`
 
 [Tutorials](http://learn.meteorfactory.io/meteor-starter/)
+
+[MIT License](http://choosealicense.com/licenses/mit/)
 
 ### Setup ####
 
