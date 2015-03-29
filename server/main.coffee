@@ -26,11 +26,9 @@ Accounts.onCreateUser (options, user) ->
 		attachData profileImageUrl
 		picture.name('picture' + user._id)
 		profilePicture = ProfilePictures.insert picture
-		user.profile = 
-			picture: profilePicture._id
+		user.profile.picture = profilePicture._id
 	else
 		email = user.emails?[0]?.address or ''
 		url = Gravatar.imageUrl email
-		user.profile =
-			picture: url
+		user.profile.picture =  url
 	user
