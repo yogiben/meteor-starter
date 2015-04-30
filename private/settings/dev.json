@@ -1,4 +1,6 @@
 {
+    "environment": "dev",
+
     "public": {
         "ga": {
             "id": "UA-XXXXXXXX-1"
@@ -8,5 +10,10 @@
             "identifyUsers": true
         }
     },
-    "environment": "dev"
+    "serviceConfigurations": {
+        "facebook": {
+            "appId": "b5bd8744275104d",
+            "secret": "7fca074e2399419013545919090850ce"
+        }
+    }
 }
