@@ -121,6 +121,7 @@ tracker@1.0.7
 twitter@1.1.4
 ui@1.0.6
 underscore@1.0.3
+underscorestring:underscore.string@3.0.3
 url@1.0.4
 webapp@1.2.0
 webapp-hashing@1.0.3
@@ -130,8 +131,9 @@ yogiben:autoform-map@0.0.4
 yogiben:autoform-modals@0.3.2
 yogiben:comments@0.1.0
 yogiben:favorites@0.0.4
-yogiben:helpers@0.0.5
+yogiben:helpers@0.0.6
 yogiben:mixpanel@0.0.4
 yogiben:notifications@0.0.6
 yogiben:pretty-email@0.0.3
 yogiben:user-helpers@0.0.8
+zimme:iron-router-active@1.0.4

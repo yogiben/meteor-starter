@@ -17,6 +17,7 @@
 	dashboardRoute: '/dashboard'
 
 	defaultLanguage: 'en'
+	dateFormat: 'D/M/YYYY'
 
 	socialMedia:
 		facebook:

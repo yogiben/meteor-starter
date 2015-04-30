@@ -29,7 +29,7 @@ yogiben:notifications@0.0.6
 yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
-yogiben:autoform-map@0.0.2
+yogiben:autoform-map
 multiply:iron-router-progress
 manuelschoebel:ms-seo
 spiderable
@@ -44,3 +44,5 @@ service-configuration
 yogiben:mixpanel
 juliancwirko:s-alert
 juliancwirko:s-alert-stackslide
+momentjs:moment
+zimme:iron-router-active
