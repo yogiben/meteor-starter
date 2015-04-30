@@ -26,10 +26,10 @@ Router.map ->
     path: "/profile"
     waitOn: ->
       Meteor.subscribe 'profilePictures'
+      
   @route "account",
     path: "/account"
-    onStop: ->
-      Alert.clear()
+
   @route "setUserName",
     path: "/setUserName"
     onBeforeAction: ->
