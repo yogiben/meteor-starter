@@ -133,7 +133,7 @@ yogiben:autoform-file@0.2.1
 yogiben:autoform-map@0.0.4
 yogiben:autoform-modals@0.3.2
 yogiben:helpers@0.0.6
-yogiben:mixpanel@0.0.5
+yogiben:mixpanel@0.0.6
 yogiben:notifications@0.0.6
 yogiben:pretty-email@0.0.3
 zimme:iron-router-active@1.0.4

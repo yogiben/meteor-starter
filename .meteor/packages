@@ -38,7 +38,7 @@ accounts-ui
 jparker:gravatar
 tap:i18n
 service-configuration
-yogiben:mixpanel
+yogiben:mixpanel@0.0.6
 juliancwirko:s-alert
 juliancwirko:s-alert-stackslide
 momentjs:moment
