@@ -3,5 +3,6 @@ Meteor.startup ->
     SEO.config
       title: Config.name
       meta:
-      	title: Config.name
+        title: Config.name
         description:  Config.subtitle
+        
