@@ -86,7 +86,7 @@ meteor-platform@1.2.2
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
-momentjs:moment@2.10.3
+momentjs:moment@2.9.0
 mongo@1.1.0
 mongo-livedata@1.0.8
 mpowaga:string-template@0.1.0
@@ -133,7 +133,7 @@ yogiben:admin@1.1.0
 yogiben:autoform-file@0.2.1
 yogiben:autoform-map@0.0.4
 yogiben:autoform-modals@0.3.2
-yogiben:helpers@0.0.6
+yogiben:helpers@0.0.5
 yogiben:mixpanel@0.0.6
 yogiben:notifications@0.0.6
 yogiben:pretty-email@0.0.3
