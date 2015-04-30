@@ -13,7 +13,7 @@ alanning:roles
 aldeed:collection2
 aldeed:simple-schema
 joshowens:accounts-entry
-chrismbeckett:fontawesome4
+fortawesome:fontawesome
 raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs

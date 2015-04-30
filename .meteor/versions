@@ -39,7 +39,6 @@ cfs:tempstore@0.1.5
 cfs:upload-http@0.0.20
 cfs:worker@0.1.4
 check@1.0.5
-chrismbeckett:fontawesome4@4.2.2
 cmather:handlebars-server@0.2.0
 coffeescript@1.0.6
 ddp@1.1.0
