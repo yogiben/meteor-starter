@@ -1,6 +1,6 @@
 AutoForm.hooks commentForm:
   onError: (operation, error, template) ->
-  	sAlert error
+  	sAlert.error error
 
   formToDoc: (doc, ss, formId) ->
   	doc.doc = Template.instance().data.commentDocId
