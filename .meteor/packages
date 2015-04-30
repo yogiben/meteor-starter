@@ -18,7 +18,6 @@ raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
 aldeed:template-extension
-yogiben:alerts
 cfs:graphicsmagick
 yogiben:helpers
 yogiben:user-helpers

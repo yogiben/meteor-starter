@@ -85,7 +85,6 @@ momentjs:moment@2.9.0
 mongo@1.1.0
 mongo-livedata@1.0.8
 mpowaga:string-template@0.1.0
-mquandalle:jade@0.2.9
 mrt:googlemaps@0.1.1
 mrt:moment@2.8.1
 mrt:underscore-string-latest@2.3.3
@@ -124,7 +123,6 @@ url@1.0.4
 webapp@1.2.0
 webapp-hashing@1.0.3
 yogiben:admin@1.1.0
-yogiben:alerts@0.0.2
 yogiben:autoform-file@0.2.1
 yogiben:autoform-map@0.0.4
 yogiben:autoform-modals@0.3.2
