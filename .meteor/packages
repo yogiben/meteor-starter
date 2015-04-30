@@ -41,3 +41,5 @@ bootstrap
 accounts-ui
 jparker:gravatar
 tap:i18n
+service-configuration
+yogiben:mixpanel

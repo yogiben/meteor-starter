@@ -1,6 +1,3 @@
-# Meteor.methods
-# 	'changeEmail': (email)->
-# 		#...
 Meteor.methods
 	deleteAccount: (userId) ->
 		if @userId == userId
