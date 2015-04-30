@@ -22,8 +22,8 @@ yogiben:alerts
 cfs:graphicsmagick
 yogiben:helpers
 yogiben:user-helpers
-iron:router@1.0.0
-yogiben:autoform-modals@0.2.8
+iron:router
+yogiben:autoform-modals
 yogiben:favorites@0.0.4
 yogiben:comments@0.0.8
 yogiben:notifications@0.0.6
@@ -39,6 +39,5 @@ accounts-google
 accounts-twitter
 bootstrap
 accounts-ui
-
 jparker:gravatar
 tap:i18n
