@@ -12,7 +12,6 @@ aldeed:autoform
 alanning:roles
 aldeed:collection2
 aldeed:simple-schema
-joshowens:accounts-entry
 fortawesome:fontawesome
 raix:handlebar-helpers
 cfs:standard-packages
@@ -37,6 +36,7 @@ bootstrap
 accounts-ui
 jparker:gravatar
 tap:i18n
+useraccounts:bootstrap
 service-configuration
 yogiben:mixpanel@0.0.6
 juliancwirko:s-alert
@@ -48,3 +48,4 @@ comments
 favorites
 dburles:collection-helpers
 reywood:publish-composite
+
