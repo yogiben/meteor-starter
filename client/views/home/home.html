@@ -10,7 +10,7 @@
                         <div id="main-nav" class="navbar-collapse">
                             <ul class="social-links">
                                 {{#unless currentUser}}
-                                <a id="home-login" href="{{pathFor 'entrySignIn'}}"><li>{{_ "login2"}}</li></a>
+                                <a id="home-login" href="{{pathFor route='atSignIn'}}"><li>{{_ "login2"}}</li></a>
                                 {{/unless}}
                                 {{#each socialMedia}}
                                 <a href="{{url}}" target="_blank"><li class="fa fa-{{icon}}"></li></a>
@@ -30,7 +30,7 @@
                         {{#if currentUser}}
                         <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
                         {{else}}
-                        <a class="btn btn-success" href="{{pathFor 'entrySignUp'}}">{{_ "getstarted"}}</a>
+                        <a class="btn btn-success" href="{{pathFor 'atSignUp'}}">{{_ "getstarted"}}</a>
                         {{/if}}
                     </div>
                     <!--                 <div class="col-lg-6 col-sm-6">
@@ -105,7 +105,7 @@
                     {{_ "final_text"}}
                     </h3>
                     <div class="text-center">
-                        <a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">{{_ "final_cta"}}</a>
+                        <a class="btn btn-primary" href="{{pathFor 'atSignUp'}}">{{_ "final_cta"}}</a>
                     </div>
                 </div>
                 <div class="col-md-8  wow fadeInUp animated">

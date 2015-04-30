@@ -43,6 +43,11 @@ Router.map ->
       if not Config.username or (Meteor.userId() and Meteor.user().username)
         @redirect '/dashboard'
       @next()
+  @route 'signOut',
+  path: '/sign-out'
+  onBeforeAction: ->
+    Meteor.logout ->
+    @next()
 
 
 Router.waitOn ->
@@ -67,10 +72,13 @@ prepareView = ->
 Router.onAfterAction prepareView
 
 #To allow non-logged in users to access more routes, add it in the config file
-signInRequired = ->
-  AccountsEntry.signInRequired @
-  if @next
-    @next()
+Router.plugin 'ensureSignedIn', except: [
+  'home'
+  'atSignIn'
+  'atSignUp'
+  'atForgotPassword'
+]
+  
 
 saveRedirectUrl = ->
   unless Meteor.loggingIn()
@@ -78,9 +86,10 @@ saveRedirectUrl = ->
       Session.set 'redirectToAfterSignIn', @url
   @next()
 
-publicRoutes = _.union Config.publicRoutes, ['entrySignIn','entrySignUp','entryForgotPassword']
-Router.onBeforeAction saveRedirectUrl, {except: _.union publicRoutes, ['entrySignOut']}
-Router.onBeforeAction signInRequired, {except: publicRoutes}
+publicRoutes = _.union Config.publicRoutes, ['atSignIn','atSignUp','atForgotPassword']
+
+
+Router.onBeforeAction saveRedirectUrl, {except: _.union publicRoutes, ['atSignOut']}
 
 signInProhibited = ->
   if Meteor.user()
@@ -89,4 +98,4 @@ signInProhibited = ->
     if @next
       @next()
       
-Router.onBeforeAction signInProhibited, {only: ['entrySignUp','entrySignUp','entryForgotPassword']}
+Router.onBeforeAction signInProhibited, {only: ['atSignUp','atSignUp','atForgotPassword']}

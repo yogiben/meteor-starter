@@ -12,7 +12,6 @@ aldeed:autoform
 alanning:roles
 aldeed:collection2
 aldeed:simple-schema
-joshowens:accounts-entry
 chrismbeckett:fontawesome4
 raix:handlebar-helpers
 cfs:standard-packages
@@ -43,3 +42,4 @@ accounts-ui
 
 jparker:gravatar
 tap:i18n
+useraccounts:bootstrap
