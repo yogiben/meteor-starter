@@ -10,7 +10,7 @@
                         <div id="main-nav" class="navbar-collapse">
                             <ul class="social-links">
                                 {{#unless currentUser}}
-                                <a id="home-login" href="{{pathFor 'entrySignIn'}}"><li>Login</li></a>
+                                <a id="home-login" href="{{pathFor 'entrySignIn'}}"><li>{{_ "login2"}}</li></a>
                                 {{/unless}}
                                 {{#each socialMedia}}
                                 <a href="{{url}}" target="_blank"><li class="fa fa-{{icon}}"></li></a>
@@ -28,9 +28,9 @@
                         <h1>{{Config.title}}</h1>
                         <h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
                         {{#if currentUser}}
-                        <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> Go to dashboard</a>
+                        <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
                         {{else}}
-                        <a class="btn btn-success" href="{{pathFor 'entrySignUp'}}">Get started</a>
+                        <a class="btn btn-success" href="{{pathFor 'entrySignUp'}}">{{_ "getstarted"}}</a>
                         {{/if}}
                     </div>
                     <!--                 <div class="col-lg-6 col-sm-6">
@@ -43,7 +43,7 @@
     <section id="how-it-works" class="text-center">
         <div class="container wow fadeIn animated">
             <div class="row col-md-12">
-                <h3>How it works</h3>
+                <h3>{{_ "how"}}</h3>
                 <h4>{{Config.name}} - {{Config.subtitle}}</h4>
             </div>
         </div>
@@ -53,22 +53,22 @@
                     <div class="iconbox">
                         <i class="fa fa-plane fa-3x"></i>
                     </div>
-                    <p class="icntitle">1. Step 1</p>
-                    <p class="icnp">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="icntitle">1. {{_ "step_1"}}</p>
+                    <p class="icnp">{{_ "step_1_text"}}</p>
                 </div>
                 <div class="col-md-4 wow fadeInUp animated" data-wow-delay="0.8s">
                     <div class="iconbox">
                         <i class="fa fa-bolt fa-3x"></i>
                     </div>
-                    <p class="icntitle">2. Step 2</p>
-                    <p class="icnp"> Oratio me istius philosophi non offendit; Qua tu etiam inprudens utebare non numquam.</p>
+                    <p class="icntitle">2. {{_ "step_2"}}</p>
+                    <p class="icnp">{{_ "step_2_text"}}</p>
                 </div>
                 <div class="col-md-4 wow fadeInRight animated" data-wow-delay="1.2s">
                     <div class="iconbox">
                         <i class="fa fa-check fa-3x"></i>
                     </div>
-                    <p class="icntitle">3. Step 3</p>
-                    <p class="icnp">Et ille ridens: Video, inquit, quid agas; Duo Reges: constructio interrete.</p>
+                    <p class="icntitle">3. {{_ "step_3"}}</p>
+                    <p class="icnp">{{_ "step_3_text"}}</p>
                 </div>
             </div>
         </div>
@@ -83,11 +83,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>A revolutionary product</h3>
-                    <p>Do really cool stuff really quickly</p>
+                    <h3>{{_ "section_ipad_header"}}</h3>
+                    <p>{{_ "section_ipad_text"}}</p>
                     <p class="text-center">
                     <a href="{{Config.about}}" target="_blank" class="btn btn-success">
-                    Made by MeteorFactory
+                    {{_ "section_ipad_btn"}}
                     </a>
                     </p>
                 </div>
@@ -102,10 +102,10 @@
             <div class="row">
                 <div class="col-md-4 text-center wow fadeInDown animated" data-wow-delay="0.8s">
                     <h3>
-                    Your life will be instantly better
+                    {{_ "final_text"}}
                     </h3>
                     <div class="text-center">
-                        <a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">Take a look</a>
+                        <a class="btn btn-primary" href="{{pathFor 'entrySignUp'}}">{{_ "final_cta"}}</a>
                     </div>
                 </div>
                 <div class="col-md-8  wow fadeInUp animated">

@@ -115,6 +115,7 @@ spacebars@1.0.6
 spacebars-compiler@1.0.6
 spiderable@1.0.7
 srp@1.0.3
+tap:i18n@1.4.1
 templating@1.1.1
 tracker@1.0.7
 twitter@1.1.4

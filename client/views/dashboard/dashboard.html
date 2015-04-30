@@ -18,7 +18,7 @@
 <template name="add">
 	<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Add a Post</h3>
+				<h3 class="panel-title">{{_ "add_post"}}</h3>
 			</div>
 			<div class="panel-body">
 				{{#autoForm id="add" collection="Posts" type="insert"}}
@@ -27,7 +27,7 @@
 				<!-- {{> afQuickField name="picture"}} -->
 				{{> afQuickField name="picture"}}
 				<!-- {{> afFileUpload name="picture" collection="Attachments"}} -->
-				<button type="submit" class="btn btn-primary">Add Post</button>
+				<button type="submit" class="btn btn-primary">{{_ "add_post_btn"}}</button>
 				{{/autoForm}}
 			</div>
 	</div>
@@ -36,10 +36,10 @@
 <template name="addWithModal">
 	<div class="panel panel-default">
 			<div class="panel-heading">
-				<h3 class="panel-title">Add with a modal</h3>
+				<h3 class="panel-title">{{_ "add_post_modal"}}</h3>
 			</div>
 			<div class="panel-body">
-				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content,picture">Add a new post</a>
+				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content,picture">{{_ "add_post_modal_btn"}}</a>
 			</div>
 	</div>
 </template>
@@ -71,10 +71,10 @@
 							{{#if $eq owner User._id}}
 							<small>
 								{{#afModal title="Update post" omitFields="createdAt,updatedAt,owner" class="text-primary" collection="Posts" operation="update" doc=_id}}
-									<i class="fa fa-pencil" buttonContent="Edit post"></i> Edit post
+									<i class="fa fa-pencil" buttonContent="Edit post"></i> {{_ "edit_post"}}
 								{{/afModal}}
 								{{#afModal title="Delete post" class="text-danger" collection="Posts" operation="remove" doc=_id}}
-									<i class="fa fa-times" buttonContent="Edit post"></i> Delete
+									<i class="fa fa-times" buttonContent="Edit post"></i> {{_ "delete"}}
 								{{/afModal}}
 							</small>
 							{{/if}}
@@ -94,7 +94,7 @@
 	{{#if Favorites 'Posts'}}
 	<div class="panel panel-default">
 		<div class="panel-heading">
-				<h3 class="panel-title">Favorites</h3>
+				<h3 class="panel-title">F{{_ "favorites"}}</h3>
 		</div>
 		<div class="panel-body">
 			<ul>

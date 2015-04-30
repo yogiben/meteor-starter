@@ -4,7 +4,7 @@
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-default">
 					  <div class="panel-heading">
-							<h3 class="panel-title">Account Details</h3>
+							<h3 class="panel-title">{{_ "account_details"}}</h3>
 					  </div>
 					  <div class="panel-body">
 					  		{{> alert}}
@@ -13,25 +13,25 @@
 				</div>
 				<div class="panel panel-danger">
 					  <div class="panel-heading">
-							<h3 class="panel-title">Delete Account</h3>
+							<h3 class="panel-title">{{_ "delete_account"}}</h3>
 					  </div>
 					  <div class="panel-body">
-							<p>There's no coming back from this one</p>
+							<p>{{_ "delete_account_warn"}}</p>
 							<p>
-								<a class="btn btn-danger" data-toggle="modal" href='#delete-account'>Delete Account</a>
+								<a class="btn btn-danger" data-toggle="modal" href='#delete-account'>{{_ "delete_account"}}</a>
 								<div class="modal fade" id="delete-account">
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-header">
 												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-												<h4 class="modal-title">Delete account</h4>
+												<h4 class="modal-title">{{_ "delete_account"}}</h4>
 											</div>
 											<div class="modal-body">
-												Are you sure you want to delete your account?
+												{{_ "delete_account_warn2"}}
 											</div>
 											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-												<button type="button" class="btn btn-danger js-delete-account">Delete</button>
+												<button type="button" class="btn btn-default" data-dismiss="modal">{{_ "close"}}</button>
+												<button type="button" class="btn btn-danger js-delete-account">{{_ "delete"}}</button>
 											</div>
 										</div>
 									</div>
@@ -63,7 +63,7 @@
 		<div class="col-md-6 col-md-offset-3">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Account Details</h3>
+					<h3 class="panel-title">{{_ "account_details"}}</h3>
 				</div>
 				<div class="panel-body">
 					{{#autoForm collection="Meteor.users" doc=user type="update" id="setUserName"}}
