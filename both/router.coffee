@@ -22,11 +22,14 @@ Router.map ->
         Meteor.subscribe 'attachments'
       ]
     onBeforeAction: ->
-      url = Session.get 'redirectToAfterSignIn'
-      if url
-        Session.set 'redirectToAfterSignIn', null
-        Router.go url
-      @next()
+      if not Meteor.user()
+        @redirect '/sign-up'
+      else
+        url = Session.get 'redirectToAfterSignIn'
+        if url
+          Session.set 'redirectToAfterSignIn', null
+          Router.go url
+        @next()
     data: ->
       Posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
   @route "profile",

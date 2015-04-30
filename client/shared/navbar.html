@@ -15,22 +15,22 @@
 				<ul class="nav navbar-nav navbar-right">
 					{{> notificationsDropdown}}
 					{{#if isInRole 'admin'}}
-					<li><a href="{{pathFor 'adminDashboard'}}">Admin</a></li> 
+					<li><a href="{{pathFor 'adminDashboard'}}">{{_ "admin"}}</a></li> 
 					{{/if}}
 					<li class="dropdown hidden-xs">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{niceName}} <i class="fa fa-chevron-down i-xs"></i></a>
 						<ul class="dropdown-menu">
-							<li><a href="{{pathFor 'profile'}}">Profile</a></li>
-							<li><a href="{{pathFor 'account'}}">Account</a></li>
+							<li><a href="{{pathFor 'profile'}}">{{_ "profile"}}</a></li>
+							<li><a href="{{pathFor 'account'}}">{{_ "account"}}</a></li>
 							<li class="divider"></li>
-							<li><a href="/sign-out">Logout</a></li>
+							<li><a href="/sign-out">{{_ "signout"}}</a></li>
 						</ul>
 					</li>
 					<li class="visible-xs">
-						<a href="{{pathFor 'profile'}}" class="close-navbar">Edit profile</a>
+						<a href="{{pathFor 'profile'}}" class="close-navbar">{{_ "edit_profile"}}</a>
 					</li>
 					<li class="visible-xs">
-						<a class="close-navbar" href="/sign-out">Sign out</a>
+						<a class="close-navbar" href="/sign-out">{{_ "signout"}}</a>
 					</li>
 
 				</ul>
@@ -38,10 +38,10 @@
 				<ul class="nav navbar-nav navbar-right">
 					
 					<li>
-						<a class="close-navbar" href="/sign-up">Sign up</a>
+						<a class="close-navbar" href="/sign-up">{{_ "signup"}}</a>
 					</li>
 					<li>
-						<a class="close-navbar" href="/sign-in">Log in</a>
+						<a class="close-navbar" href="/sign-in">{{_ "login"}}</a>
 					</li>
 					
 				</ul>

@@ -1,7 +1,9 @@
 @Config =
 	name: 'My App'
-	title: 'Make Meteor Apps. Fast.'
-	subtitle: 'A boilerplate from MeteorFactory.io'
+	title: ->
+			TAPi18n.__ 'configTitle'
+	subtitle: ->
+			TAPi18n.__ 'configSubtitle'
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
@@ -27,3 +29,7 @@
 			url: 'http://meteorfactory.io'
 			icon: 'link'
 	publicRoutes: ['home']
+
+Meteor.startup ->
+	if Meteor.isClient
+		TAPi18n.setLanguage('en')
