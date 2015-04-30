@@ -15,6 +15,9 @@
 	username: false
 	homeRoute: '/'
 	dashboardRoute: '/dashboard'
+
+	defaultLanguage: 'en'
+
 	socialMedia:
 		facebook:
 			url: 'http://facebook.com/benjaminpeterjones'
@@ -28,8 +31,5 @@
 		info:
 			url: 'http://meteorfactory.io'
 			icon: 'link'
-	publicRoutes: ['home']
 
-Meteor.startup ->
-	if Meteor.isClient
-		TAPi18n.setLanguage('en')
+	publicRoutes: ['home']
