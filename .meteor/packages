@@ -20,12 +20,9 @@ cfs:gridfs
 aldeed:template-extension
 cfs:graphicsmagick
 yogiben:helpers
-yogiben:user-helpers
 iron:router
 yogiben:autoform-modals
-yogiben:favorites@0.0.4
-yogiben:comments@0.0.8
-yogiben:notifications@0.0.6
+yogiben:notifications
 yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
@@ -46,3 +43,6 @@ juliancwirko:s-alert
 juliancwirko:s-alert-stackslide
 momentjs:moment
 zimme:iron-router-active
+user-thumbs
+comments
+favorites
