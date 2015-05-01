@@ -20,15 +20,12 @@ prepareView = ->
   window.scrollTo(0,0)
   $('body').removeClass('sidebar-active')
 
-  #Fuck off broken modals
+  # Remove
   $('.modal-backdrop').removeClass('in')
   $bd =  $('.modal-backdrop')
   setTimeout ->
     $bd.remove()
   , 300
-
-  #For skrollr :(
-  $('body').attr('style','')
 
 Router.onAfterAction prepareView
 

@@ -29,7 +29,6 @@ Template.home.rendered = () ->
 
 		skrollr.init(options).refresh()
 
-
-	$( document ).ready ->
-		# alert 'ready'
-		$('#loading-overlay').fadeOut 800
+Template.home.destroyed = () ->
+	#For Skrollr
+	$('body').attr('style','')
