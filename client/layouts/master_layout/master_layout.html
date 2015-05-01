@@ -1,9 +1,9 @@
 <template name="masterLayout">
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
-		<div class="container">
+		{{#momentum plugin='iron-router' options=transition}}
 			{{> yield }}
-		</div>
+		{{/momentum}}
 		<div class="push"></div>
 		<div id="xs-sidebar-overlay" class="close-sidebar"></div>
 	</div>

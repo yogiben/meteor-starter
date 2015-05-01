@@ -8,3 +8,7 @@ Template.masterLayout.events
 		 $('body').addClass('sidebar-active')
 	'click .close-sidebar': () ->
 		 $('body').removeClass('sidebar-active')
+
+Template.masterLayout.transition = ->
+  (from, to, element) ->
+    "fade"

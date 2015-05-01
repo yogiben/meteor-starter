@@ -10,8 +10,8 @@ alanning:roles@1.2.13
 aldeed:autoform@4.2.2
 aldeed:collection2@2.3.3
 aldeed:simple-schema@1.3.2
+aldeed:tabular@1.0.6
 aldeed:template-extension@3.4.3
-alethes:pages@1.7.2
 autoupdate@1.2.1
 base64@1.0.3
 binary-heap@1.0.3
@@ -83,6 +83,8 @@ logging@1.0.7
 manuelschoebel:ms-seo@0.4.1
 meteor@1.1.6
 meteor-platform@1.2.2
+meteorhacks:meteorx@1.0.2
+meteorhacks:unblock@1.1.0
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
@@ -100,6 +102,9 @@ oauth1@1.1.4
 oauth2@1.1.3
 observe-sequence@1.0.6
 ordered-dict@1.0.3
+percolate:momentum@0.7.2
+percolate:momentum-iron-router@0.7.0
+percolate:velocityjs@1.1.0
 raix:eventemitter@0.1.2
 raix:handlebar-helpers@0.2.4
 random@1.0.3
@@ -129,7 +134,7 @@ url@1.0.4
 user-thumbs@0.0.8
 webapp@1.2.0
 webapp-hashing@1.0.3
-yogiben:admin@1.1.0
+yogiben:admin@1.1.1
 yogiben:autoform-file@0.2.1
 yogiben:autoform-map@0.0.4
 yogiben:autoform-modals@0.3.2
