@@ -1,9 +1,9 @@
 Tracker.autorun ->
 	#Accounts entry routing bug
-	if Meteor.userId() and not _.isNull(Router.current()) and Router.current().route.name == 'entrySignIn'
+	if Meteor.userId() and not _.isNull(Router.current()) and Router.current().route.name == 'atSignIn'
 		Router.go 'dashboard'
 
-	if Meteor.userId() and not _.isNull(Router.current()) and Router.current().route.name == 'entrySignUp'
+	if Meteor.userId() and not _.isNull(Router.current()) and Router.current().route.name == 'atSignUp'
 		Router.go 'dashboard'
 
 	#Subscriptions
