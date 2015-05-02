@@ -13,7 +13,7 @@ Accounts.onCreateUser (options, user) ->
 	# TODO: twitter email, first name and last name
 
 	if user.services?.facebook?.id
-		profileImageUrl = 'https://graph.facebook.com/v2.2/' + user.services.facebook.id + '/picture?type=normal'
+		profileImageUrl = 'https://graph.facebook.com/v2.3/' + user.services.facebook.id + '/picture?type=normal'
 	if user.services?.google?.id
 		profileImageUrl = user.services.google.picture
 	if user.services?.twitter?.id
