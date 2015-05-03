@@ -1,6 +1,10 @@
-Meteor.publish 'user', ->
-  Meteor.users.find @userId
-
-Meteor.publish 'myProfilePicture', ->
-  user = Meteor.users.findOne @userId
-  ProfilePictures.find _id: user.profile.picture
+Meteor.publishComposite 'user', ->
+  find: ->
+    Meteor.users.find _id: @userId
+  children: [
+    find: (user) ->
+      console.log user
+      _id = user.profile.picture or null
+      console.log _id
+      ProfilePictures.find _id: _id
+    ]

@@ -1,9 +1,9 @@
 AutoForm.hooks
 	updateProfile:
 		onSuccess: (operation, result, template) ->
-			sAlert.success 'Profile picture updated'
+			sAlert.success 'Profile updated'
 		onError: (operation, error, template) ->
-			sAlert.error 'Profile picture updated'
+			sAlert.error error
 
 	updatePicture:
 		onSuccess: (operation, result, template) ->
@@ -14,5 +14,7 @@ AutoForm.hooks
 # Autoupdate form
 # Autoform's autosave="true" wasn't working
 Template.profile.events
-	'change input': (e,t) ->
-		$('#updatePicture').submit()
+	'change form#updatePicture input': (e,t) ->
+		Meteor.setTimeout ->
+			$('form#updatePicture').submit()
+		, 10
