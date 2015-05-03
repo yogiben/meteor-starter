@@ -10,3 +10,10 @@ Template.registerHelper 'socialMedia', ->
 
 Template.registerHelper 'Utils', ->
   Utils
+
+Template.registerHelper 'currentRoute', ->
+  if Router and Router.current and Router.current()
+    Router.current()
+
+Template.registerHelper 'isRouteReady', ->
+  Router and Router.current and Router.current() and Router.current()._waitlist._notReadyCount == 0
