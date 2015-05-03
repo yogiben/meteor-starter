@@ -21,7 +21,7 @@ AccountsTemplates.configure
   continuousValidation: false
   negativeFeedback: false
   negativeValidation: true
-  positiveValidation: true
+  positiveValidation: false
   positiveFeedback: true
   showValidating: true
   
