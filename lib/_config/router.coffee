@@ -18,7 +18,6 @@ Router.waitOn ->
 
 onAfterAction = ->
   window.scrollTo(0,0)
-  $('body').removeClass('sidebar-active')
 
   # Remove modal
   $bd =  $('.modal-backdrop')
@@ -37,26 +36,4 @@ Router.plugin 'ensureSignedIn', except: [
   'atForgotPassword'
   'atSignOut'
 ]
-  
-
-saveRedirectUrl = ->
-  unless Meteor.loggingIn()
-    if not Meteor.user()
-      Session.set 'redirectToAfterSignIn', @url
-  @next()
-
-publicRoutes = _.union Config.publicRoutes, ['atSignIn','atSignUp','atForgotPassword']
-
-
-Router.onBeforeAction saveRedirectUrl, {except: _.union publicRoutes, ['atSignOut']}
-
-signInProhibited = ->
-  if Meteor.user()
-    Router.go('dashboard')
-  else
-    if @next
-      @next()
-      
-
-Router.onBeforeAction signInProhibited, {only: ['atSignOut','atSignUp','atForgotPassword']}
 

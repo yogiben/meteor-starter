@@ -1,22 +1,49 @@
+# See https://github.com/meteor-useraccounts/core/blob/master/Guide.md
+
+AccountsTemplates.configure
+  
+  # Behaviour
+  confirmPassword: false
+  enablePasswordChange: true
+  forbidClientAccountCreation: false
+  overrideLoginErrors: true
+  sendVerificationEmail: false
+  lowercaseUsername: false
+  
+  # Appearance
+  showAddRemoveServices: false
+  showForgotPasswordLink: false
+  showLabels: true
+  showPlaceholders: true
+  showResendVerificationEmailLink: false
+  
+  # Client-side Validation
+  continuousValidation: false
+  negativeFeedback: false
+  negativeValidation: true
+  positiveValidation: true
+  positiveFeedback: true
+  showValidating: true
+  
+  # Privacy Policy and Terms of Use
+  privacyUrl: Config.privacyUrl || null
+  termsUrl: Config.termsUrl || null
+  
+  # Redirects
+  homeRoutePath: Config.homeRoute || null
+  redirectTimeout: 4000
+  
+  # Hooks
+  onLogoutHook: ->
+    console.log 'logout'
+
+  onSubmitHook: ->
+    console.log 'submitting form'
+
 AccountsTemplates.configure
 	sendVerificationEmail : true
 	showAddRemoveServices: true
 	showForgotPasswordLink: true
-
-# if Meteor.isClient
-# 	Meteor.startup ->
-# 		if Config.username
-# 			AccountsTemplates.configureRoute
-# 				homeRoute: '/'
-# 				dashboardRoute: '/dashboard'
-# 				profileRoute: 'profile'
-# 				passwordSignupFields: 'USERNAME_AND_EMAIL'
-# 		else
-# 			AccountsTemplates.configureRoute
-# 				homeRoute: '/'
-# 				dashboardRoute: '/dashboard'
-# 				profileRoute: 'profile'
-# 				passwordSignupFields: 'EMAIL_ONLY'
 
 AccountsTemplates.configureRoute 'signIn'
 AccountsTemplates.configureRoute 'signUp'
