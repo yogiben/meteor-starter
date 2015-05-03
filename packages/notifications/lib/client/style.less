@@ -1,0 +1,38 @@
+@unread-notification-color: #d9edf7;
+@brand-success: #5cb85c;
+
+/* dirty hack for not working .bg-info class in .list-group-item */
+.unread-notification {
+  background-color: @unread-notification-color !important;
+}
+
+.notificationsDropdown {
+  .notification {
+    i {
+      font-size: 120%;
+
+    }
+
+    li a
+    {
+      padding: 12px 20px;
+    }
+
+    .badge {
+      position: absolute;
+      top: 7px;
+      right: 3px;
+      font-size: 70%;
+      background-color: @brand-success;
+    }
+  }
+
+}
+.notificationsDropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+
+.notificationsDropdown .dropdown-menu li a {
+  padding: 12px 20px;
+}
