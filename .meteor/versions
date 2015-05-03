@@ -7,7 +7,7 @@ accounts-twitter@1.0.4
 accounts-ui@1.1.5
 accounts-ui-unstyled@1.1.7
 alanning:roles@1.2.13
-aldeed:autoform@4.2.2
+aldeed:autoform@5.1.2
 aldeed:collection2@2.3.3
 aldeed:simple-schema@1.3.2
 aldeed:tabular@1.0.6
@@ -95,6 +95,7 @@ mrt:googlemaps@0.1.1
 mrt:moment@2.8.1
 multiply:iron-router-progress@1.0.1
 natestrauser:animate-css@3.2.6
+notifications@0.0.7
 npm-bcrypt@0.7.8_2
 oauth@1.1.4
 oauth1@1.1.4
@@ -135,11 +136,10 @@ useraccounts:core@1.9.1
 webapp@1.2.0
 webapp-hashing@1.0.3
 yogiben:admin@1.1.1
-yogiben:autoform-file@0.2.1
+yogiben:autoform-file@0.2.4
 yogiben:autoform-map@0.0.4
-yogiben:autoform-modals@0.3.2
+yogiben:autoform-modals@0.3.3
 yogiben:helpers@0.0.5
 yogiben:mixpanel@0.0.6
-yogiben:notifications@0.0.6
 yogiben:pretty-email@0.0.3
 zimme:iron-router-active@1.0.4

@@ -8,7 +8,7 @@ coffeescript
 less
 accounts-base
 accounts-password
-aldeed:autoform
+aldeed:autoform@5.1.2
 alanning:roles
 aldeed:collection2
 aldeed:simple-schema
@@ -21,10 +21,8 @@ cfs:graphicsmagick
 yogiben:helpers
 iron:router
 yogiben:autoform-modals
-yogiben:notifications
 yogiben:pretty-email
 yogiben:autoform-file
-yogiben:admin
 yogiben:autoform-map
 multiply:iron-router-progress
 manuelschoebel:ms-seo
@@ -38,7 +36,7 @@ jparker:gravatar
 tap:i18n
 useraccounts:bootstrap
 service-configuration
-yogiben:mixpanel@0.0.6
+yogiben:mixpanel
 juliancwirko:s-alert
 juliancwirko:s-alert-stackslide
 momentjs:moment
@@ -53,3 +51,5 @@ percolate:momentum
 natestrauser:animate-css
 meteorhacks:subs-manager
 fastclick
+notifications
+yogiben:admin

@@ -1,6 +1,6 @@
 @Favorites = new Meteor.Collection 'favorites'
 
-Schemas.Favorites = new SimpleSchema
+FavoritesSchemas = new SimpleSchema
 	doc:
 		type:String
 		regEx: SimpleSchema.RegEx.Id
@@ -17,4 +17,4 @@ Schemas.Favorites = new SimpleSchema
 			if this.isInsert
 				new Date()
 
-Favorites.attachSchema(Schemas.Favorites)
+Favorites.attachSchema(FavoritesSchemas)
