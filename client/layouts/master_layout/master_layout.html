@@ -1,7 +1,7 @@
 <template name="masterLayout">
 	<div class="layout master-layout {{$.Session.get 'sidebar'}}">
 		{{>header}}
-		{{#momentum plugin='iron-router' options=transition}}
+		{{#momentum plugin='iron-router' options=momentumIRTransition}}
 			{{> yield }}
 		{{/momentum}}
 		<div class="push"></div>

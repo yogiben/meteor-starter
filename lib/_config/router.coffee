@@ -1,3 +1,5 @@
+@subs = new SubsManager()
+
 Router.configure
   layoutTemplate: "masterLayout"
   loadingTemplate: "loading"
@@ -12,22 +14,20 @@ Router.configure
 
 
 Router.waitOn ->
-  Meteor.subscribe 'user'
-  Meteor.subscribe 'userPicture'
+  subs.subscribe 'user'
 
-
-prepareView = ->
+onAfterAction = ->
   window.scrollTo(0,0)
   $('body').removeClass('sidebar-active')
 
-  # Remove
-  $('.modal-backdrop').removeClass('in')
+  # Remove modal
   $bd =  $('.modal-backdrop')
+  $bd.removeClass('in')
   setTimeout ->
     $bd.remove()
   , 300
 
-Router.onAfterAction prepareView
+Router.onAfterAction onAfterAction
 
 #To allow non-logged in users to access more routes, add it in the config file
 Router.plugin 'ensureSignedIn', except: [

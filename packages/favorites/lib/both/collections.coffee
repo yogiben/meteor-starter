@@ -7,7 +7,9 @@ Schemas.Favorites = new SimpleSchema
 
 	owner:
 		type: String
-		regEx: SimpleSchema.RegEx.Id
+		autoValue: ->
+			if @isInsert
+				Meteor.userId()
 
 	createdAt: 
 		type: Date

@@ -1,53 +1,55 @@
 <template name="dashboard">
-	<div class="container">
-		<div class="row" id="champion-messages">
-			<div class="col-md-3">
-				{{> add}}
-				{{> favorites}}
-			</div>
-			<div class="col-md-9">
-				{{> posts}}
+	<div class="template-dashboard">
+		<div class="container">
+			<div class="row" id="champion-messages">
+				<div class="col-md-3">
+					{{> addPost}}
+					{{> favoritesSidebar}}
+				</div>
+				<div class="col-md-9">
+					{{> posts}}
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
-
-<template name="add">
-	<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">{{_ "add_post"}}</h3>
-			</div>
-			<div class="panel-body">
-				{{#autoForm id="add" collection="Posts" type="insert"}}
-				{{> afQuickField name="title"}}
-				{{> afQuickField name="content"}}
-				{{> afQuickField name="picture"}}
-				<button type="submit" class="btn btn-primary">{{_ "add_post_btn"}}</button>
-				{{/autoForm}}
-			</div>
-	</div>
-</template>
-
-<template name="addWithModal">
-	<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">{{_ "add_post_modal"}}</h3>
-			</div>
-			<div class="panel-body">
-				<a href="#afModal" data-toggle="modal" class="btn btn-primary" collection="Posts" operation="insert" fields="title,content,picture">{{_ "add_post_modal_btn"}}</a>
-			</div>
+<template name="addPost">
+	<div class="template-add-post">
+		<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">{{_ "add_post"}}</h3>
+				</div>
+				<div class="panel-body">
+					{{#autoForm id="add" collection="Posts" type="insert"}}
+					{{> afQuickField name="title"}}
+					{{> afQuickField name="content"}}
+					{{> afQuickField name="picture"}}
+					<button type="submit" class="btn btn-primary">{{_ "add_post_btn"}}</button>
+					{{/autoForm}}
+				</div>
+		</div>
 	</div>
 </template>
 
 <template name="posts">
-	{{#each orderByFavorites Posts}}
+	<div class="template-posts">
+		{{#each  posts}}
+		{{> post}}
+		{{else}}
+		{{> noData}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="post">
+	<div class="template-post">
 		<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">
 						{{title}}
 						<span class="pull-right">
-							<i class="fa fa-thumbs-up"></i> {{favoriteCount _id}}
+							<i class="fa fa-thumbs-up"></i> {{#with favoritesByDoc _id}}{{count}}{{/with}}
 							<i class="fa fa-comments"></i> {{commentCount _id}}
 						</span>
 					</h3>
@@ -83,24 +85,26 @@
 					{{> comments}}
 				</div>
 		</div>
-	{{/each}}
+	</div>
 </template>
 
-<template name="favorites">
-	{{#if Favorites 'Posts'}}
-	<div class="panel panel-default">
-		<div class="panel-heading">
-				<h3 class="panel-title">{{_ "favorites"}}</h3>
+<template name="favoritesSidebar">
+	<div class="template-favorites-sidebar">
+		{{#if myFavorites.count}}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+					<h3 class="panel-title">{{_ "favorites"}}</h3>
+			</div>
+			<div class="panel-body">
+				<ul>
+				{{#each myFavorites}}
+					<li>
+						<a>{{_id}}</a>
+					</li>
+				{{/each}}
+				</ul>
+			</div>
 		</div>
-		<div class="panel-body">
-			<ul>
-			{{#each Favorites 'Posts'}}
-				<li>
-					<a>{{title}}</a>
-				</li>
-			{{/each}}
-			</ul>
-		</div>
+		{{/if}}
 	</div>
-	{{/if}}
 </template>

@@ -22,7 +22,6 @@ Package.onUse(function(api) {
 
   api.addFiles(
   	[
-  		'lib/both/schemas.coffee',
   		'lib/both/collections.coffee'
   	],
   	both)

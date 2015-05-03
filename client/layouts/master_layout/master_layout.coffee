@@ -9,6 +9,6 @@ Template.masterLayout.events
 	'click .close-sidebar': () ->
 		 $('body').removeClass('sidebar-active')
 
-Template.masterLayout.transition = ->
-  (from, to, element) ->
+Template.registerHelper 'momentumIRTransition', ->
+	(from, to, element) ->
     "fade"
