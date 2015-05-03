@@ -11,8 +11,8 @@ AccountsTemplates.configure
   lowercaseUsername: false
   
   # Appearance
-  showAddRemoveServices: false
-  showForgotPasswordLink: false
+  showAddRemoveServices: true
+  showForgotPasswordLink: true
   showLabels: true
   showPlaceholders: true
   showResendVerificationEmailLink: false
@@ -39,11 +39,6 @@ AccountsTemplates.configure
 
   onSubmitHook: ->
     console.log 'submitting form'
-
-AccountsTemplates.configure
-	sendVerificationEmail : true
-	showAddRemoveServices: true
-	showForgotPasswordLink: true
 
 AccountsTemplates.configureRoute 'signIn'
 AccountsTemplates.configureRoute 'signUp'

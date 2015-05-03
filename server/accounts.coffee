@@ -30,6 +30,9 @@ Accounts.onCreateUser (options, user) ->
 		email = user.emails?[0]?.address or ''
 		profileImageUrl = Gravatar.imageUrl email, {default: 'identicon'}
 	
+	console.log 'PROFILE IMAGE URL'
+	console.log profileImageUrl
+
 	if  profileImageUrl
 		picture = new FS.File()
 		attachData = Meteor.wrapAsync picture.attachData, picture
