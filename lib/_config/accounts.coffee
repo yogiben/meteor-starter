@@ -30,8 +30,7 @@ AccountsTemplates.configure
   termsUrl: Config.termsUrl || null
   
   # Redirects
-  homeRoutePath: Config.homeRoute || null
-  redirectTimeout: 4000
+  homeRoutePath: Config.dashboardRoute || null
   
   # Hooks
   onLogoutHook: ->

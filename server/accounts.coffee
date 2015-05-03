@@ -29,9 +29,6 @@ Accounts.onCreateUser (options, user) ->
 
 		email = user.emails?[0]?.address or ''
 		profileImageUrl = Gravatar.imageUrl email, {default: 'identicon'}
-	
-	console.log 'PROFILE IMAGE URL'
-	console.log profileImageUrl
 
 	if  profileImageUrl
 		picture = new FS.File()
@@ -40,6 +37,5 @@ Accounts.onCreateUser (options, user) ->
 		picture.name('picture ' + user._id + '.png')
 		profilePicture = ProfilePictures.insert picture
 		user.profile.picture = profilePicture._id
-
-	console.log user
+		
 	user
