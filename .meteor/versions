@@ -136,7 +136,7 @@ useraccounts:core@1.9.1
 webapp@1.2.0
 webapp-hashing@1.0.3
 yogiben:admin@1.1.1
-yogiben:autoform-file@0.2.4
+yogiben:autoform-file@0.2.5
 yogiben:autoform-map@0.0.4
 yogiben:autoform-modals@0.3.3
 yogiben:helpers@0.0.5
