@@ -1,10 +1,14 @@
 if Meteor.isServer
-	PrettyEmail.options = 
-		facebook: 'http://facebook.com/onthecode'
-		twitter: 'http://twitter.com/BenPeterJones'
-		website: 'http://benjaminpeterjones.com'
+  options =
+    siteName: Config.name
 
-		siteName: 'Meteor Starter'
-		companyAddress: 'Jessnerstrasse 18, 12047 Berlin'
-		companyName: 'Code to Create'
-		companyUrl: 'http://code2create.com'
+  if Config.socialMedia
+    _.each Config.socialMedia, (v,k) ->
+      options[k] = v.url
+
+  if Config.legal
+    options.companyAddress = Config.legal.address
+    options.companyName = Config.legal.name
+    options.companyUrl = Config.legal.url
+
+  PrettyEmail.options = options
