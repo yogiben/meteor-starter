@@ -37,7 +37,9 @@ Accounts.onCreateUser (options, user) ->
 		picture = new FS.File()
 		attachData = Meteor.wrapAsync picture.attachData, picture
 		attachData profileImageUrl
-		picture.name('picture' + user._id)
+		picture.name('picture ' + user._id + '.png')
 		profilePicture = ProfilePictures.insert picture
 		user.profile.picture = profilePicture._id
+
+	console.log user
 	user

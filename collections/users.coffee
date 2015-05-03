@@ -275,9 +275,6 @@ Schemas.User = new SimpleSchema(
 
   profile:
     type: Schemas.UserProfile
-    autoValue: ->
-      if @isInsert
-        {}
 
   services:
     type: Object
