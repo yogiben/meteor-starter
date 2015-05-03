@@ -13,7 +13,7 @@
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-					{{#if currentUser}}
+					{{#if User}}
 						{{> notificationsDropdown}}
 						{{#if isInRole 'admin'}}
 						<li><a href="{{pathFor 'adminDashboard'}}">{{_ "admin"}}</a></li> 

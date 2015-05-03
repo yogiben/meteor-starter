@@ -9,7 +9,7 @@
                         <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
                         <div id="main-nav" class="navbar-collapse">
                             <ul class="social-links">
-                                {{#unless currentUser}}
+                                {{#unless User}}
                                 <a id="home-login" href="{{pathFor route='atSignIn'}}"><li>{{_ "login2"}}</li></a>
                                 {{/unless}}
                                 {{#each socialMedia}}
@@ -27,7 +27,7 @@
                     <div class="col-lg-12 col-sm-12">
                         <h1>{{Config.title}}</h1>
                         <h2 style="color:white;" class="hidden-xs">{{Config.subtitle}}</h2>
-                        {{#if currentUser}}
+                        {{#if User}}
                         <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
                         {{else}}
                         <a class="btn btn-success" href="{{pathFor 'atSignUp'}}">{{_ "getstarted"}}</a>
