@@ -1,42 +1,44 @@
 <template name="account">
-	<div class="container">
-		<div class="row" id="champion-messages">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="panel panel-default">
-					  <div class="panel-heading">
-							<h3 class="panel-title">{{_ "account_details"}}</h3>
-					  </div>
-					  <div class="panel-body">
-							{{> updatePassword}}
-					  </div>
-				</div>
-				<div class="panel panel-danger">
-					  <div class="panel-heading">
-							<h3 class="panel-title">{{_ "delete_account"}}</h3>
-					  </div>
-					  <div class="panel-body">
-							<p>{{_ "delete_account_warn"}}</p>
-							<p>
-								<a class="btn btn-danger" data-toggle="modal" href='#delete-account'>{{_ "delete_account"}}</a>
-								<div class="modal fade" id="delete-account">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-												<h4 class="modal-title">{{_ "delete_account"}}</h4>
-											</div>
-											<div class="modal-body">
-												{{_ "delete_account_warn2"}}
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">{{_ "close"}}</button>
-												<button type="button" class="btn btn-danger js-delete-account">{{_ "delete"}}</button>
+	<div class="template-account">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+								<h3 class="panel-title">{{_ "account_details"}}</h3>
+						  </div>
+						  <div class="panel-body">
+								{{> updatePassword}}
+						  </div>
+					</div>
+					<div class="panel panel-danger">
+						  <div class="panel-heading">
+								<h3 class="panel-title">{{_ "delete_account"}}</h3>
+						  </div>
+						  <div class="panel-body">
+								<p>{{_ "delete_account_warn"}}</p>
+								<p>
+									<a class="btn btn-danger" data-toggle="modal" href='#delete-account'>{{_ "delete_account"}}</a>
+									<div class="modal fade" id="delete-account">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+													<h4 class="modal-title">{{_ "delete_account"}}</h4>
+												</div>
+												<div class="modal-body">
+													{{_ "delete_account_warn2"}}
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">{{_ "close"}}</button>
+													<button type="button" class="btn btn-danger js-delete-account">{{_ "delete"}}</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</p>
-					  </div>
+								</p>
+						  </div>
+					</div>
 				</div>
 			</div>
 		</div>
