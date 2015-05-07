@@ -1,26 +1,24 @@
 <template name="home">
-<div id="skrollr-body">
-    {{> skrollrBackground}}
-    <section id="intro" class="colored text-center">
-        <header>
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="row">
-                        <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
-                        <div id="main-nav" class="navbar-collapse">
-                            <ul class="social-links">
-                                {{#unless User}}
-                                <a id="home-login" href="{{pathFor route='atSignIn'}}"><li>{{_ "login2"}}</li></a>
-                                {{/unless}}
-                                {{#each socialMedia}}
-                                <a href="{{url}}" target="_blank"><li class="fa fa-{{icon}}"></li></a>
-                                {{/each}}
-                            </ul>
-                        </div>
-                    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="row">
+                <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
+                <div id="main-nav" class="navbar-collapse">
+                    <ul class="nav pull-right">
+                        {{#unless User}}
+                        <li>
+                            <a href="{{pathFor 'atSignIn'}}">{{_ "login2"}}</a>
+                        </li>
+                        <li>
+                            <a href="{{pathFor 'atSignUp'}}" class="btn  btn-hollow">{{_ "signup"}}</a>
+                        </li>
+                        {{/unless}}
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
+    <section id="intro" class="colored text-center">
         <div class="container">
             <div class="intro-well wow animated bounceIn">
                 <div class="row">
@@ -30,7 +28,7 @@
                         {{#if User}}
                         <a href="{{pathFor 'dashboard'}}" class="btn btn-success"><i class="fa fa-dashboard"></i> {{_ "dashboard"}}</a>
                         {{else}}
-                        <a class="btn btn-success" href="{{pathFor 'dashboard'}}">{{_ "getstarted"}}</a>
+                        <a class="btn btn-hollow" href="{{pathFor 'dashboard'}}">{{_ "getstarted"}}</a>
                         {{/if}}
                     </div>
                     <!--                 <div class="col-lg-6 col-sm-6">
@@ -114,25 +112,8 @@
             </div>
         </div>
     </section>
-</div>
-{{> footerHome}}
 </template>
-<template name="skrollrBackground">
-<div
-    id="skroll-background-intro"
-    class="parallax-image-wrapper parallax-image-wrapper-100"
-    data-anchor-target="#intro"
-    data-bottom-top="transform:translate3d(0px, 200%, 0px)"
-    data-top-bottom="transform:translate3d(0px, 0%, 0px)">
-    <div
-        class="parallax-image parallax-image-100"
-        data-anchor-target="#intro"
-        data-bottom-top="transform: translate3d(0px, -80%, 0px);"
-        data-top-bottom="transform: translate3d(0px, 80%, 0px);"
-    ></div>
-    <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
-</div>
-</template>
+
 <template name="footerHome">
     <footer id="footer-home">
         <div class="container">
