@@ -31,9 +31,6 @@
                         <a class="btn btn-hollow" href="{{pathFor 'dashboard'}}">{{_ "getstarted"}}</a>
                         {{/if}}
                     </div>
-                    <!--                 <div class="col-lg-6 col-sm-6">
-                                                <img class="img-responsive" src="/img/image-header1.png" alt="">
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -71,12 +68,6 @@
             </div>
         </div>
     </section>
-    <!-- <section id="examples">
-                <div class="container wow fadeInUp animated">
-                        <h1>Great features!</h1>
-                        <h2>You can use {{Config.siteName}} to do anything</h2>
-                </div>
-    </section> -->
     <section id="ipad" class="colored text-center">
         <div class="container">
             <div class="row">
@@ -112,30 +103,4 @@
             </div>
         </div>
     </section>
-</template>
-
-<template name="footerHome">
-    <footer id="footer-home">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-offset-2 col-md-8">
-                    <ul class="social-networks">
-                        {{#each socialMedia}}
-                        <li><a href="{{url}}" target="_blank">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-{{icon}} fa-stack-1x fa-inverse"></i>
-                        </span></a>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    {{{Config.footer}}}
-                </div>
-            </div>
-        </div>
-    </footer>
 </template>
