@@ -1,0 +1,15 @@
+<template name="profileThumb">
+	<div class="profile-thumb">
+		{{#if profileThumbSrc _id}}
+			<div class="profile-thumb-img">
+				<img class="media-object img-thumbnail img-circle" src="{{profileThumbSrc _id}}" alt="Image">
+			</div>
+		{{else}}
+			{{#with profileThumbInitial _id}}
+				<div class="profile-thumb-initial">
+					<div style="color:{{color}};background-color:{{backgroundColor}}">{{{html}}}</div>
+				</div>
+			{{/with}}
+		{{/if}}
+	</div>
+</template>

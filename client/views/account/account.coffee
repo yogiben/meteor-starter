@@ -1,14 +1,14 @@
 AutoForm.hooks updatePassword:
 	onSubmit: (insertDoc, updateDoc, currentDoc)->
 		if insertDoc.new != insertDoc.confirm
-			Alert.error 'Passwords do not match'
+			sAlert.error 'Passwords do not match'
 			return false
 		Accounts.changePassword insertDoc.old, insertDoc.new, (e)->
 			$('.btn-primary').attr('disabled',null)
 			if e
-				Alert.error e.message
+				sAlert.error e.message
 			else
-				Alert.success 'Password Updated'
+				sAlert.success 'Password Updated'
 
 		false
 

@@ -1,6 +1,8 @@
 Template.home.rendered = () ->
 	w = new WOW().init()
 
+	# TODO: End after home destroyed
+
 	# make sure div stays full width/height on resize
 	# global vars
 	winWidth = $(window).width()
@@ -16,20 +18,14 @@ Template.home.rendered = () ->
 	    width: $(window).width()
 	    height: $(window).height()
 
-	
-	# s = new skrollr.init({smoothScrolling: true})
-	# s.refresh()
-
-	if  (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent or navigator.vendor or window.opera)
-		$('#intro').addClass('mobile')
-	else
+	#Skroll doesn't work so well on mobile imo
+	unless Utils.isMobile
 		options =
 			forceHeight: false
 			smoothScrolling: false
 
 		skrollr.init(options).refresh()
 
-
-	$( document ).ready ->
-		# alert 'ready'
-		$('#loading-overlay').fadeOut 800
+Template.home.destroyed = () ->
+	#For Skrollr
+	$('body').attr('style','')

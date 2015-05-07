@@ -1,0 +1,56 @@
+<template name="commentForm">
+    {{#autoForm collection="Comments" id="commentForm" type="insert" commentDocId=_id}}
+      {{> afQuickField name='content' id='content' rows=2}}
+    <button type="submit" doc="{{_id}}" class="btn btn-primary btn-sm">Comment</button>
+    {{#if cancelButton}}
+    <a class="btn-cancel-comment">Cancel</a>
+    {{/if}}
+  {{/autoForm}}
+</template>
+
+<template name="commentFormToggle">
+    {{#if commentingOn _id}}
+        <hr/>
+        {{> commentForm _id=_id cancelButton=true}}
+    {{else}}
+        <button class="btn btn-primary btn-sm btn-comment" doc="{{_id}}">Comment</button>
+    {{/if}}
+</template>
+
+<template name="comments">
+    <div class="comments">
+        {{#if CommentsByDoc _id}}
+            <hr/>
+            {{#each CommentsByDoc _id}}
+                    {{> comment}}
+            {{/each}}
+        {{else}}
+            {{> noComments}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="comment">
+	<div class="media comment">
+		<a class="pull-left" href="#">
+			{{> profileThumb _id=owner}}
+		</a>
+		<div class="media-body">
+            <p>{{content}}</p>
+			<small class="media-heading">{{niceName owner}}</small>
+		</div>
+	</div>
+</template>
+
+<template name="hasComments">
+    {{#each comments}}
+        <div style="padding:20px">
+	        <div class="tip left">
+                {{content}}
+            </div>
+        </div>
+    {{/each}}
+</template>
+
+<template name="noComments">
+</template>

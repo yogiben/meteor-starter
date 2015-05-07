@@ -1,0 +1,45 @@
+<template name="notificationsDropdown">
+  <li class="dropdown notificationsDropdown">
+    <a href="#" class="notification">
+      {{#if notificationCount}}
+        <i class="fa fa-{{dropdownIcon}}"></i>
+        <span class="badge bg-success">{{notificationCount}}</span>
+      {{else}}
+        <i class="fa fa-{{dropdownIconEmpty}}"></i>
+      {{/if}}
+    </a>
+
+    <ul class="dropdown-menu" role="menu">
+      {{#if hasNotifications}}
+        {{#each Notifications limit=5 unreadFirst=true}}
+          <li class="notification {{notificationClass}}">
+            <a href="{{link}}"><i class="fa fa-{{icon}} fa-fw text-{{class}}"></i> {{title}}</a>
+          </li>
+        {{/each}}
+        <li class="text-center"><a href="/notifications">See all</a></li>
+      {{else}}
+        <li><div class="well-sm">0 Notifications</div></li>
+      {{/if}}
+    </ul>
+  </li>
+</template>
+
+<template name="notifications">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Notifications</h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        {{#each Notifications}}
+          <li class="list-group-item notification {{notificationClass}}">
+            <i class="fa fa-{{icon}} text-{{class}}"></i> 
+            <a href="{{link}}">{{title}}</a> 
+            <span class="pull-right">{{ago}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+ </template>
