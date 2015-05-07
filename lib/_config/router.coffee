@@ -21,7 +21,7 @@ onAfterAction = ->
 
 Router.onAfterAction onAfterAction
 
-#To allow non-logged in users to access more routes, add it in the config file
+#To allow non-logged in users to access more routes, add it in the _config.coffee file
 publicRoutes = _.union Config.publicRoutes || [], [
   'home'
   'atSignIn'
