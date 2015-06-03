@@ -1,5 +1,4 @@
 FROM danieldent/meteor:1.0.3.1
-MAINTAINER Mike Michel (http://sloppy.io/)
 COPY . /opt/src
 WORKDIR /opt/src
 RUN meteor build .. --directory --server http://localhost:3000 \

@@ -48,11 +48,26 @@ First steps:
 ### Docker ###
 Dockerize it
 
+for Dev
+
+```
+docker build -t myrepo/meteordev -f Dockerfile-dev .
+```
+
+Run
+
+```
+docker run -it -p 3000:3000 --rm myrepo/meteordev
+```
+
+
+for Prod
+
 ```
 docker build -t myrepo/mymeteorapp .
 ```
 
-#### Run it ####
+Run it
 ```
 docker run --name mongodb -d mongo
 docker run -it --rm -p 3000:3000 --link mongodb:db -e "MONGO_URL=mongodb://db" -e "ROOT_URL=http://localhost:3000" myrepo/mymeteorapp
