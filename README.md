@@ -45,6 +45,19 @@ First steps:
 * Add / edit collections in `/both/collections/`
 * Create routes and views in `/both/router.coffee` and `/client/views` folder
 
+### Docker ###
+Dockerize it
+
+```
+docker build -t myrepo/mymeteorapp .
+```
+
+#### Run it ####
+```
+docker run --name mongodb -d mongo
+docker run -it --rm -p 3000:3000 --link mongodb:db -e "MONGO_URL=mongodb://db" -e "ROOT_URL=http://localhost:3000" myrepo/mymeteorapp
+```
+
 ### Screenshots ###
 ![alt tag](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/meteor-starter-5.png)
 ![alt tag](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/login.png)
