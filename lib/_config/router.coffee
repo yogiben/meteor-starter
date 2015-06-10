@@ -17,14 +17,15 @@ Router.waitOn ->
   subs.subscribe 'user'
 
 onAfterAction = ->
-  window.scrollTo(0,0)
+  if Meteor.isClient
+    window.scrollTo(0,0)
 
-  # Remove modal
-  $bd =  $('.modal-backdrop')
-  $bd.removeClass('in')
-  setTimeout ->
-    $bd.remove()
-  , 300
+    # Remove modal
+    $bd =  $('.modal-backdrop')
+    $bd.removeClass('in')
+    setTimeout ->
+      $bd.remove()
+    , 300
 
 Router.onAfterAction onAfterAction
 
@@ -36,4 +37,3 @@ Router.plugin 'ensureSignedIn', except: [
   'atForgotPassword'
   'atSignOut'
 ]
-
