@@ -122,6 +122,7 @@ spacebars@1.0.6
 spacebars-compiler@1.0.6
 spiderable@1.0.7
 srp@1.0.3
+stylus@1.0.7
 tap:i18n@1.4.1
 templating@1.1.1
 timmyg:wow@1.0.1
@@ -135,6 +136,7 @@ url@1.0.4
 user-thumbs@0.0.8
 useraccounts:bootstrap@1.9.1
 useraccounts:core@1.9.1
+utilities:avatar@0.7.11
 webapp@1.2.0
 webapp-hashing@1.0.3
 yogiben:admin@1.1.1
