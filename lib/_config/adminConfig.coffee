@@ -4,20 +4,20 @@
 		Posts: {
 			color: 'red'
 			icon: 'pencil'
-			auxCollections: ['Attachments']
+			auxCollections: ['Attachments', 'Users']
 			tableColumns: [
-              {label: 'Title',name:'title'}
-              {label:'User',name:'owner',collection:'Users'}
+              {label: 'Title', name:'title'}
+              {label: 'User', name:'owner', collection:'Users'}
             ]
 		}
 		Comments: {
 			color: 'green'
 			icon: 'comments'
-			auxCollections: ['Posts']
+			auxCollections: ['Posts', 'Users']
 			tableColumns: [
-              {label: 'Content';name:'content'}
-              {label:'Post';name:'doc',collection: 'Posts',collection_property:'title'}
-              {label:'User',name:'owner',collection:'Users'}
+              {label: 'Content', name: 'content'}
+              {label: 'Post', name:'doc', collection: 'Posts', collection_property: 'title'}
+              {label: 'User', name:'owner', collection:'Users'}
             ]
 		}
 	dashboard:
