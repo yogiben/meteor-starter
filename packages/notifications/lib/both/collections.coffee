@@ -14,32 +14,32 @@ Notifications.read = (_id) ->
 
 NotificationsSchema = new SimpleSchema
   owner:
-    type:String
+    type: String
     regEx: SimpleSchema.RegEx.Id
 
   link:
-    type:String
+    type: String
     optional: true
 
-  title:
-    type:String
+  title: 
+    type: String
 
   read:
-    type:Boolean
-    defaultValue: false
+    type: Boolean
+    defaultValue:  false
 
-  date:
-    type:Date
-    autoValue: ->
+  date: 
+    type: Date
+    autoValue:  ->
       if this.isInsert
         new Date()
 
   icon:
-    type:String
-    defaultValue: 'circle-o'
+    type: String
+    defaultValue:  'circle-o'
 
   class:
-    type:String
-    defaultValue: 'default'
+    type: String
+    defaultValue:  'default'
 
 Notifications.attachSchema(NotificationsSchema)
