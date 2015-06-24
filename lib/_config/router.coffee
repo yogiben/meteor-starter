@@ -19,6 +19,13 @@ onAfterAction = ->
   if Meteor.isClient
     window.scrollTo(0,0)
 
+    # Remove modal
+    $bd =  $('.modal-backdrop')
+    $bd.removeClass('in')
+    setTimeout ->
+      $bd.remove()
+    , 300
+
 Router.onAfterAction onAfterAction
 
 #To allow non-logged in users to access more routes, add it in the _config.coffee file

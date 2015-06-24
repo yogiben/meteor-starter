@@ -1,0 +1,76 @@
+{
+
+	/*Config*/
+	"configName": "我的应用",
+	"configTitle": "制作Meteor App. 更快速.",
+	"configSubtitle": "畅快建立美观实用的Meteor Apps",
+	
+	/*Home*/
+	"getstarted": "开始",
+	"dashboard": "控制面板",
+	"learn": "了解更多",
+	"intro": "制作Meteor Apps. 更快速.",
+	"how": "如何工作",
+	"step_1": "步骤 1",
+	"step_1_text": "不要急于相见 为天空再留一朵洁白的梦幻 洁白的梦幻 雨打芭蕉　泪湿栏杆 ",
+	"step_2": "步骤 2",
+	"step_2_text": "不要急于相见 等庭院盛开温馨的玉兰 温馨的玉兰 举杯把盏　花好月圆 ",
+	"step_3": "步骤 3",
+	"step_3_text": "不要急于相见 既然已分别了很久很久 平安便是夙愿 离愁终有尽　相思诉不完",
+	"section_ipad_header": "一个革命性的产品",
+	"section_ipad_text": "真帅真快得无以伦比",
+	"section_ipad_btn": "由MeteorFactory制作",
+	"final_text": "你的生命每个瞬间将会更好.",
+	"final_cta": "参观下",
+
+	/*Shared*/
+
+	"favorite": "常用",
+
+	 /*Navbar*/
+	"admin": "管理中心",
+	"profile": "资料面板",
+	"account": "账户",
+	"signout": "登出",
+	"signup": "登入",
+	"login": "登录",
+	"login2": "登陆",
+	"edit_profile": "编辑资料",
+
+	/*Not Found*/
+	"not_found": "这里什么也没有.",
+
+
+	/*Dashboard*/
+	"add_post": "新增帖子",
+	"add_post_btn": "新增",
+	"add_post_modal": "带框架增加",
+	"add_post_modal_btn": "新增帖子",
+	"edit_post": "编辑帖子",
+	"delete": "删除",
+	"favorites": "常用",
+
+	/*Account*/
+	"account_details": "账户资料",
+	"delete_account": "删除账户",
+	"delete_account_warn": "此操作不可恢复",
+	"delete_account_warn2": "确定要删除你的账户吗?",
+	"close": "关闭",
+	"change_pswd": "更换密码",
+
+	/*Profile*/
+	"update": "更新",
+
+	/*Posts*/
+
+	"postTitle": "标题",
+	"postContent": "正文",
+	"postPicture": "图片",
+	// "uploadLabel": "选择文件"
+	"profilePicture": "资料图片"
+
+
+	
+
+
+}
