@@ -1,39 +1,35 @@
 @AdminConfig =
 	name: Config.name
-	collections : 
-		Posts: {
+	collections:
+		Posts:
 			color: 'red'
 			icon: 'pencil'
-			auxCollections: ['Attachments', 'Users']
+			extraFields: ['owner']
 			tableColumns: [
-              {label: 'Title', name:'title'}
-              {label: 'User', name:'owner', collection:'Users'}
-            ]
-		}
+        { label: 'Title', name: 'title' }
+        { label: 'User', name: 'author()', template: 'adminUserCell' }
+      ]
 		Comments: {
 			color: 'green'
 			icon: 'comments'
-			auxCollections: ['Posts', 'Users']
+			extraFields: ['doc', 'owner']
 			tableColumns: [
-              {label: 'Content', name: 'content'}
-              {label: 'Post', name:'doc', collection: 'Posts', collection_property: 'title'}
-              {label: 'User', name:'owner', collection:'Users'}
-            ]
+        { label: 'Content', name: 'content' }
+        { label: 'Post', name: 'docTitle()', template: 'adminPostCell' }
+        { label: 'User', name: 'author()', template: 'adminUserCell' }
+      ]
+			children: [
+				{
+					find: (comment) ->
+						Posts.find comment.doc, limit: 1
+				}
+				{
+					find: (comment) ->
+						Meteor.users.find comment.owner, limit: 1
+				}
+			]
 		}
 	dashboard:
 		homeUrl: '/dashboard'
-		# widgets: [
-		# 	{
-		# 		template: 'adminCollectionWidget'
-		# 		data:
-		# 			collection: 'Posts'
-		# 			class: 'col-lg-3 col-xs-6'
-		# 	}
-		# 	{
-		# 		template: 'adminUserWidget'
-		# 		data:
-		# 			class: 'col-lg-3 col-xs-6'
-		# 	}
-		# ]
-	autoForm: 
+	autoForm:
 	        omitFields: ['createdAt', 'updatedAt']
