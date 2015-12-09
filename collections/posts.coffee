@@ -10,7 +10,7 @@ Schemas.Posts = new SimpleSchema
 		autoform:
 			rows: 5
 
-	createdAt: 
+	createdAt:
 		type: Date
 		autoValue: ->
 			if this.isInsert
@@ -30,7 +30,7 @@ Schemas.Posts = new SimpleSchema
 				type: 'fileUpload'
 				collection: 'Attachments'
 
-	owner: 
+	owner:
 		type: String
 		regEx: SimpleSchema.RegEx.Id
 		autoValue: ->
@@ -43,3 +43,11 @@ Schemas.Posts = new SimpleSchema
 					value: user._id
 
 Posts.attachSchema(Schemas.Posts)
+
+Posts.helpers
+	author: ->
+		user = Meteor.users.findOne(@owner)
+		if user?.profile?.firstName? and user?.profile?.lastName
+			user.profile.firstName + ' ' + user.profile.lastName
+		else
+			user?.emails?[0].address
