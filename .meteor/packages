@@ -39,11 +39,12 @@ juliancwirko:s-alert
 juliancwirko:s-alert-stackslide
 momentjs:moment
 zimme:iron-router-active
-# user-thumbs
-# comments
-# favorites
-# notifications
+user-thumbs
+comments
+favorites
+notifications
 # bootstrap
+useraccounts:iron-routing
 dburles:collection-helpers
 reywood:publish-composite
 percolate:momentum-iron-router
