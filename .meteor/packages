@@ -15,7 +15,7 @@ fortawesome:fontawesome
 raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
-aldeed:template-extension
+aldeed:template-extension@4.0.0
 cfs:graphicsmagick
 yogiben:helpers
 iron:router
