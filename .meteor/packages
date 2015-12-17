@@ -8,14 +8,16 @@ less
 accounts-base
 accounts-password
 aldeed:autoform@5.1.2
-alanning:roles
 aldeed:collection2
+dburles:collection-helpers
+matb33:collection-hooks
+alanning:roles
 aldeed:simple-schema
 fortawesome:fontawesome
 raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
-aldeed:template-extension@4.0.0
+aldeed:template-extension
 cfs:graphicsmagick
 yogiben:helpers
 iron:router
@@ -45,7 +47,6 @@ favorites
 notifications
 twbs:bootstrap
 useraccounts:iron-routing
-dburles:collection-helpers
 reywood:publish-composite
 percolate:momentum-iron-router
 percolate:momentum
