@@ -43,7 +43,7 @@ user-thumbs
 comments
 favorites
 notifications
-# bootstrap
+twbs:bootstrap
 useraccounts:iron-routing
 dburles:collection-helpers
 reywood:publish-composite
