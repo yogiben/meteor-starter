@@ -8,12 +8,12 @@ Package.describe({
 both = ['client','server']
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0');
+  api.versionsFrom('METEOR@1.0.3');
 
   api.use(
   	[
   		'coffeescript',
-  		'less',
+  		'less@2.5.1',
       'templating',
 	    'aldeed:autoform@4.1.0 || 5.1.2'
   	],

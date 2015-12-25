@@ -3,14 +3,15 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 coffeescript
 less
 accounts-base
 accounts-password
 aldeed:autoform@5.1.2
-alanning:roles
 aldeed:collection2
+dburles:collection-helpers
+matb33:collection-hooks
+alanning:roles
 aldeed:simple-schema
 fortawesome:fontawesome
 raix:handlebar-helpers
@@ -30,7 +31,6 @@ spiderable
 accounts-facebook
 accounts-google
 accounts-twitter
-bootstrap
 accounts-ui
 jparker:gravatar
 tap:i18n
@@ -44,15 +44,30 @@ zimme:iron-router-active
 user-thumbs
 comments
 favorites
-dburles:collection-helpers
+notifications
+twbs:bootstrap
+useraccounts:iron-routing
 reywood:publish-composite
 percolate:momentum-iron-router
 percolate:momentum
 natestrauser:animate-css
 meteorhacks:subs-manager
 fastclick
-notifications
 yogiben:admin
 timmyg:wow
 tsega:skrollr
 utilities:avatar
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check

@@ -7,13 +7,13 @@ Package.describe({
 both = ['client', 'server'];
 
 Package.onUse(function(api) {
-  api.versionsFrom('METEOR@1.0');
+  api.versionsFrom('METEOR@1.0.3');
   
   api.use(
       [
         'coffeescript',
         'templating',
-        'less',
+        'less@2.5.1',
         'tracker',
         'iron:router@1.0.0',
         'mrt:moment@2.8.1',
