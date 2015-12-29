@@ -158,7 +158,6 @@ twbs:bootstrap@3.3.6
 twitter@1.1.5
 ui@1.0.8
 underscore@1.0.4
-underscorestring:underscore.string@3.0.3_1
 url@1.0.5
 user-thumbs@0.0.8
 useraccounts:bootstrap@1.13.1
@@ -175,4 +174,3 @@ yogiben:helpers@0.0.6
 yogiben:mixpanel@0.0.7
 yogiben:pretty-email@0.0.7
 zimme:active-route@2.3.2
-zimme:iron-router-active@1.0.4
