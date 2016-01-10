@@ -2,13 +2,13 @@
 	name: Config.name
 	collections:
 		Posts:
-			color: 'red'
-			icon: 'pencil'
-			extraFields: ['owner']
-			tableColumns: [
-				{ label: 'Title', name: 'title' }
-				{ label: 'User', name: 'author()', template: 'adminUserCell' }
-			]
+      templates:
+        new: 
+          name: 'customTemplateName'
+        edit: 
+          name: 'customTemplateNameEdit'
+          data:
+            text: 'cool!'
 		Comments:
 			color: 'green'
 			icon: 'comments'

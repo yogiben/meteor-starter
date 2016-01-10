@@ -1,0 +1,23 @@
+<template name="customTemplateName">
+  {{# autoForm id="adminPostNewForm" collection="Posts" type="insert"}}
+   
+    <div class="form-group">
+      <div class="row">
+        <div class="col-md-6">
+          {{> afQuickField name="title"}}
+          {{> afQuickField name="content"}}
+        </div>
+        <div class="col-md-6">
+          {{> afQuickField name="picture"}}
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary btn-block">Get this into the database</button>
+        </div>
+      </div>
+    </div>
+  {{/autoForm}}
+</template>
+
+<template name="customTemplateNameEdit">
+  <h1>Heeey Meteor admin is {{text}}</h1>
+</template>
