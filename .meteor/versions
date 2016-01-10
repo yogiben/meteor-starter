@@ -8,10 +8,10 @@ accounts-ui@1.1.6
 accounts-ui-unstyled@1.1.8
 alanning:roles@1.2.14
 aldeed:autoform@5.8.1
-aldeed:collection2@2.7.0
-aldeed:simple-schema@1.5.1
+aldeed:collection2@2.7.1
+aldeed:simple-schema@1.5.3
 aldeed:tabular@1.4.2
-aldeed:template-extension@3.4.3
+aldeed:template-extension@4.0.0
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -85,8 +85,8 @@ jparker:crypto-core@0.1.0
 jparker:crypto-md5@0.1.1
 jparker:gravatar@0.4.1
 jquery@1.11.4
-juliancwirko:s-alert@2.4.2
-juliancwirko:s-alert-stackslide@1.1.4
+juliancwirko:s-alert@3.1.3
+juliancwirko:s-alert-stackslide@3.1.3
 launch-screen@1.0.4
 less@2.5.1
 livedata@1.0.15
@@ -94,11 +94,11 @@ localstorage@1.0.5
 logging@1.0.8
 manuelschoebel:ms-seo@0.4.1
 matb33:collection-hooks@0.8.1
-mdg:validation-error@0.1.0
+mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
 meteorhacks:inject-initial@1.0.3
-meteorhacks:meteorx@1.0.2
+meteorhacks:meteorx@1.4.1
 meteorhacks:subs-manager@1.6.3
 meteorhacks:unblock@1.1.0
 meteorspark:util@0.2.0
@@ -127,7 +127,7 @@ observe-sequence@1.0.7
 ordered-dict@1.0.4
 percolate:momentum@0.7.2
 percolate:momentum-iron-router@0.7.0
-percolate:velocityjs@1.1.0
+percolate:velocityjs@1.2.1_1
 promise@0.5.1
 raix:eventemitter@0.1.3
 raix:handlebar-helpers@0.2.5
@@ -142,7 +142,7 @@ routepolicy@1.0.6
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
-softwarerero:accounts-t9n@1.1.7
+softwarerero:accounts-t9n@1.2.0
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 spiderable@1.0.9
@@ -158,7 +158,6 @@ twbs:bootstrap@3.3.6
 twitter@1.1.5
 ui@1.0.8
 underscore@1.0.4
-underscorestring:underscore.string@3.0.3
 url@1.0.5
 user-thumbs@0.0.8
 useraccounts:bootstrap@1.13.1
@@ -175,4 +174,3 @@ yogiben:helpers@0.0.6
 yogiben:mixpanel@0.0.7
 yogiben:pretty-email@0.0.7
 zimme:active-route@2.3.2
-zimme:iron-router-active@1.0.4
