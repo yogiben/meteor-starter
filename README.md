@@ -9,6 +9,10 @@ A Meteor boilerplate with a lot packed in. Written in Coffeescript.
 
 [MIT License](http://choosealicense.com/licenses/mit/)
 
+Maintained by [Meteor Factory](https://meteorfactory.io). Professional Meteor development.
+
+[![Meteor starter](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/meteor-factory.jpg)](http://meteorfactory.io)
+
 ### Setup ####
 
 ```

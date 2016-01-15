@@ -6,9 +6,9 @@ Package.describe({
 
 
 Package.on_use(function (api) {
-  api.versionsFrom("METEOR@1.1.0.2");
+  api.versionsFrom("METEOR@1.0.3");
   api.use('jquery', 'client');
-  api.use('less', 'client');
+  api.use('less@2.5.1', 'client');
 
   // javascript
   api.add_files('lib/js/transition.js', 'client');
