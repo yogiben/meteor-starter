@@ -37,7 +37,7 @@
   }
   section
   {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
     &.colored
     {
@@ -52,6 +52,9 @@
     h1
     {
       padding-top: 100px;
+      @media (max-width: 768px) {
+        padding-top: 10px;
+      }
     }
     a.btn
     {
@@ -75,8 +78,16 @@
   {
     padding-bottom: 0 !important;
     overflow-x: hidden;
-    h3 {
-        padding-top: 100px;
+    h3
+    {
+      padding-top: 100px;
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+    .btn
+    {
+      margin: 20px auto 30px;
     }
   }
   section#final 
@@ -84,7 +95,7 @@
     padding-bottom: 0;
     .btn 
     {
-      margin-top: 20px;
+      margin: 20px auto 30px;
     }
   }
 }
