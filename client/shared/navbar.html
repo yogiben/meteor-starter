@@ -6,9 +6,6 @@
 					<button type="button" class="navbar-toggle">
 						<i class="fa fa-bars"></i>
 					</button>
-					<a href="{{pathFor 'profile'}}" class="xs-mobile-cta">
-						<i class="fa fa-user"></i>
-					</a>
 					<a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}">{{{Config.logo}}}</a>
 				</div>
 				<div class="navbar-collapse collapse">
