@@ -9,29 +9,35 @@
     background: darken(#fff, 15%);
     width: 100%;
     z-index: 1000;
-    a
+    .link
     {
       color: white;
       &:hover
       {
-        text-decoration: none;
         background: inherit;
+        color: white;
+        text-decoration: none;
       }
       &.btn-hollow
       {
         padding-top: 5px;
         padding-bottom: 5px;
+        margin-top: 5px;
       }
     }
-    ul
+    ul.nav
     {
       list-style: none;
       padding-top: 2px;
-      li
+      > li
       {
         padding-left: 10px;
         display: inline-block;
         padding-right: 5px;
+      }
+      > .dropdown
+      {
+        padding-right: 0;
       }
     }
   }
