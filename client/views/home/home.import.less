@@ -6,37 +6,44 @@
 {
   nav.navbar
   {
+    background: darken(#fff, 15%);
     width: 100%;
     z-index: 1000;
-    a
+    .link
     {
       color: white;
       &:hover
       {
-        text-decoration: none;
         background: inherit;
+        color: white;
+        text-decoration: none;
       }
       &.btn-hollow
       {
         padding-top: 5px;
         padding-bottom: 5px;
+        margin-top: 5px;
       }
     }
-    ul
+    ul.nav
     {
       list-style: none;
       padding-top: 2px;
-      li
+      > li
       {
         padding-left: 10px;
         display: inline-block;
         padding-right: 5px;
       }
+      > .dropdown
+      {
+        padding-right: 0;
+      }
     }
   }
   section
   {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
     &.colored
     {
@@ -51,10 +58,13 @@
     h1
     {
       padding-top: 100px;
+      @media (max-width: 768px) {
+        padding-top: 10px;
+      }
     }
     a.btn
     {
-      margin-top: 20px;
+      margin-top: 10px;
       color: white;
     }
   }
@@ -65,13 +75,25 @@
       margin-top: 60px;
       margin-bottom: 30px;
     }
+    .icntitle
+    {
+      font-size: 14px;
+    }
   }
   section#ipad 
   {
     padding-bottom: 0 !important;
     overflow-x: hidden;
-    h3 {
-        padding-top: 100px;
+    h3
+    {
+      padding-top: 100px;
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
+    }
+    .btn
+    {
+      margin: 20px auto 30px;
     }
   }
   section#final 
@@ -79,7 +101,7 @@
     padding-bottom: 0;
     .btn 
     {
-      margin-top: 20px;
+      margin: 20px auto 30px;
     }
   }
 }
