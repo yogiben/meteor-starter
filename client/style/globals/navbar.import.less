@@ -1,23 +1,77 @@
 .template-navbar
-{  
+{
   .navbar-toggle
   {
+    cursor: pointer;
     float: left;
+    margin-left: 4px;
+    margin-right: 0;
     position: relative;
 
-    i
+    .bar
     {
-      color: white;
-      cursor: pointer;
-      position: absolute;
-      font-size: 1.3em;
-      font-weight: 100;
-      top: 6px;
+      border-top: 2px solid white;
+      display: block;
+      width: 15px;
+      transition: 0.2s;
+    }
+
+    .icon
+    {
+      .bar;
+      margin-top: 6px;
+      padding: 3px 0;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        .bar;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 2px;
+      }
     }
 
     &.xs-mobile-cta
     {
       float: right;
+    }
+  }
+
+  #sliding-menu-controller:checked
+  {
+    ~ .navbar-toggle .icon
+    {
+      border-color: transparent;
+
+      &::before,
+      &::after {
+        top: -2px;
+      }
+
+      &::before
+      {
+        -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+
+      &::after
+      {
+        -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
     }
   }
 }
