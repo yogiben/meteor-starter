@@ -3,9 +3,28 @@
     <div class="navbar navbar-inverse">
       <div class="container close-navbar">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle">
-            <i class="fa fa-bars"></i>
-          </button>
+          <input type="checkbox" id="sliding-menu-controller" class="hide">
+          <label type="button" class="navbar-toggle" for="sliding-menu-controller">
+            <span class="icon"></span>
+          </label>
+          <div class="sliding-menu visible-xs">
+            <div class="panel panel-default">
+              {{#if User}}
+                <div class="panel-heading">{{niceName User._id}}</div>
+                <div class="list-group">
+                  <a class="list-group-item" href="{{pathFor 'profile'}}">{{_ "profile"}}</a>
+                  <a class="list-group-item" href="{{pathFor 'account'}}">{{_ "account"}}</a>
+                  <a class="list-group-item" href="{{pathFor 'notifications'}}">
+                    {{#if notificationCount}}
+                      <span class="badge bg-success">{{notificationCount}}</span>
+                    {{/if}}
+                    {{_ "notifications"}}
+                  </a>
+                  <a class="list-group-item" href="/sign-out">{{_ "signout"}}</a>
+                </div>
+              {{/if}}
+            </div>
+          </div>
           <a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}">{{{Config.logo}}}</a>
         </div>
         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
@@ -15,16 +34,7 @@
               {{#if isInRole 'admin'}}
                 <li><a href="{{pathFor 'adminDashboard'}}">{{_ "admin"}}</a></li>
               {{/if}}
-              <li class="dropdown hidden-xs">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{niceName User._id}} <i
-                  class="fa fa-chevron-down i-xs"></i></a>
-                <ul class="dropdown-menu">
-                  <li><a href="{{pathFor 'profile'}}">{{_ "profile"}}</a></li>
-                  <li><a href="{{pathFor 'account'}}">{{_ "account"}}</a></li>
-                  <li class="divider"></li>
-                  <li><a href="/sign-out">{{_ "signout"}}</a></li>
-                </ul>
-              </li>
+              {{> userDropdown}}
               <li class="visible-xs">
                 <a href="{{pathFor 'profile'}}" class="close-navbar">{{_ "edit_profile"}}</a>
               </li>
