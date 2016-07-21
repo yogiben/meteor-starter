@@ -15,7 +15,7 @@
             "appId": "b5bd8744275104d",
             "secret": "7fca074e2399419013545919090850ce"
         },
-        "googe": {
+        "google": {
           "clientId" : "xxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com",
           "secret" : "xxxxxxxxxxxxxxxxxxxxxxxxxxx",
           "loginStyle" : "popup"
